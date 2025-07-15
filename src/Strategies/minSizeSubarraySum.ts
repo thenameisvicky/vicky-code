@@ -5,7 +5,7 @@ export class MinimumSizeSubarraySum implements BaseSingleArrayExecutionStrategy 
         let left = 0, min = Infinity, sum = 0;
         for (let i = 0; i < nums.length; i++) {
             sum += nums[i];
-            if (target && sum >= target) {
+            while (target && sum >= target) {
                 min = Math.min(min, i - left + 1);
                 sum -= nums[left];
                 left++;
