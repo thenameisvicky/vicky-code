@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TwoSumStrategy2 = void 0;
 class TwoSumStrategy2 {
-    async function(nums, target) {
+    async contextFunction(nums, target) {
         let left = 0;
         let right = nums.length - 1;
         while (left <= right) {

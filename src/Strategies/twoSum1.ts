@@ -1,7 +1,7 @@
 import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
 
 export class TwoSumStrategy1 implements BaseSingleArrayExecutionStrategy {
-  async function(nums: Array<number>, target?: number): Promise<Array<number>> {
+  async contextFunction(nums: Array<number>, target?: number): Promise<Array<number>> {
     const map = new Map();
     for (let i = 0; i < nums.length; i++) {
       const completement = target && target - nums[i];

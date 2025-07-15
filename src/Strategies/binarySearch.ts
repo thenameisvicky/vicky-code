@@ -1,7 +1,7 @@
 import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
 
 export class BinarySearchStrategy implements BaseSingleArrayExecutionStrategy {
-  async function(nums: Array<number>, target?: number): Promise<any> {
+  async contextFunction(nums: Array<number>, target?: number): Promise<any> {
     let left = 0;
     let right = nums.length - 1;
     while (left <= right) {

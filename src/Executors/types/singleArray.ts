@@ -1,5 +1,5 @@
 export interface BaseSingleArrayExecutionStrategy {
-  function: (nums: Array<number>, target?: number) => Promise<any>;
+  contextFunction: (nums: Array<number>, target?: number) => Promise<any>;
 }
 
 export class contextExecutor<T extends BaseSingleArrayExecutionStrategy> {
@@ -9,6 +9,6 @@ export class contextExecutor<T extends BaseSingleArrayExecutionStrategy> {
   }
 
   async execute(nums: Array<number>, target?: number): Promise<any> {
-    return await this.strategy.function(nums, target);
+    return await this.strategy.contextFunction(nums, target);
   }
 }
