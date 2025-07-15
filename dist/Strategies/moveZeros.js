@@ -2,7 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MoveZeroStrategy = void 0;
 class MoveZeroStrategy {
-    async contextFunction(nums) {
+    async contextFunction(params) {
+        const { nums } = params;
         let k = 0;
         for (let i = 0; i < nums.length; i++) {
             if (nums[i] !== 0) {

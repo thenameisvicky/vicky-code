@@ -1,7 +1,9 @@
 import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
+import { minSizeSubarraySumParams } from "./type";
 
-export class MinimumSizeSubarraySum implements BaseSingleArrayExecutionStrategy {
-    async contextFunction(nums: Array<number>, target?: number): Promise<any> {
+export class MinimumSizeSubarraySum implements BaseSingleArrayExecutionStrategy<'minSizeSubarrSum'> {
+    async contextFunction(params: minSizeSubarraySumParams): Promise<any> {
+        const { nums, target } = params;
         let left = 0, min = Infinity, sum = 0;
         for (let i = 0; i < nums.length; i++) {
             sum += nums[i];

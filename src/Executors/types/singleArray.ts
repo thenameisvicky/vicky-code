@@ -1,14 +1,24 @@
-export interface BaseSingleArrayExecutionStrategy {
-  contextFunction: (nums: Array<number>, target?: number) => Promise<any>;
+import { binarySearchParams, longSubStringNoDupParams, minSizeSubarraySumParams, moveZerosParams, twoSumParams } from "../../Strategies/type";
+
+export interface paramsMap {
+  twoSum: twoSumParams,
+  binarySearch: binarySearchParams,
+  minSizeSubarrSum: minSizeSubarraySumParams,
+  moveZeros: moveZerosParams,
+  longestSubStringNoDup: longSubStringNoDupParams;
 }
 
-export class contextExecutor<T extends BaseSingleArrayExecutionStrategy> {
-  private strategy: T;
-  constructor(Strategy: T) {
+export interface BaseSingleArrayExecutionStrategy<K extends keyof paramsMap> {
+  contextFunction: (params: paramsMap[K]) => Promise<any>;
+}
+
+export class contextExecutor<K extends keyof paramsMap> {
+  private strategy: BaseSingleArrayExecutionStrategy<K>;
+  constructor(Strategy: BaseSingleArrayExecutionStrategy<K>) {
     this.strategy = Strategy;
   }
 
-  async execute(nums: Array<number>, target?: number): Promise<any> {
-    return await this.strategy.contextFunction(nums, target);
+  async execute(params: paramsMap[K]): Promise<any> {
+    return await this.strategy.contextFunction(params);
   }
 }

@@ -2,14 +2,14 @@ import {
   BaseSingleArrayExecutionStrategy,
   contextExecutor,
 } from "./types/singleArray";
+import type { paramsMap } from "./types/singleArray";
 
-export function exec<T extends BaseSingleArrayExecutionStrategy>(
-  nums: Array<number>,
-  strategy: T,
-  target?: number,
+export function exec<K extends keyof paramsMap>(
+  strategy: BaseSingleArrayExecutionStrategy<K>,
+  params: paramsMap[K]
 ) {
-  const executor = new contextExecutor<T>(strategy);
-  executor.execute(nums, target).then((result) => {
+  const executor = new contextExecutor<K>(strategy);
+  executor.execute(params).then((result) => {
     console.log(`Executed-${strategy.constructor.name} and Result: ${result}`);
   });
 }

@@ -1,7 +1,9 @@
 import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
+import { moveZerosParams } from "./type";
 
-export class MoveZeroStrategy implements BaseSingleArrayExecutionStrategy {
-  async contextFunction(nums: Array<number>): Promise<any> {
+export class MoveZeroStrategy implements BaseSingleArrayExecutionStrategy<'moveZeros'> {
+  async contextFunction(params: moveZerosParams): Promise<any> {
+    const { nums } = params;
     let k = 0;
     for (let i = 0; i < nums.length; i++) {
       if (nums[i] !== 0) {

@@ -1,14 +1,16 @@
 import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
+import type { binarySearchParams } from "./type";
 
-export class BinarySearchStrategy implements BaseSingleArrayExecutionStrategy {
-  async contextFunction(nums: Array<number>, target?: number): Promise<any> {
+export class BinarySearchStrategy implements BaseSingleArrayExecutionStrategy<'binarySearch'> {
+  async contextFunction(params: binarySearchParams): Promise<any> {
+    const { nums, target } = params;
     let left = 0;
     let right = nums.length - 1;
     while (left <= right) {
       const mid = Math.floor((left + right) / 2);
-      if (target && nums[mid] == target) {
+      if (nums[mid] === target) {
         return Promise.resolve(mid);
-      } else if (target && nums[mid] < target) {
+      } else if (nums[mid] < target) {
         left = mid + 1;
       } else {
         right = mid - 1;

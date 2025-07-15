@@ -1,14 +1,16 @@
 import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
+import { twoSumParams } from "./type";
 
-export class TwoSumStrategy2 implements BaseSingleArrayExecutionStrategy {
-  async contextFunction(nums: Array<number>, target?: number): Promise<Array<number>> {
+export class TwoSumStrategy2 implements BaseSingleArrayExecutionStrategy<'twoSum'> {
+  async contextFunction(params: twoSumParams): Promise<Array<number>> {
+    const { nums, target } = params;
     let left = 0;
     let right = nums.length - 1;
     while (left <= right) {
       let sum = nums[left] + nums[right];
-      if (target && sum == target) {
+      if (sum == target) {
         return Promise.resolve([left, right]);
-      } else if (target && sum < target) {
+      } else if (sum < target) {
         left++;
       } else {
         right--;
