@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.LongestSubStrWithNoRepeatChar = void 0;
-class LongestSubStrWithNoRepeatChar {
+exports.LongestSubStrWithNoRepeatCharStrategy = void 0;
+class LongestSubStrWithNoRepeatCharStrategy {
     async contextFunction(params) {
         const { s } = params;
         let left = 0, map = new Map(), max = 0;
@@ -16,4 +16,4 @@ class LongestSubStrWithNoRepeatChar {
         return max;
     }
 }
-exports.LongestSubStrWithNoRepeatChar = LongestSubStrWithNoRepeatChar;
+exports.LongestSubStrWithNoRepeatCharStrategy = LongestSubStrWithNoRepeatCharStrategy;

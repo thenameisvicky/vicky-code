@@ -1,0 +1,20 @@
+import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
+import { findInsertPositionParams } from "./type";
+
+export class FindInsertPositionStrategy implements BaseSingleArrayExecutionStrategy<'findInsertPosition'> {
+    async contextFunction(params: findInsertPositionParams): Promise<any> {
+        const { nums, target } = params;
+        let left = 0, right = nums.length - 1;
+        while (left <= right) {
+            let mid = Math.floor((left + right) / 2);
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        return left;
+    }
+}

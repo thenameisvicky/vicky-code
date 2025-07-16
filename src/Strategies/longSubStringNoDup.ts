@@ -1,7 +1,7 @@
 import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
 import { longSubStringNoDupParams } from "./type";
 
-export class LongestSubStrWithNoRepeatChar implements BaseSingleArrayExecutionStrategy<'longestSubStringNoDup'> {
+export class LongestSubStrWithNoRepeatCharStrategy implements BaseSingleArrayExecutionStrategy<'longestSubStringNoDup'> {
     async contextFunction(params: longSubStringNoDupParams): Promise<any> {
         const { s } = params;
         let left = 0, map = new Map(), max = 0;

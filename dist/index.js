@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const exec_1 = require("./Executors/exec");
 const binarySearch_1 = require("./Strategies/binarySearch");
+const findInsertPosition_1 = require("./Strategies/findInsertPosition");
 const longSubStringNoDup_1 = require("./Strategies/longSubStringNoDup");
 const minSizeSubarraySum_1 = require("./Strategies/minSizeSubarraySum");
 const moveZeros_1 = require("./Strategies/moveZeros");
@@ -20,8 +21,11 @@ const moveZeros = new moveZeros_1.MoveZeroStrategy();
 const binarySearch = new binarySearch_1.BinarySearchStrategy();
 (0, exec_1.exec)(binarySearch, { nums: [1, 2, 3, 4, 4], target: 4 });
 // MinimumSizeSubarraySum
-const minSizesubarrSum = new minSizeSubarraySum_1.MinimumSizeSubarraySum();
+const minSizesubarrSum = new minSizeSubarraySum_1.MinimumSizeSubarraySumStrategy();
 (0, exec_1.exec)(minSizesubarrSum, { nums: [1, 2, 3, 4, 5], target: 10 });
 //LongestSubStringNoDupLength
-const longSizesubstrNoDupLen = new longSubStringNoDup_1.LongestSubStrWithNoRepeatChar();
+const longSizesubstrNoDupLen = new longSubStringNoDup_1.LongestSubStrWithNoRepeatCharStrategy();
 (0, exec_1.exec)(longSizesubstrNoDupLen, { s: 'pwwke' });
+//FindInsertPosition
+const findInserPosition = new findInsertPosition_1.FindInsertPositionStrategy();
+(0, exec_1.exec)(findInserPosition, { nums: [1, 2, 3, 4, 6], target: 5 });

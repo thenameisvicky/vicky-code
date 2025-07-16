@@ -18,6 +18,11 @@ export interface minSizeSubarraySumParams {
     target: number;
 }
 
+export interface findInsertPositionParams {
+    nums: Array<number>;
+    target: number;
+}
+
 //String Params
 export interface longSubStringNoDupParams {
     s: string;

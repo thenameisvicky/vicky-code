@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MinimumSizeSubarraySum = void 0;
-class MinimumSizeSubarraySum {
+exports.MinimumSizeSubarraySumStrategy = void 0;
+class MinimumSizeSubarraySumStrategy {
     async contextFunction(params) {
         const { nums, target } = params;
         let left = 0, min = Infinity, sum = 0;
@@ -16,4 +16,4 @@ class MinimumSizeSubarraySum {
         return min === Infinity ? 0 : min;
     }
 }
-exports.MinimumSizeSubarraySum = MinimumSizeSubarraySum;
+exports.MinimumSizeSubarraySumStrategy = MinimumSizeSubarraySumStrategy;
