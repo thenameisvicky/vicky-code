@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
+import { BaseSingleArrayExecutionStrategy } from "../Executors/types/arrays";
 import { minSizeSubarraySumParams } from "./type";
 
 export class MinimumSizeSubarraySumStrategy implements BaseSingleArrayExecutionStrategy<'minSizeSubarrSum'> {

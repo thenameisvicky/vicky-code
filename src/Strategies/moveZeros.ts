@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../Executors/types/singleArray";
+import { BaseSingleArrayExecutionStrategy } from "../Executors/types/arrays";
 import { moveZerosParams } from "./type";
 
 export class MoveZeroStrategy implements BaseSingleArrayExecutionStrategy<'moveZeros'> {

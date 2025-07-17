@@ -4,6 +4,7 @@ import { FindInsertPositionStrategy } from "./Strategies/findInsertPosition";
 import { LongestSubStrWithNoRepeatCharStrategy } from "./Strategies/longSubStringNoDup";
 import { MinimumSizeSubarraySumStrategy } from "./Strategies/minSizeSubarraySum";
 import { MoveZeroStrategy } from "./Strategies/moveZeros";
+import { NextPermutationStrategy } from "./Strategies/nextPermutation";
 import { TwoSumStrategy1 } from "./Strategies/twoSum1";
 import { TwoSumStrategy2 } from "./Strategies/twoSum2";
 
@@ -34,3 +35,7 @@ exec<'longestSubStringNoDup'>(longSizesubstrNoDupLen, { s: 'pwwke' })
 //FindInsertPosition
 const findInserPosition = new FindInsertPositionStrategy();
 exec<'findInsertPosition'>(findInserPosition, { nums: [1, 2, 3, 4, 6], target: 5 });
+
+//NextPermutation
+const nextPermutation = new NextPermutationStrategy();
+exec<'nextPermutation'>(nextPermutation, {nums:[1,2,3,4]});

@@ -6,6 +6,7 @@ const findInsertPosition_1 = require("./Strategies/findInsertPosition");
 const longSubStringNoDup_1 = require("./Strategies/longSubStringNoDup");
 const minSizeSubarraySum_1 = require("./Strategies/minSizeSubarraySum");
 const moveZeros_1 = require("./Strategies/moveZeros");
+const nextPermutation_1 = require("./Strategies/nextPermutation");
 const twoSum1_1 = require("./Strategies/twoSum1");
 const twoSum2_1 = require("./Strategies/twoSum2");
 // TwoSum1
@@ -29,3 +30,6 @@ const longSizesubstrNoDupLen = new longSubStringNoDup_1.LongestSubStrWithNoRepea
 //FindInsertPosition
 const findInserPosition = new findInsertPosition_1.FindInsertPositionStrategy();
 (0, exec_1.exec)(findInserPosition, { nums: [1, 2, 3, 4, 6], target: 5 });
+//NextPermutation
+const nextPermutation = new nextPermutation_1.NextPermutationStrategy();
+(0, exec_1.exec)(nextPermutation, { nums: [1, 2, 3, 4] });

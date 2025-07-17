@@ -23,6 +23,10 @@ export interface findInsertPositionParams {
     target: number;
 }
 
+export interface nextPermutationParams {
+    nums: Array<number>;
+}
+
 //String Params
 export interface longSubStringNoDupParams {
     s: string;

@@ -1,8 +1,8 @@
 import {
   BaseSingleArrayExecutionStrategy,
   contextExecutor,
-} from "./types/singleArray";
-import type { paramsMap } from "./types/singleArray";
+} from "./types/arrays";
+import type { paramsMap } from "./types/arrays";
 
 export function exec<K extends keyof paramsMap>(
   strategy: BaseSingleArrayExecutionStrategy<K>,
