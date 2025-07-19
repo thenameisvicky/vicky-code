@@ -5,6 +5,7 @@ import { LongestSubStrWithNoRepeatCharStrategy } from "./Strategies/longSubStrin
 import { MinimumSizeSubarraySumStrategy } from "./Strategies/minSizeSubarraySum";
 import { MoveZeroStrategy } from "./Strategies/moveZeros";
 import { NextPermutationStrategy } from "./Strategies/nextPermutation";
+import { SingleOccuringNumberStrategy } from "./Strategies/singleNumber";
 import { TwoSumStrategy1 } from "./Strategies/twoSum1";
 import { TwoSumStrategy2 } from "./Strategies/twoSum2";
 
@@ -38,4 +39,8 @@ exec<'findInsertPosition'>(findInserPosition, { nums: [1, 2, 3, 4, 6], target: 5
 
 //NextPermutation
 const nextPermutation = new NextPermutationStrategy();
-exec<'nextPermutation'>(nextPermutation, {nums:[1,2,3,4]});
+exec<'nextPermutation'>(nextPermutation, { nums: [1, 2, 3, 4] });
+
+//SingleOccuringNumber
+const singleNumber = new SingleOccuringNumberStrategy();
+exec<'singleOccuringNumber'>(singleNumber, { num: [1, 2, 3, 4, 2, 3, 1] });
