@@ -30,6 +30,7 @@ Leetcode-Repo/
 ## 🚀 Getting Started
 
 ### Prerequisites
+- Fully Functioning Human Brain
 - [Node.js](https://nodejs.org/) (v18+ recommended)
 - [npm](https://www.npmjs.com/)
 
@@ -69,7 +70,7 @@ npm run dev
 - **Type Safety:** TypeScript ensures fewer bugs and better collaboration.
 - **Scalability:** Easy to add, test, and compare multiple solutions.
 
-## 🤝 Let's Grow Together!
+## 🤝 Let's Lock In!
 Share your solutions, review each other's code, and discuss different approaches. This repo is for learning, experimenting, and improving as a team.
 
 ---

@@ -31,6 +31,10 @@ export interface singleNumberParams {
     num: Array<number>;
 }
 
+export interface threeSumParams {
+    nums: Array<number>
+}
+
 //String Params
 export interface longSubStringNoDupParams {
     s: string;

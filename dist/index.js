@@ -7,29 +7,37 @@ const longSubStringNoDup_1 = require("./Strategies/longSubStringNoDup");
 const minSizeSubarraySum_1 = require("./Strategies/minSizeSubarraySum");
 const moveZeros_1 = require("./Strategies/moveZeros");
 const nextPermutation_1 = require("./Strategies/nextPermutation");
+const singleNumber_1 = require("./Strategies/singleNumber");
+const threeSum_1 = require("./Strategies/threeSum");
 const twoSum1_1 = require("./Strategies/twoSum1");
 const twoSum2_1 = require("./Strategies/twoSum2");
-// TwoSum1
+// TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
-(0, exec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 10 });
-// TwoSum2
+(0, exec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ []
+// TwoSum2: Multiple duplicates that sum to target
 const twoSum2 = new twoSum2_1.TwoSumStrategy2();
-(0, exec_1.exec)(twoSum2, { nums: [1, 2, 3, 4, 5], target: 9 });
-// MoveZeros
+(0, exec_1.exec)(twoSum2, { nums: [2, 3, 3, 4, 5], target: 6 }); // ➞ [[2,4], [3,3]]
+// MoveZeros: All zeros
 const moveZeros = new moveZeros_1.MoveZeroStrategy();
-(0, exec_1.exec)(moveZeros, { nums: [1, 0, 2, 0, 9, 0, 12] });
-// BinarySearch
+(0, exec_1.exec)(moveZeros, { nums: [0, 0, 0, 0] }); // ➞ [0, 0, 0, 0]
+// BinarySearch: Target not found
 const binarySearch = new binarySearch_1.BinarySearchStrategy();
-(0, exec_1.exec)(binarySearch, { nums: [1, 2, 3, 4, 4], target: 4 });
-// MinimumSizeSubarraySum
+(0, exec_1.exec)(binarySearch, { nums: [1, 2, 4, 5, 6], target: 3 }); // ➞ -1
+// MinimumSizeSubarraySum: No subarray meets target
 const minSizesubarrSum = new minSizeSubarraySum_1.MinimumSizeSubarraySumStrategy();
-(0, exec_1.exec)(minSizesubarrSum, { nums: [1, 2, 3, 4, 5], target: 10 });
-//LongestSubStringNoDupLength
+(0, exec_1.exec)(minSizesubarrSum, { nums: [1, 1, 1, 1], target: 10 }); // ➞ 0
+// LongestSubStringNoDup: All same characters
 const longSizesubstrNoDupLen = new longSubStringNoDup_1.LongestSubStrWithNoRepeatCharStrategy();
-(0, exec_1.exec)(longSizesubstrNoDupLen, { s: 'pwwke' });
-//FindInsertPosition
+(0, exec_1.exec)(longSizesubstrNoDupLen, { s: 'aaaaaa' }); // ➞ 1
+// FindInsertPosition: Insert in middle
 const findInserPosition = new findInsertPosition_1.FindInsertPositionStrategy();
-(0, exec_1.exec)(findInserPosition, { nums: [1, 2, 3, 4, 6], target: 5 });
-//NextPermutation
+(0, exec_1.exec)(findInserPosition, { nums: [1, 3, 5, 6], target: 4 }); // ➞ 2
+// NextPermutation: Already in descending order
 const nextPermutation = new nextPermutation_1.NextPermutationStrategy();
-(0, exec_1.exec)(nextPermutation, { nums: [1, 2, 3, 4] });
+(0, exec_1.exec)(nextPermutation, { nums: [3, 2, 1] }); // ➞ [1, 2, 3]
+// SingleOccuringNumber: Only one unique
+const singleNumber = new singleNumber_1.SingleOccuringNumberStrategy();
+(0, exec_1.exec)(singleNumber, { num: [7, 3, 3, 7, 1, 1, 4, 4, 9] }); // ➞ 9
+// ThreeSum: Only one valid triplet
+const threeSum = new threeSum_1.ThreeSumStrategy();
+(0, exec_1.exec)(threeSum, { nums: [-1, 0, 1, 2, -1, -4] }); // ➞ [[-1, -1, 2], [-1, 0, 1]]
