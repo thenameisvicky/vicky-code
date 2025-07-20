@@ -1,6 +1,7 @@
 import { exec } from "./Executors/exec";
 import { BinarySearchStrategy } from "./Strategies/binarySearch";
 import { FindInsertPositionStrategy } from "./Strategies/findInsertPosition";
+import { FourSumStrategy } from "./Strategies/fourSum";
 import { LongestSubStrWithNoRepeatCharStrategy } from "./Strategies/longSubStringNoDup";
 import { MinimumSizeSubarraySumStrategy } from "./Strategies/minSizeSubarraySum";
 import { MoveZeroStrategy } from "./Strategies/moveZeros";
@@ -47,6 +48,10 @@ exec<'nextPermutation'>(nextPermutation, { nums: [3, 2, 1] }); // ➞ [1, 2, 3]
 const singleNumber = new SingleOccuringNumberStrategy();
 exec<'singleOccuringNumber'>(singleNumber, { num: [7, 3, 3, 7, 1, 1, 4, 4, 9] }); // ➞ 9
 
-// ThreeSum: Only one valid triplet
+// ThreeSum: Only valid triplet
 const threeSum = new ThreeSumStrategy();
 exec<'threeSum'>(threeSum, { nums: [-1, 0, 1, 2, -1, -4] }); // ➞ [[-1, -1, 2], [-1, 0, 1]]
+
+//FourSum: All elements same, only one unique quadruplet
+const fourSum = new FourSumStrategy();
+exec<'fourSum'>(fourSum, { nums: [2, 2, 2, 2, 2], target: 8 }); // ➞ [[2, 2, 2, 2]]

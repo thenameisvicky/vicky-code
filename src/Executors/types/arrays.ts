@@ -1,4 +1,4 @@
-import { binarySearchParams, findInsertPositionParams, longSubStringNoDupParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, singleNumberParams, threeSumParams, twoSumParams } from "../../Strategies/type";
+import { binarySearchParams, findInsertPositionParams, fourSumParams, longSubStringNoDupParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, singleNumberParams, threeSumParams, twoSumParams } from "../../Strategies/type";
 
 export interface paramsMap {
   twoSum: twoSumParams,
@@ -10,6 +10,7 @@ export interface paramsMap {
   nextPermutation: nextPermutationParams;
   singleOccuringNumber: singleNumberParams;
   threeSum: threeSumParams;
+  fourSum: fourSumParams;
 }
 
 export interface BaseSingleArrayExecutionStrategy<K extends keyof paramsMap> {

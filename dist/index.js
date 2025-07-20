@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const exec_1 = require("./Executors/exec");
 const binarySearch_1 = require("./Strategies/binarySearch");
 const findInsertPosition_1 = require("./Strategies/findInsertPosition");
+const fourSum_1 = require("./Strategies/fourSum");
 const longSubStringNoDup_1 = require("./Strategies/longSubStringNoDup");
 const minSizeSubarraySum_1 = require("./Strategies/minSizeSubarraySum");
 const moveZeros_1 = require("./Strategies/moveZeros");
@@ -13,10 +14,10 @@ const twoSum1_1 = require("./Strategies/twoSum1");
 const twoSum2_1 = require("./Strategies/twoSum2");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
-(0, exec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ []
+(0, exec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
 // TwoSum2: Multiple duplicates that sum to target
 const twoSum2 = new twoSum2_1.TwoSumStrategy2();
-(0, exec_1.exec)(twoSum2, { nums: [2, 3, 3, 4, 5], target: 6 }); // ➞ [[2,4], [3,3]]
+(0, exec_1.exec)(twoSum2, { nums: [2, 3, 3, 4, 5], target: 6 }); // ➞ [0,3]
 // MoveZeros: All zeros
 const moveZeros = new moveZeros_1.MoveZeroStrategy();
 (0, exec_1.exec)(moveZeros, { nums: [0, 0, 0, 0] }); // ➞ [0, 0, 0, 0]
@@ -38,6 +39,9 @@ const nextPermutation = new nextPermutation_1.NextPermutationStrategy();
 // SingleOccuringNumber: Only one unique
 const singleNumber = new singleNumber_1.SingleOccuringNumberStrategy();
 (0, exec_1.exec)(singleNumber, { num: [7, 3, 3, 7, 1, 1, 4, 4, 9] }); // ➞ 9
-// ThreeSum: Only one valid triplet
+// ThreeSum: Only valid triplet
 const threeSum = new threeSum_1.ThreeSumStrategy();
 (0, exec_1.exec)(threeSum, { nums: [-1, 0, 1, 2, -1, -4] }); // ➞ [[-1, -1, 2], [-1, 0, 1]]
+//FourSum: All elements same, only one unique quadruplet
+const fourSum = new fourSum_1.FourSumStrategy();
+(0, exec_1.exec)(fourSum, { nums: [2, 2, 2, 2, 2], target: 8 }); // ➞ [[2, 2, 2, 2]]
