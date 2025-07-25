@@ -40,6 +40,11 @@ export interface fourSumParams {
     target: number;
 }
 
+export interface threeSumClosestParams {
+    nums: Array<number>;
+    target: number;
+}
+
 //String Params
 export interface longSubStringNoDupParams {
     s: string;

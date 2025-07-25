@@ -10,6 +10,7 @@ const moveZeros_1 = require("./Strategies/moveZeros");
 const nextPermutation_1 = require("./Strategies/nextPermutation");
 const singleNumber_1 = require("./Strategies/singleNumber");
 const threeSum_1 = require("./Strategies/threeSum");
+const threeSumClosest_1 = require("./Strategies/threeSumClosest");
 const twoSum1_1 = require("./Strategies/twoSum1");
 const twoSum2_1 = require("./Strategies/twoSum2");
 // TwoSum1: No pair adds to 100
@@ -45,3 +46,7 @@ const threeSum = new threeSum_1.ThreeSumStrategy();
 //FourSum: All elements same, only one unique quadruplet
 const fourSum = new fourSum_1.FourSumStrategy();
 (0, exec_1.exec)(fourSum, { nums: [2, 2, 2, 2, 2], target: 8 }); // ➞ [[2, 2, 2, 2]]
+//ThreeSumClosest: Return the closest 3Sum values
+const threeSumClosest = new threeSumClosest_1.ThreeSumClosestStrategy();
+// Edge case: all negative numbers, positive target
+(0, exec_1.exec)(threeSumClosest, { nums: [-8, -6, -5, -3, -1], target: 2 }); // ➞ -6 (closest to 2)

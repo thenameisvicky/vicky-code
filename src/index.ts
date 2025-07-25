@@ -8,6 +8,7 @@ import { MoveZeroStrategy } from "./Strategies/moveZeros";
 import { NextPermutationStrategy } from "./Strategies/nextPermutation";
 import { SingleOccuringNumberStrategy } from "./Strategies/singleNumber";
 import { ThreeSumStrategy } from "./Strategies/threeSum";
+import { ThreeSumClosestStrategy } from "./Strategies/threeSumClosest";
 import { TwoSumStrategy1 } from "./Strategies/twoSum1";
 import { TwoSumStrategy2 } from "./Strategies/twoSum2";
 
@@ -55,3 +56,8 @@ exec<'threeSum'>(threeSum, { nums: [-1, 0, 1, 2, -1, -4] }); // ➞ [[-1, -1, 2]
 //FourSum: All elements same, only one unique quadruplet
 const fourSum = new FourSumStrategy();
 exec<'fourSum'>(fourSum, { nums: [2, 2, 2, 2, 2], target: 8 }); // ➞ [[2, 2, 2, 2]]
+
+//ThreeSumClosest: Return the closest 3Sum values
+const threeSumClosest = new ThreeSumClosestStrategy();
+// Edge case: all negative numbers, positive target
+exec<'threeSumClosest'>(threeSumClosest, { nums: [-8, -6, -5, -3, -1], target: 2 }); // ➞ -6 (closest to 2)
