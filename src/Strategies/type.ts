@@ -45,6 +45,10 @@ export interface threeSumClosestParams {
     target: number;
 }
 
+export interface containerWithMostWaterParams {
+    nums: Array<number>;
+}
+
 //String Params
 export interface longSubStringNoDupParams {
     s: string;

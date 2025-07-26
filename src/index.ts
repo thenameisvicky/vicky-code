@@ -11,6 +11,7 @@ import { ThreeSumStrategy } from "./Strategies/threeSum";
 import { ThreeSumClosestStrategy } from "./Strategies/threeSumClosest";
 import { TwoSumStrategy1 } from "./Strategies/twoSum1";
 import { TwoSumStrategy2 } from "./Strategies/twoSum2";
+import { ContainerWithMostWaterStrategy } from "./Strategies/containerWithMostWater";
 
 
 // TwoSum1: No pair adds to 100
@@ -59,5 +60,8 @@ exec<'fourSum'>(fourSum, { nums: [2, 2, 2, 2, 2], target: 8 }); // ➞ [[2, 2, 2
 
 //ThreeSumClosest: Return the closest 3Sum values
 const threeSumClosest = new ThreeSumClosestStrategy();
-// Edge case: all negative numbers, positive target
-exec<'threeSumClosest'>(threeSumClosest, { nums: [-8, -6, -5, -3, -1], target: 2 }); // ➞ -6 (closest to 2)
+exec<'threeSumClosest'>(threeSumClosest, { nums: [-8, -6, -5, -3, -1], target: 2 }); // ➞ -9 (closest to 2)
+
+//ContainerWithMostWater: All heights zero
+const containerWithMostWater = new ContainerWithMostWaterStrategy();
+exec<'containerWithMostWater'>(containerWithMostWater, { nums: [0, 0, 0, 0, 0] }); // ➞ 0 
