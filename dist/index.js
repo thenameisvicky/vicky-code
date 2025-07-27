@@ -13,6 +13,8 @@ const threeSum_1 = require("./Strategies/threeSum");
 const threeSumClosest_1 = require("./Strategies/threeSumClosest");
 const twoSum1_1 = require("./Strategies/twoSum1");
 const twoSum2_1 = require("./Strategies/twoSum2");
+const containerWithMostWater_1 = require("./Strategies/containerWithMostWater");
+const groupAnagrams_1 = require("./Strategies/groupAnagrams");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, exec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -48,5 +50,10 @@ const fourSum = new fourSum_1.FourSumStrategy();
 (0, exec_1.exec)(fourSum, { nums: [2, 2, 2, 2, 2], target: 8 }); // ➞ [[2, 2, 2, 2]]
 //ThreeSumClosest: Return the closest 3Sum values
 const threeSumClosest = new threeSumClosest_1.ThreeSumClosestStrategy();
-// Edge case: all negative numbers, positive target
-(0, exec_1.exec)(threeSumClosest, { nums: [-8, -6, -5, -3, -1], target: 2 }); // ➞ -6 (closest to 2)
+(0, exec_1.exec)(threeSumClosest, { nums: [-8, -6, -5, -3, -1], target: 2 }); // ➞ -9 (closest to 2)
+//ContainerWithMostWater: All heights zero
+const containerWithMostWater = new containerWithMostWater_1.ContainerWithMostWaterStrategy();
+(0, exec_1.exec)(containerWithMostWater, { nums: [0, 0, 0, 0, 0] }); // ➞ 0 
+//GroupAnagrams: Empty array - no anagrams to group
+const groupAnagrams = new groupAnagrams_1.GroupAnagramsStrategy();
+(0, exec_1.exec)(groupAnagrams, { strings: [] }); // ➞ []

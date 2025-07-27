@@ -49,6 +49,10 @@ export interface containerWithMostWaterParams {
     nums: Array<number>;
 }
 
+export interface groupAnagramsParams {
+    strings: Array<string>;
+}
+
 //String Params
 export interface longSubStringNoDupParams {
     s: string;

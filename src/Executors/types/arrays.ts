@@ -1,4 +1,4 @@
-import { binarySearchParams, containerWithMostWaterParams, findInsertPositionParams, fourSumParams, longSubStringNoDupParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, singleNumberParams, threeSumClosestParams, threeSumParams, twoSumParams } from "../../Strategies/type";
+import { binarySearchParams, containerWithMostWaterParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longSubStringNoDupParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, singleNumberParams, threeSumClosestParams, threeSumParams, twoSumParams } from "../../Strategies/type";
 
 export interface paramsMap {
   twoSum: twoSumParams,
@@ -13,6 +13,7 @@ export interface paramsMap {
   fourSum: fourSumParams;
   threeSumClosest: threeSumClosestParams;
   containerWithMostWater: containerWithMostWaterParams;
+  groupAnagrams: groupAnagramsParams;
 }
 
 export interface BaseSingleArrayExecutionStrategy<K extends keyof paramsMap> {

@@ -12,6 +12,7 @@ import { ThreeSumClosestStrategy } from "./Strategies/threeSumClosest";
 import { TwoSumStrategy1 } from "./Strategies/twoSum1";
 import { TwoSumStrategy2 } from "./Strategies/twoSum2";
 import { ContainerWithMostWaterStrategy } from "./Strategies/containerWithMostWater";
+import { GroupAnagramsStrategy } from "./Strategies/groupAnagrams";
 
 
 // TwoSum1: No pair adds to 100
@@ -65,3 +66,7 @@ exec<'threeSumClosest'>(threeSumClosest, { nums: [-8, -6, -5, -3, -1], target: 2
 //ContainerWithMostWater: All heights zero
 const containerWithMostWater = new ContainerWithMostWaterStrategy();
 exec<'containerWithMostWater'>(containerWithMostWater, { nums: [0, 0, 0, 0, 0] }); // ➞ 0 
+
+//GroupAnagrams: Empty array - no anagrams to group
+const groupAnagrams = new GroupAnagramsStrategy();
+exec<'groupAnagrams'>(groupAnagrams, { strings: [] }); // ➞ []
