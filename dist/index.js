@@ -6,6 +6,7 @@ const findInsertPosition_1 = require("./Strategies/search/findInsertPosition");
 const fourSum_1 = require("./Strategies/twoPointers/fourSum");
 const longSubStringNoDup_1 = require("./Strategies/slidingWindow/longSubStringNoDup");
 const minSizeSubarraySum_1 = require("./Strategies/slidingWindow/minSizeSubarraySum");
+const maxSumSubarray_1 = require("./Strategies/slidingWindow/maxSumSubarray");
 const moveZeros_1 = require("./Strategies/arrayManipulation/moveZeros");
 const nextPermutation_1 = require("./Strategies/arrayManipulation/nextPermutation");
 const singleNumber_1 = require("./Strategies/hashMap/singleNumber");
@@ -57,3 +58,6 @@ const containerWithMostWater = new containerWithMostWater_1.ContainerWithMostWat
 //GroupAnagrams: Empty array - no anagrams to group
 const groupAnagrams = new groupAnagrams_1.GroupAnagramsStrategy();
 (0, exec_1.exec)(groupAnagrams, { strings: [] }); // ➞ []
+// MaximumSumSubArray: Edge Case 1000000
+const maxSumSubarray = new maxSumSubarray_1.MaximumSumSubArrayStrategy();
+(0, exec_1.exec)(maxSumSubarray, { nums: [1000000, -1000000, 1000000] }); // ➞ 1000000
