@@ -7,7 +7,7 @@ export class MinimumSizeSubarraySumStrategy implements BaseSingleArrayExecutionS
         let left = 0, min = Infinity, sum = 0;
         for (let i = 0; i < nums.length; i++) {
             sum += nums[i];
-            while (target && sum >= target) {
+            while (sum >= target) {
                 min = Math.min(min, i - left + 1);
                 sum -= nums[left];
                 left++;
