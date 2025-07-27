@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../Executors/types/arrays";
-import { moveZerosParams } from "./type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { moveZerosParams } from "../type";
 
 export class MoveZeroStrategy implements BaseSingleArrayExecutionStrategy<'moveZeros'> {
   async contextFunction(params: moveZerosParams): Promise<any> {

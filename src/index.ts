@@ -1,18 +1,18 @@
 import { exec } from "./Executors/exec";
-import { BinarySearchStrategy } from "./Strategies/binarySearch";
-import { FindInsertPositionStrategy } from "./Strategies/findInsertPosition";
-import { FourSumStrategy } from "./Strategies/fourSum";
-import { LongestSubStrWithNoRepeatCharStrategy } from "./Strategies/longSubStringNoDup";
-import { MinimumSizeSubarraySumStrategy } from "./Strategies/minSizeSubarraySum";
-import { MoveZeroStrategy } from "./Strategies/moveZeros";
-import { NextPermutationStrategy } from "./Strategies/nextPermutation";
-import { SingleOccuringNumberStrategy } from "./Strategies/singleNumber";
-import { ThreeSumStrategy } from "./Strategies/threeSum";
-import { ThreeSumClosestStrategy } from "./Strategies/threeSumClosest";
-import { TwoSumStrategy1 } from "./Strategies/twoSum1";
-import { TwoSumStrategy2 } from "./Strategies/twoSum2";
-import { ContainerWithMostWaterStrategy } from "./Strategies/containerWithMostWater";
-import { GroupAnagramsStrategy } from "./Strategies/groupAnagrams";
+import { BinarySearchStrategy } from "./Strategies/search/binarySearch";
+import { FindInsertPositionStrategy } from "./Strategies/search/findInsertPosition";
+import { FourSumStrategy } from "./Strategies/twoPointers/fourSum";
+import { LongestSubStrWithNoRepeatCharStrategy } from "./Strategies/slidingWindow/longSubStringNoDup";
+import { MinimumSizeSubarraySumStrategy } from "./Strategies/slidingWindow/minSizeSubarraySum";
+import { MoveZeroStrategy } from "./Strategies/arrayManipulation/moveZeros";
+import { NextPermutationStrategy } from "./Strategies/arrayManipulation/nextPermutation";
+import { SingleOccuringNumberStrategy } from "./Strategies/hashMap/singleNumber";
+import { ThreeSumStrategy } from "./Strategies/twoPointers/threeSum";
+import { ThreeSumClosestStrategy } from "./Strategies/twoPointers/threeSumClosest";
+import { TwoSumStrategy1 } from "./Strategies/hashMap/twoSum1";
+import { TwoSumStrategy2 } from "./Strategies/hashMap/twoSum2";
+import { ContainerWithMostWaterStrategy } from "./Strategies/twoPointers/containerWithMostWater";
+import { GroupAnagramsStrategy } from "./Strategies/hashMap/groupAnagrams";
 
 
 // TwoSum1: No pair adds to 100

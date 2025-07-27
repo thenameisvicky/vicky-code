@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../Executors/types/arrays";
-import { threeSumParams } from "./type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { threeSumParams } from "../type";
 
 export class ThreeSumStrategy implements BaseSingleArrayExecutionStrategy<'threeSum'> {
     async contextFunction(params: threeSumParams): Promise<any> {

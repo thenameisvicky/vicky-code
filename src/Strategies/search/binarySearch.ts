@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../Executors/types/arrays";
-import type { binarySearchParams } from "./type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import type { binarySearchParams } from "../type";
 
 export class BinarySearchStrategy implements BaseSingleArrayExecutionStrategy<'binarySearch'> {
   async contextFunction(params: binarySearchParams): Promise<any> {

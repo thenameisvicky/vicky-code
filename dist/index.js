@@ -1,20 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const exec_1 = require("./Executors/exec");
-const binarySearch_1 = require("./Strategies/binarySearch");
-const findInsertPosition_1 = require("./Strategies/findInsertPosition");
-const fourSum_1 = require("./Strategies/fourSum");
-const longSubStringNoDup_1 = require("./Strategies/longSubStringNoDup");
-const minSizeSubarraySum_1 = require("./Strategies/minSizeSubarraySum");
-const moveZeros_1 = require("./Strategies/moveZeros");
-const nextPermutation_1 = require("./Strategies/nextPermutation");
-const singleNumber_1 = require("./Strategies/singleNumber");
-const threeSum_1 = require("./Strategies/threeSum");
-const threeSumClosest_1 = require("./Strategies/threeSumClosest");
-const twoSum1_1 = require("./Strategies/twoSum1");
-const twoSum2_1 = require("./Strategies/twoSum2");
-const containerWithMostWater_1 = require("./Strategies/containerWithMostWater");
-const groupAnagrams_1 = require("./Strategies/groupAnagrams");
+const binarySearch_1 = require("./Strategies/search/binarySearch");
+const findInsertPosition_1 = require("./Strategies/search/findInsertPosition");
+const fourSum_1 = require("./Strategies/twoPointers/fourSum");
+const longSubStringNoDup_1 = require("./Strategies/slidingWindow/longSubStringNoDup");
+const minSizeSubarraySum_1 = require("./Strategies/slidingWindow/minSizeSubarraySum");
+const moveZeros_1 = require("./Strategies/arrayManipulation/moveZeros");
+const nextPermutation_1 = require("./Strategies/arrayManipulation/nextPermutation");
+const singleNumber_1 = require("./Strategies/hashMap/singleNumber");
+const threeSum_1 = require("./Strategies/twoPointers/threeSum");
+const threeSumClosest_1 = require("./Strategies/twoPointers/threeSumClosest");
+const twoSum1_1 = require("./Strategies/hashMap/twoSum1");
+const twoSum2_1 = require("./Strategies/hashMap/twoSum2");
+const containerWithMostWater_1 = require("./Strategies/twoPointers/containerWithMostWater");
+const groupAnagrams_1 = require("./Strategies/hashMap/groupAnagrams");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, exec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]

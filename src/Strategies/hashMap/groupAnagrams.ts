@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../Executors/types/arrays";
-import { groupAnagramsParams } from "./type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { groupAnagramsParams } from "../type";
 
 export class GroupAnagramsStrategy implements BaseSingleArrayExecutionStrategy<'groupAnagrams'> {
     async contextFunction(params: groupAnagramsParams): Promise<any> {
