@@ -53,6 +53,10 @@ export interface groupAnagramsParams {
     strings: Array<string>;
 }
 
+export interface maxSumSubarrayParams {
+    nums: Array<number>;
+}
+
 //String Params
 export interface longSubStringNoDupParams {
     s: string;

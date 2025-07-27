@@ -4,6 +4,7 @@ import { FindInsertPositionStrategy } from "./Strategies/search/findInsertPositi
 import { FourSumStrategy } from "./Strategies/twoPointers/fourSum";
 import { LongestSubStrWithNoRepeatCharStrategy } from "./Strategies/slidingWindow/longSubStringNoDup";
 import { MinimumSizeSubarraySumStrategy } from "./Strategies/slidingWindow/minSizeSubarraySum";
+import { MaximumSumSubArrayStrategy } from "./Strategies/slidingWindow/maxSumSubarray";
 import { MoveZeroStrategy } from "./Strategies/arrayManipulation/moveZeros";
 import { NextPermutationStrategy } from "./Strategies/arrayManipulation/nextPermutation";
 import { SingleOccuringNumberStrategy } from "./Strategies/hashMap/singleNumber";
@@ -70,3 +71,7 @@ exec<'containerWithMostWater'>(containerWithMostWater, { nums: [0, 0, 0, 0, 0] }
 //GroupAnagrams: Empty array - no anagrams to group
 const groupAnagrams = new GroupAnagramsStrategy();
 exec<'groupAnagrams'>(groupAnagrams, { strings: [] }); // ➞ []
+
+// MaximumSumSubArray: Edge Case 1000000
+const maxSumSubarray = new MaximumSumSubArrayStrategy();
+exec<'maxSumSubarray'>(maxSumSubarray, { nums: [1000000, -1000000, 1000000] }); // ➞ 1000000
