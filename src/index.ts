@@ -14,6 +14,7 @@ import { TwoSumStrategy1 } from "./Strategies/hashMap/twoSum1";
 import { TwoSumStrategy2 } from "./Strategies/hashMap/twoSum2";
 import { ContainerWithMostWaterStrategy } from "./Strategies/twoPointers/containerWithMostWater";
 import { GroupAnagramsStrategy } from "./Strategies/hashMap/groupAnagrams";
+import { CountHillsAndValleysStrategy } from "./Strategies/twoPointers/hillsAndValleysCount";
 
 
 // TwoSum1: No pair adds to 100
@@ -75,3 +76,8 @@ exec<'groupAnagrams'>(groupAnagrams, { strings: [] }); // ➞ []
 // MaximumSumSubArray: Edge Case 1000000
 const maxSumSubarray = new MaximumSumSubArrayStrategy();
 exec<'maxSumSubarray'>(maxSumSubarray, { nums: [1000000, -1000000, 1000000] }); // ➞ 1000000
+
+// CountHillsAndValleys: All elements are the same 
+const countHillsAndValleys = new CountHillsAndValleysStrategy();
+exec<'countHillsAndValley'>(countHillsAndValleys, { nums: [5, 5, 5, 5, 5] }); // ➞ 0
+

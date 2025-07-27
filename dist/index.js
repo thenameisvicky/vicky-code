@@ -16,6 +16,7 @@ const twoSum1_1 = require("./Strategies/hashMap/twoSum1");
 const twoSum2_1 = require("./Strategies/hashMap/twoSum2");
 const containerWithMostWater_1 = require("./Strategies/twoPointers/containerWithMostWater");
 const groupAnagrams_1 = require("./Strategies/hashMap/groupAnagrams");
+const hillsAndValleysCount_1 = require("./Strategies/twoPointers/hillsAndValleysCount");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, exec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -61,3 +62,6 @@ const groupAnagrams = new groupAnagrams_1.GroupAnagramsStrategy();
 // MaximumSumSubArray: Edge Case 1000000
 const maxSumSubarray = new maxSumSubarray_1.MaximumSumSubArrayStrategy();
 (0, exec_1.exec)(maxSumSubarray, { nums: [1000000, -1000000, 1000000] }); // ➞ 1000000
+// CountHillsAndValleys: All elements are the same 
+const countHillsAndValleys = new hillsAndValleysCount_1.CountHillsAndValleysStrategy();
+(0, exec_1.exec)(countHillsAndValleys, { nums: [5, 5, 5, 5, 5] }); // ➞ 0

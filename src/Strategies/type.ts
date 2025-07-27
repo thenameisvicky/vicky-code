@@ -57,6 +57,10 @@ export interface maxSumSubarrayParams {
     nums: Array<number>;
 }
 
+export interface countHillsAndValleysParams {
+    nums: Array<number>;
+}
+
 //String Params
 export interface longSubStringNoDupParams {
     s: string;
