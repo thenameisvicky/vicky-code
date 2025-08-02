@@ -84,4 +84,4 @@ exec<'countHillsAndValley'>(countHillsAndValleys, { nums: [5, 5, 5, 5, 5] }); //
 
 // MaximumProductSubArray: Expected 0 as output
 const maximumProductSubarray = new MaximumProductSubArrayStrategy();
-exec<'maxProductSubarray'>(maximumProductSubarray, { nums: [-2, 0 - 2] }); // ➞ 0
+exec<'maxProductSubarray'>(maximumProductSubarray, { nums: [-2, 0 - 2] }); // ➞ 4
