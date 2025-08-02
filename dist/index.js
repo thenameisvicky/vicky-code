@@ -3,20 +3,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const exec_1 = require("./Executors/exec");
 const binarySearch_1 = require("./Strategies/search/binarySearch");
 const findInsertPosition_1 = require("./Strategies/search/findInsertPosition");
-const fourSum_1 = require("./Strategies/twoPointers/fourSum");
+const fourSum_1 = require("./Strategies/pointers/fourSum");
 const longSubStringNoDup_1 = require("./Strategies/slidingWindow/longSubStringNoDup");
 const minSizeSubarraySum_1 = require("./Strategies/slidingWindow/minSizeSubarraySum");
 const maxSumSubarray_1 = require("./Strategies/slidingWindow/maxSumSubarray");
 const moveZeros_1 = require("./Strategies/arrayManipulation/moveZeros");
 const nextPermutation_1 = require("./Strategies/arrayManipulation/nextPermutation");
 const singleNumber_1 = require("./Strategies/hashMap/singleNumber");
-const threeSum_1 = require("./Strategies/twoPointers/threeSum");
-const threeSumClosest_1 = require("./Strategies/twoPointers/threeSumClosest");
+const threeSum_1 = require("./Strategies/pointers/threeSum");
+const threeSumClosest_1 = require("./Strategies/pointers/threeSumClosest");
 const twoSum1_1 = require("./Strategies/hashMap/twoSum1");
 const twoSum2_1 = require("./Strategies/hashMap/twoSum2");
-const containerWithMostWater_1 = require("./Strategies/twoPointers/containerWithMostWater");
+const containerWithMostWater_1 = require("./Strategies/pointers/containerWithMostWater");
 const groupAnagrams_1 = require("./Strategies/hashMap/groupAnagrams");
-const hillsAndValleysCount_1 = require("./Strategies/twoPointers/hillsAndValleysCount");
+const hillsAndValleysCount_1 = require("./Strategies/pointers/hillsAndValleysCount");
+const maxProductSubarry_1 = require("./Strategies/pointers/maxProductSubarry");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, exec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -65,3 +66,6 @@ const maxSumSubarray = new maxSumSubarray_1.MaximumSumSubArrayStrategy();
 // CountHillsAndValleys: All elements are the same 
 const countHillsAndValleys = new hillsAndValleysCount_1.CountHillsAndValleysStrategy();
 (0, exec_1.exec)(countHillsAndValleys, { nums: [5, 5, 5, 5, 5] }); // ➞ 0
+// MaximumProductSubArray: Expected 0 as output
+const maximumProductSubarray = new maxProductSubarry_1.MaximumProductSubArrayStrategy();
+(0, exec_1.exec)(maximumProductSubarray, { nums: [-2, 0 - 2] }); // ➞ 0

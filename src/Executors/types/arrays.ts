@@ -1,4 +1,4 @@
-import { binarySearchParams, containerWithMostWaterParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longSubStringNoDupParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, singleNumberParams, threeSumClosestParams, threeSumParams, twoSumParams } from "../../Strategies/type";
+import { binarySearchParams, containerWithMostWaterParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, singleNumberParams, threeSumClosestParams, threeSumParams, twoSumParams } from "../../Strategies/type";
 
 export interface paramsMap {
   twoSum: twoSumParams,
@@ -16,10 +16,11 @@ export interface paramsMap {
   groupAnagrams: groupAnagramsParams;
   maxSumSubarray: maxSumSubarrayParams;
   countHillsAndValley: countHillsAndValleysParams;
+  maxProductSubarray: maxProductSubarrayParams;
 }
 
 export interface BaseSingleArrayExecutionStrategy<K extends keyof paramsMap> {
-  contextFunction: (params: paramsMap[K]) => Promise<any>;
+  contextFunction: (params: paramsMap[K]) => any;
 }
 
 export class contextExecutor<K extends keyof paramsMap> {
@@ -28,7 +29,7 @@ export class contextExecutor<K extends keyof paramsMap> {
     this.strategy = Strategy;
   }
 
-  async execute(params: paramsMap[K]): Promise<any> {
-    return await this.strategy.contextFunction(params);
+  execute(params: paramsMap[K]): any {
+    return this.strategy.contextFunction(params);
   }
 }

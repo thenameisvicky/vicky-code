@@ -2,7 +2,7 @@ import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
 import { twoSumParams } from "../type";
 
 export class TwoSumStrategy2 implements BaseSingleArrayExecutionStrategy<'twoSum'> {
-  async contextFunction(params: twoSumParams): Promise<Array<number>> {
+  contextFunction(params: twoSumParams): Promise<Array<number>> {
     const { nums, target } = params;
     let left = 0;
     let right = nums.length - 1;

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.FourSumStrategy = void 0;
 class FourSumStrategy {
-    async contextFunction(params) {
+    contextFunction(params) {
         const { nums, target } = params;
         const result = [];
         nums.sort((a, b) => a - b);

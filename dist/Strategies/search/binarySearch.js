@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BinarySearchStrategy = void 0;
 class BinarySearchStrategy {
-    async contextFunction(params) {
+    contextFunction(params) {
         const { nums, target } = params;
         let left = 0;
         let right = nums.length - 1;

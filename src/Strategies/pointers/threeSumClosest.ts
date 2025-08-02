@@ -2,7 +2,7 @@ import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
 import { threeSumClosestParams } from "../type";
 
 export class ThreeSumClosestStrategy implements BaseSingleArrayExecutionStrategy<'threeSumClosest'> {
-    async contextFunction(params: threeSumClosestParams): Promise<any> {
+    contextFunction(params: threeSumClosestParams): any {
         const { nums, target } = params;
         nums.sort((a, b) => a - b);
         let closest = -Infinity;

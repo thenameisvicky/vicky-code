@@ -5,8 +5,8 @@ class contextExecutor {
     constructor(Strategy) {
         this.strategy = Strategy;
     }
-    async execute(params) {
-        return await this.strategy.contextFunction(params);
+    execute(params) {
+        return this.strategy.contextFunction(params);
     }
 }
 exports.contextExecutor = contextExecutor;

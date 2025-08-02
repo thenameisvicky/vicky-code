@@ -2,7 +2,7 @@ import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
 import type { binarySearchParams } from "../type";
 
 export class BinarySearchStrategy implements BaseSingleArrayExecutionStrategy<'binarySearch'> {
-  async contextFunction(params: binarySearchParams): Promise<any> {
+  contextFunction(params: binarySearchParams): any {
     const { nums, target } = params;
     let left = 0;
     let right = nums.length - 1;

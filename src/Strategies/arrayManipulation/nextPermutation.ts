@@ -2,7 +2,7 @@ import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
 import { nextPermutationParams } from "../type";
 
 export class NextPermutationStrategy implements BaseSingleArrayExecutionStrategy<'nextPermutation'> {
-    async contextFunction(params: nextPermutationParams): Promise<any> {
+    contextFunction(params: nextPermutationParams): any {
         const { nums } = params;
         let i = nums.length - 2;
         while (i >= 0 && nums[i] >= nums[i + 1]) {

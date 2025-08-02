@@ -2,7 +2,7 @@ import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
 import { threeSumParams } from "../type";
 
 export class ThreeSumStrategy implements BaseSingleArrayExecutionStrategy<'threeSum'> {
-    async contextFunction(params: threeSumParams): Promise<any> {
+    contextFunction(params: threeSumParams): any {
         const { nums } = params;
         let result = [];
         nums.sort((a, b) => a - b);

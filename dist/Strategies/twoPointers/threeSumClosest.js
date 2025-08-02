@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ThreeSumClosestStrategy = void 0;
 class ThreeSumClosestStrategy {
-    async contextFunction(params) {
+    contextFunction(params) {
         const { nums, target } = params;
         nums.sort((a, b) => a - b);
         let closest = -Infinity;

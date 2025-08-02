@@ -2,7 +2,7 @@ import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
 import { groupAnagramsParams } from "../type";
 
 export class GroupAnagramsStrategy implements BaseSingleArrayExecutionStrategy<'groupAnagrams'> {
-    async contextFunction(params: groupAnagramsParams): Promise<any> {
+    contextFunction(params: groupAnagramsParams): any {
         const { strings } = params;
         const map = new Map();
         for (let i = 0; i < strings.length; i++) {

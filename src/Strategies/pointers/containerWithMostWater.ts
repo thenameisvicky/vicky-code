@@ -2,7 +2,7 @@ import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
 import { containerWithMostWaterParams } from "../type";
 
 export class ContainerWithMostWaterStrategy implements BaseSingleArrayExecutionStrategy<'containerWithMostWater'> {
-    async contextFunction(params: containerWithMostWaterParams): Promise<any> {
+    contextFunction(params: containerWithMostWaterParams): any {
         const { nums } = params;
         let left = 0;
         let right = nums.length - 1;

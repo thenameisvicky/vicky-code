@@ -1,20 +1,21 @@
 import { exec } from "./Executors/exec";
 import { BinarySearchStrategy } from "./Strategies/search/binarySearch";
 import { FindInsertPositionStrategy } from "./Strategies/search/findInsertPosition";
-import { FourSumStrategy } from "./Strategies/twoPointers/fourSum";
+import { FourSumStrategy } from "./Strategies/pointers/fourSum";
 import { LongestSubStrWithNoRepeatCharStrategy } from "./Strategies/slidingWindow/longSubStringNoDup";
 import { MinimumSizeSubarraySumStrategy } from "./Strategies/slidingWindow/minSizeSubarraySum";
 import { MaximumSumSubArrayStrategy } from "./Strategies/slidingWindow/maxSumSubarray";
 import { MoveZeroStrategy } from "./Strategies/arrayManipulation/moveZeros";
 import { NextPermutationStrategy } from "./Strategies/arrayManipulation/nextPermutation";
 import { SingleOccuringNumberStrategy } from "./Strategies/hashMap/singleNumber";
-import { ThreeSumStrategy } from "./Strategies/twoPointers/threeSum";
-import { ThreeSumClosestStrategy } from "./Strategies/twoPointers/threeSumClosest";
+import { ThreeSumStrategy } from "./Strategies/pointers/threeSum";
+import { ThreeSumClosestStrategy } from "./Strategies/pointers/threeSumClosest";
 import { TwoSumStrategy1 } from "./Strategies/hashMap/twoSum1";
 import { TwoSumStrategy2 } from "./Strategies/hashMap/twoSum2";
-import { ContainerWithMostWaterStrategy } from "./Strategies/twoPointers/containerWithMostWater";
+import { ContainerWithMostWaterStrategy } from "./Strategies/pointers/containerWithMostWater";
 import { GroupAnagramsStrategy } from "./Strategies/hashMap/groupAnagrams";
-import { CountHillsAndValleysStrategy } from "./Strategies/twoPointers/hillsAndValleysCount";
+import { CountHillsAndValleysStrategy } from "./Strategies/pointers/hillsAndValleysCount";
+import { MaximumProductSubArrayStrategy } from "./Strategies/pointers/maxProductSubarry";
 
 
 // TwoSum1: No pair adds to 100
@@ -81,3 +82,6 @@ exec<'maxSumSubarray'>(maxSumSubarray, { nums: [1000000, -1000000, 1000000] }); 
 const countHillsAndValleys = new CountHillsAndValleysStrategy();
 exec<'countHillsAndValley'>(countHillsAndValleys, { nums: [5, 5, 5, 5, 5] }); // ➞ 0
 
+// MaximumProductSubArray: Expected 0 as output
+const maximumProductSubarray = new MaximumProductSubArrayStrategy();
+exec<'maxProductSubarray'>(maximumProductSubarray, { nums: [-2, 0 - 2] }); // ➞ 0
