@@ -16,6 +16,7 @@ import { ContainerWithMostWaterStrategy } from "./Strategies/pointers/containerW
 import { GroupAnagramsStrategy } from "./Strategies/hashMap/groupAnagrams";
 import { CountHillsAndValleysStrategy } from "./Strategies/pointers/hillsAndValleysCount";
 import { MaximumProductSubArrayStrategy } from "./Strategies/pointers/maxProductSubarry";
+import { RotatedArraySearchStrategy } from "./Strategies/search/rotatedArraySearch";
 
 
 // TwoSum1: No pair adds to 100
@@ -85,3 +86,7 @@ exec<'countHillsAndValley'>(countHillsAndValleys, { nums: [5, 5, 5, 5, 5] }); //
 // MaximumProductSubArray: Expected 0 as output
 const maximumProductSubarray = new MaximumProductSubArrayStrategy();
 exec<'maxProductSubarray'>(maximumProductSubarray, { nums: [-2, 0 - 2] }); // ➞ 4
+
+//RotatedArraySearch: Edge Case handling with all Duplicate
+const rotatedArraySearch = new RotatedArraySearchStrategy();
+exec<'rotatedArraySearch'>(rotatedArraySearch, { nums: [1,1,3,1,1], target: 3 });

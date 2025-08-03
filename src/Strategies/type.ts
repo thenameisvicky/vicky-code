@@ -65,6 +65,10 @@ export type maxProductSubarrayParams = {
     nums: Array<number>;
 }
 
+export type rotatedArraySearchParams = {
+    nums: Array<number>;
+    target: number;  
+}
 //String Params
 export type longSubStringNoDupParams = {
     s: string;

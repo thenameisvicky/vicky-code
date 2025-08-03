@@ -18,6 +18,7 @@ const containerWithMostWater_1 = require("./Strategies/pointers/containerWithMos
 const groupAnagrams_1 = require("./Strategies/hashMap/groupAnagrams");
 const hillsAndValleysCount_1 = require("./Strategies/pointers/hillsAndValleysCount");
 const maxProductSubarry_1 = require("./Strategies/pointers/maxProductSubarry");
+const rotatedArraySearch_1 = require("./Strategies/search/rotatedArraySearch");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, exec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -68,4 +69,7 @@ const countHillsAndValleys = new hillsAndValleysCount_1.CountHillsAndValleysStra
 (0, exec_1.exec)(countHillsAndValleys, { nums: [5, 5, 5, 5, 5] }); // ➞ 0
 // MaximumProductSubArray: Expected 0 as output
 const maximumProductSubarray = new maxProductSubarry_1.MaximumProductSubArrayStrategy();
-(0, exec_1.exec)(maximumProductSubarray, { nums: [-2, 0 - 2] }); // ➞ 0
+(0, exec_1.exec)(maximumProductSubarray, { nums: [-2, 0 - 2] }); // ➞ 4
+//RotatedArraySearch: Edge Case handling with all Duplicate
+const rotatedArraySearch = new rotatedArraySearch_1.RotatedArraySearchStrategy();
+(0, exec_1.exec)(rotatedArraySearch, { nums: [1, 1, 3, 1, 1], target: 3 });
