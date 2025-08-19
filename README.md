@@ -1,16 +1,17 @@
 # Leetcode-Repo
 
-A collaborative TypeScript project for implementing, testing, and sharing algorithmic solutions to Leetcode-style problems. Designed for team growth, learning, and code quality.
+A collaborative TypeScript project for implementing, testing, and sharing algorithmic solutions to Leetcode-style problems and real-world engineering challenges. Designed for team growth, learning, and code quality.
 
 ## 📁 Project Structure
 
 ```
 Leetcode-Repo/
   ├── src/
-  │   ├── Strategies/         # Algorithm implementations organized by category
+  │   ├── leetCodeStyle/      # Algorithm implementations organized by category
   │   │     ├── arrayManipulation/  # Array manipulation algorithms
   │   │     │     ├── moveZeros.ts
-  │   │     │     └── nextPermutation.ts
+  │   │     │     ├── nextPermutation.ts
+  │   │     │     └── maxSumSubarray.ts
   │   │     ├── hashMap/            # Hash map based solutions
   │   │     │     ├── groupAnagrams.ts
   │   │     │     ├── singleNumber.ts
@@ -29,11 +30,17 @@ Leetcode-Repo/
   │   │     │     └── rotatedArraySearch.ts
   │   │     ├── slidingWindow/      # Sliding window technique
   │   │     │     ├── longSubStringNoDup.ts
-  │   │     │     ├── maxSumSubarray.ts
   │   │     │     └── minSizeSubarraySum.ts
-  │   │     └── type.ts             # Common types and interfaces
+  │   │     ├── types.ts            # Common types and interfaces
+  │   │     └── index.ts            # Strategy execution and testing
+  │   ├── engineeringDrills/   # Real-world engineering problems and solutions
+  │   │     ├── systemDesign/      # System architecture and design problems
+  │   │     ├── dataStructures/    # Custom data structure implementations
+  │   │     ├── optimization/      # Performance and efficiency problems
+  │   │     ├── integration/       # API integration and microservice problems
+  │   │     └── testing/           # Testing strategies and test-driven development
   │   ├── Executors/          # Code to run strategies and handle input/output
-  │   │     ├── exec.ts
+  │   │     ├── problemSolvingExec.ts
   │   │     └── types/
   │   │           └── arrays.ts
   │   └── index.ts            # Main entry point
@@ -91,13 +98,50 @@ npm run dev
 - **Maximum Sum Subarray:** Find contiguous subarray with maximum sum
 - **Minimum Size Subarray Sum:** Find minimal length of contiguous subarray with sum ≥ target
 
-## 🏗️ Adding a New Strategy
+## 🏭 Engineering Drills
 
-1. **Choose the appropriate category** in `src/Strategies/` based on the algorithm type
-2. **Create a new class** implementing the appropriate interface (see `type.ts`)
+Beyond traditional algorithmic challenges, this section focuses on real-world engineering problems and production-ready solutions.
+
+### System Design
+- **Rate Limiting:** Implement various rate limiting strategies (Token Bucket, Leaky Bucket, Fixed Window)
+- **Caching Strategies:** LRU, LFU, and distributed caching implementations
+- **Load Balancing:** Round-robin, least connections, and weighted algorithms
+
+### Data Structures
+- **Custom Implementations:** Specialized data structures for specific use cases
+- **Performance Optimization:** Memory-efficient and fast data structure variants
+- **Concurrent Structures:** Thread-safe data structures for multi-threaded environments
+
+### Performance & Optimization
+- **Database Query Optimization:** Index strategies, query planning, and performance tuning
+- **Memory Management:** Efficient memory allocation and garbage collection strategies
+- **Algorithm Complexity:** Time and space complexity optimization techniques
+
+### API & Integration
+- **RESTful API Design:** Best practices, versioning, and error handling
+- **Microservice Communication:** Service discovery, load balancing, and fault tolerance
+- **Authentication & Authorization:** JWT, OAuth, and role-based access control
+
+### Testing & Quality
+- **Test-Driven Development:** Writing tests before implementation
+- **Performance Testing:** Load testing, stress testing, and benchmarking
+- **Security Testing:** Vulnerability assessment and penetration testing
+
+## 🏗️ Adding New Solutions
+
+### LeetCode Strategies
+1. **Choose the appropriate category** in `src/leetCodeStyle/` based on the algorithm type
+2. **Create a new class** implementing the appropriate interface (see `types.ts`)
 3. **Export your class** and implement the `contextFunction` method
-4. **Update `src/index.ts`** to register and execute your new strategy
-5. **(Optional) Add types** in `src/Executors/types/` if needed
+4. **Update `src/leetCodeStyle/index.ts`** to register and execute your new strategy
+5. **(Optional) Add types** in `src/leetCodeStyle/types.ts` if needed
+
+### Engineering Drills
+1. **Choose the appropriate category** in `src/engineeringDrills/` based on the problem type
+2. **Create a new module** with clear problem description and solution
+3. **Include tests** and performance benchmarks
+4. **Document the approach** and real-world applications
+5. **Update the relevant section** in this README
 
 ## 💡 Why This Structure?
 
