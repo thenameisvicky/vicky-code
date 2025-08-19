@@ -1,4 +1,4 @@
-import { binarySearchParams, containerWithMostWaterParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, rotatedArraySearchParams, singleNumberParams, threeSumClosestParams, threeSumParams, twoSumParams } from "../../Strategies/type";
+import { binarySearchParams, containerWithMostWaterParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, rotatedArraySearchParams, singleNumberParams, threeSumClosestParams, threeSumParams, twoSumParams } from "../../ProblemSolvingStrategies/type";
 
 export interface paramsMap {
   twoSum: twoSumParams,
