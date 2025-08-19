@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { findInsertPositionParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { findInsertPositionParams } from "../ProblemSolvingStrategies/type";
 
 export class FindInsertPositionStrategy implements BaseSingleArrayExecutionStrategy<'findInsertPosition'> {
     contextFunction(params: findInsertPositionParams): any {

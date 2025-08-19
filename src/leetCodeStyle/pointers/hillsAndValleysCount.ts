@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { countHillsAndValleysParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { countHillsAndValleysParams } from "../ProblemSolvingStrategies/type";
 
 export class CountHillsAndValleysStrategy implements BaseSingleArrayExecutionStrategy<'countHillsAndValley'> {
     contextFunction(params: countHillsAndValleysParams): any {

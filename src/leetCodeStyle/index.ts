@@ -1,22 +1,22 @@
 import { exec } from "../Executors/problemSolvingExec";
-import { BinarySearchStrategy } from "./ProblemSolvingStrategies/search/binarySearch";
-import { FindInsertPositionStrategy } from "./ProblemSolvingStrategies/search/findInsertPosition";
-import { FourSumStrategy } from "./ProblemSolvingStrategies/pointers/fourSum";
-import { LongestSubStrWithNoRepeatCharStrategy } from "./ProblemSolvingStrategies/slidingWindow/longSubStringNoDup";
-import { MinimumSizeSubarraySumStrategy } from "./ProblemSolvingStrategies/slidingWindow/minSizeSubarraySum";
-import { MaximumSumSubArrayStrategy } from "./ProblemSolvingStrategies/arrayManipulation/maxSumSubarray";
-import { MoveZeroStrategy } from "./ProblemSolvingStrategies/arrayManipulation/moveZeros";
-import { NextPermutationStrategy } from "./ProblemSolvingStrategies/arrayManipulation/nextPermutation";
-import { SingleOccuringNumberStrategy } from "./ProblemSolvingStrategies/hashMap/singleNumber";
-import { ThreeSumStrategy } from "./ProblemSolvingStrategies/pointers/threeSum";
-import { ThreeSumClosestStrategy } from "./ProblemSolvingStrategies/pointers/threeSumClosest";
-import { TwoSumStrategy1 } from "./ProblemSolvingStrategies/hashMap/twoSum1";
-import { TwoSumStrategy2 } from "./ProblemSolvingStrategies/hashMap/twoSum2";
-import { ContainerWithMostWaterStrategy } from "./ProblemSolvingStrategies/pointers/containerWithMostWater";
-import { GroupAnagramsStrategy } from "./ProblemSolvingStrategies/hashMap/groupAnagrams";
-import { CountHillsAndValleysStrategy } from "./ProblemSolvingStrategies/pointers/hillsAndValleysCount";
-import { MaximumProductSubArrayStrategy } from "./ProblemSolvingStrategies/pointers/maxProductSubarry";
-import { RotatedArraySearchStrategy } from "./ProblemSolvingStrategies/search/rotatedArraySearch";
+import { BinarySearchStrategy } from "./search/binarySearch";
+import { FindInsertPositionStrategy } from "./search/findInsertPosition";
+import { FourSumStrategy } from "./pointers/fourSum";
+import { LongestSubStrWithNoRepeatCharStrategy } from "./slidingWindow/longSubStringNoDup";
+import { MinimumSizeSubarraySumStrategy } from "./slidingWindow/minSizeSubarraySum";
+import { MaximumSumSubArrayStrategy } from "./arrayManipulation/maxSumSubarray";
+import { MoveZeroStrategy } from "./arrayManipulation/moveZeros";
+import { NextPermutationStrategy } from "./arrayManipulation/nextPermutation";
+import { SingleOccuringNumberStrategy } from "./hashMap/singleNumber";
+import { ThreeSumStrategy } from "./pointers/threeSum";
+import { ThreeSumClosestStrategy } from "./pointers/threeSumClosest";
+import { TwoSumStrategy1 } from "./hashMap/twoSum1";
+import { TwoSumStrategy2 } from "./hashMap/twoSum2";
+import { ContainerWithMostWaterStrategy } from "./pointers/containerWithMostWater";
+import { GroupAnagramsStrategy } from "./hashMap/groupAnagrams";
+import { CountHillsAndValleysStrategy } from "./pointers/hillsAndValleysCount";
+import { MaximumProductSubArrayStrategy } from "./pointers/maxProductSubarry";
+import { RotatedArraySearchStrategy } from "./search/rotatedArraySearch";
 
 
 // TwoSum1: No pair adds to 100

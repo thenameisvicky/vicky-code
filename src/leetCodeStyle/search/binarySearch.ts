@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import type { binarySearchParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import type { binarySearchParams } from "../ProblemSolvingStrategies/type";
 
 export class BinarySearchStrategy implements BaseSingleArrayExecutionStrategy<'binarySearch'> {
   contextFunction(params: binarySearchParams): any {

@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { rotatedArraySearchParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { rotatedArraySearchParams } from "../ProblemSolvingStrategies/type";
 
 export class RotatedArraySearchStrategy implements BaseSingleArrayExecutionStrategy<'rotatedArraySearch'> {
     contextFunction(params: rotatedArraySearchParams): any {

@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { nextPermutationParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { nextPermutationParams } from "../ProblemSolvingStrategies/type";
 
 export class NextPermutationStrategy implements BaseSingleArrayExecutionStrategy<'nextPermutation'> {
     contextFunction(params: nextPermutationParams): any {

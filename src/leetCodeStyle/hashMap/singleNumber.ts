@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { singleNumberParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { singleNumberParams } from "../ProblemSolvingStrategies/type";
 
 export class SingleOccuringNumberStrategy implements BaseSingleArrayExecutionStrategy<'singleOccuringNumber'> {
     contextFunction(params: singleNumberParams): any {

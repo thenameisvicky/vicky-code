@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { containerWithMostWaterParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { containerWithMostWaterParams } from "../ProblemSolvingStrategies/type";
 
 export class ContainerWithMostWaterStrategy implements BaseSingleArrayExecutionStrategy<'containerWithMostWater'> {
     contextFunction(params: containerWithMostWaterParams): any {

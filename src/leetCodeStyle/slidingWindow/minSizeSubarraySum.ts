@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { minSizeSubarraySumParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { minSizeSubarraySumParams } from "../ProblemSolvingStrategies/type";
 
 export class MinimumSizeSubarraySumStrategy implements BaseSingleArrayExecutionStrategy<'minSizeSubarrSum'> {
     contextFunction(params: minSizeSubarraySumParams): any {

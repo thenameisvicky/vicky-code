@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { maxProductSubarrayParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { maxProductSubarrayParams } from "../ProblemSolvingStrategies/type";
 
 export class MaximumProductSubArrayStrategy implements BaseSingleArrayExecutionStrategy<'maxProductSubarray'> {
     contextFunction(params: maxProductSubarrayParams): any {

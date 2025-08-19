@@ -1,5 +1,5 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { fourSumParams } from "../type";
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { fourSumParams } from "../ProblemSolvingStrategies/type";
 
 export class FourSumStrategy implements BaseSingleArrayExecutionStrategy<'fourSum'> {
     contextFunction(params: fourSumParams): any {
