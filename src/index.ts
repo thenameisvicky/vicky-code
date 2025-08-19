@@ -4,7 +4,7 @@ import { FindInsertPositionStrategy } from "./Strategies/search/findInsertPositi
 import { FourSumStrategy } from "./Strategies/pointers/fourSum";
 import { LongestSubStrWithNoRepeatCharStrategy } from "./Strategies/slidingWindow/longSubStringNoDup";
 import { MinimumSizeSubarraySumStrategy } from "./Strategies/slidingWindow/minSizeSubarraySum";
-import { MaximumSumSubArrayStrategy } from "./Strategies/slidingWindow/maxSumSubarray";
+import { MaximumSumSubArrayStrategy } from "./Strategies/arrayManipulation/maxSumSubarray";
 import { MoveZeroStrategy } from "./Strategies/arrayManipulation/moveZeros";
 import { NextPermutationStrategy } from "./Strategies/arrayManipulation/nextPermutation";
 import { SingleOccuringNumberStrategy } from "./Strategies/hashMap/singleNumber";
