@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
 import { groupAnagramsParams } from "../type";
 
 export class GroupAnagramsStrategy implements BaseSingleArrayExecutionStrategy<'groupAnagrams'> {

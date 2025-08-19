@@ -1,4 +1,4 @@
-import { exec } from "./Executors/problemSolvingExec";
+import { exec } from "../Executors/problemSolvingExec";
 import { BinarySearchStrategy } from "./ProblemSolvingStrategies/search/binarySearch";
 import { FindInsertPositionStrategy } from "./ProblemSolvingStrategies/search/findInsertPosition";
 import { FourSumStrategy } from "./ProblemSolvingStrategies/pointers/fourSum";

@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
 import { singleNumberParams } from "../type";
 
 export class SingleOccuringNumberStrategy implements BaseSingleArrayExecutionStrategy<'singleOccuringNumber'> {

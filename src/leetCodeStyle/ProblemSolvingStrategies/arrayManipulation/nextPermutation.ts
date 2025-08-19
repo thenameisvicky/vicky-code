@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
 import { nextPermutationParams } from "../type";
 
 export class NextPermutationStrategy implements BaseSingleArrayExecutionStrategy<'nextPermutation'> {

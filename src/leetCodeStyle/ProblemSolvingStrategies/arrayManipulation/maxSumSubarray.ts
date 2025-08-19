@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
 import { maxSumSubarrayParams } from "../type";
 
 export class MaximumSumSubArrayStrategy implements BaseSingleArrayExecutionStrategy<'maxSumSubarray'> {

@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
 import { rotatedArraySearchParams } from "../type";
 
 export class RotatedArraySearchStrategy implements BaseSingleArrayExecutionStrategy<'rotatedArraySearch'> {

@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
 import { twoSumParams } from "../type";
 
 export class TwoSumStrategy1 implements BaseSingleArrayExecutionStrategy<'twoSum'> {

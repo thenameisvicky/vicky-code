@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
 import { countHillsAndValleysParams } from "../type";
 
 export class CountHillsAndValleysStrategy implements BaseSingleArrayExecutionStrategy<'countHillsAndValley'> {

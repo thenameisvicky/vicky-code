@@ -1,4 +1,4 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
 import { threeSumClosestParams } from "../type";
 
 export class ThreeSumClosestStrategy implements BaseSingleArrayExecutionStrategy<'threeSumClosest'> {
