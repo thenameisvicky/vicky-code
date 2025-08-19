@@ -1,13 +1,14 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { threeSumClosestParams } from "../types";
-
-export class ThreeSumClosestStrategy implements BaseSingleArrayExecutionStrategy<'threeSumClosest'> {
-    contextFunction(params: threeSumClosestParams): any {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThreeSumClosestStrategy = void 0;
+class ThreeSumClosestStrategy {
+    contextFunction(params) {
         const { nums, target } = params;
-        nums.sort((a: number, b: number) => a - b);
+        nums.sort((a, b) => a - b);
         let closest = -Infinity;
         for (let i = 0; i < nums.length - 2; i++) {
-            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue;
             let j = i + 1;
             let k = nums.length - 1;
             while (j < k) {
@@ -17,13 +18,16 @@ export class ThreeSumClosestStrategy implements BaseSingleArrayExecutionStrategy
                 }
                 if (sum < target) {
                     j++;
-                } else if (sum > target) {
+                }
+                else if (sum > target) {
                     k--;
-                } else {
+                }
+                else {
                     return sum;
                 }
             }
         }
         return closest;
     }
-} 
+}
+exports.ThreeSumClosestStrategy = ThreeSumClosestStrategy;

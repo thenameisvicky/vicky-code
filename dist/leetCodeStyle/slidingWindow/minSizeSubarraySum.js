@@ -1,8 +1,8 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { minSizeSubarraySumParams } from "../types";
-
-export class MinimumSizeSubarraySumStrategy implements BaseSingleArrayExecutionStrategy<'minSizeSubarrSum'> {
-    contextFunction(params: minSizeSubarraySumParams): any {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MinimumSizeSubarraySumStrategy = void 0;
+class MinimumSizeSubarraySumStrategy {
+    contextFunction(params) {
         const { nums, target } = params;
         let left = 0, min = Infinity, sum = 0;
         for (let i = 0; i < nums.length; i++) {
@@ -16,3 +16,4 @@ export class MinimumSizeSubarraySumStrategy implements BaseSingleArrayExecutionS
         return min === Infinity ? 0 : min;
     }
 }
+exports.MinimumSizeSubarraySumStrategy = MinimumSizeSubarraySumStrategy;

@@ -1,5 +1,5 @@
 import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { groupAnagramsParams } from "../ProblemSolvingStrategies/type";
+import { groupAnagramsParams } from "../types";
 
 export class GroupAnagramsStrategy implements BaseSingleArrayExecutionStrategy<'groupAnagrams'> {
     contextFunction(params: groupAnagramsParams): any {

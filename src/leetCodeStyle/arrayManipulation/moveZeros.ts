@@ -1,5 +1,5 @@
 import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { moveZerosParams } from "../ProblemSolvingStrategies/type";
+import { moveZerosParams } from "../types";
 
 export class MoveZeroStrategy implements BaseSingleArrayExecutionStrategy<'moveZeros'> {
   contextFunction(params: moveZerosParams): any {

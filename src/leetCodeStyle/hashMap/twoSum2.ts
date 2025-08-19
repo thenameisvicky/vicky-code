@@ -1,5 +1,5 @@
 import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { twoSumParams } from "../ProblemSolvingStrategies/type";
+import { twoSumParams } from "../types";
 
 export class TwoSumStrategy2 implements BaseSingleArrayExecutionStrategy<'twoSum'> {
   contextFunction(params: twoSumParams): Promise<Array<number>> {

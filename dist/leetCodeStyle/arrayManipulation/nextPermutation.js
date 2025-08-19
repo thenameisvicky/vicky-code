@@ -1,8 +1,8 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { nextPermutationParams } from "../types";
-
-export class NextPermutationStrategy implements BaseSingleArrayExecutionStrategy<'nextPermutation'> {
-    contextFunction(params: nextPermutationParams): any {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.NextPermutationStrategy = void 0;
+class NextPermutationStrategy {
+    contextFunction(params) {
         const { nums } = params;
         let i = nums.length - 2;
         while (i >= 0 && nums[i] >= nums[i + 1]) {
@@ -25,3 +25,4 @@ export class NextPermutationStrategy implements BaseSingleArrayExecutionStrategy
         return nums;
     }
 }
+exports.NextPermutationStrategy = NextPermutationStrategy;

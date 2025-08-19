@@ -1,21 +1,17 @@
-import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { maxSumSubarrayParams } from "../types";
-
-export class MaximumSumSubArrayStrategy implements BaseSingleArrayExecutionStrategy<'maxSumSubarray'> {
-    contextFunction(params: maxSumSubarrayParams): any {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MaximumSumSubArrayStrategy = void 0;
+class MaximumSumSubArrayStrategy {
+    contextFunction(params) {
         const { nums } = params;
-
         if (nums.length === 0) {
             return 0;
         }
-
         if (nums.length === 1) {
             return nums[0];
         }
-
         let currentSum = 0;
         let maxSum = nums[0];
-
         for (let i = 0; i < nums.length; i++) {
             currentSum += nums[i];
             maxSum = Math.max(maxSum, currentSum);
@@ -26,3 +22,4 @@ export class MaximumSumSubArrayStrategy implements BaseSingleArrayExecutionStrat
         return maxSum;
     }
 }
+exports.MaximumSumSubArrayStrategy = MaximumSumSubArrayStrategy;

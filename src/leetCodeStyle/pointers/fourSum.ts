@@ -1,11 +1,11 @@
 import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { fourSumParams } from "../ProblemSolvingStrategies/type";
+import { fourSumParams } from "../types";
 
 export class FourSumStrategy implements BaseSingleArrayExecutionStrategy<'fourSum'> {
     contextFunction(params: fourSumParams): any {
         const { nums, target } = params;
         const result = [];
-        nums.sort((a, b) => a - b);
+        nums.sort((a: number, b: number) => a - b);
         for (let i = 0; i < nums.length - 3; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             for (let j = i + 1; j < nums.length - 2; j++) {

@@ -1,5 +1,5 @@
 import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { longSubStringNoDupParams } from "../ProblemSolvingStrategies/type";
+import { longSubStringNoDupParams } from "../types";
 
 export class LongestSubStrWithNoRepeatCharStrategy implements BaseSingleArrayExecutionStrategy<'longestSubStringNoDup'> {
     contextFunction(params: longSubStringNoDupParams): any {

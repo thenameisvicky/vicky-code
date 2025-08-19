@@ -1,11 +1,11 @@
 import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { threeSumParams } from "../ProblemSolvingStrategies/type";
+import { threeSumParams } from "../types";
 
 export class ThreeSumStrategy implements BaseSingleArrayExecutionStrategy<'threeSum'> {
     contextFunction(params: threeSumParams): any {
         const { nums } = params;
         let result = [];
-        nums.sort((a, b) => a - b);
+        nums.sort((a: number, b: number) => a - b);
         for (let i = 0; i < nums.length - 2; i++) {
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             let j = i + 1;
