@@ -1,0 +1,26 @@
+name: Auto Assign Reviewer
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, reopened]
+
+jobs:
+  auto-assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Assign Reviewer
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo, number } = context.issue;
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner,
+                repo,
+                pull_number: number,
+                reviewers: ['thenameisvicky']
+              });
+              console.log(`Successfully assigned @thenameisvicky as reviewer for PR #${number}`);
+            } catch (error) {
+              console.log(`Failed to assign reviewer: ${error.message}`);
+            }

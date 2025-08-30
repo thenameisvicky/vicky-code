@@ -1,0 +1,65 @@
+name: PR Review Assignment
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, reopened, synchronize]
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  assign-reviewer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign PR Reviewer
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo, number } = context.issue;
+            
+            const pr = await github.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: number
+            });
+            
+            if (pr.data.draft) {
+              console.log('PR is still in draft mode, skipping reviewer assignment');
+              return;
+            }
+            
+            const currentReviewers = await github.rest.pulls.listRequestedReviewers({
+              owner,
+              repo,
+              pull_number: number
+            });
+            
+            const isAlreadyAssigned = currentReviewers.data.users.some(
+              user => user.login === 'thenameisvicky'
+            );
+            
+            if (!isAlreadyAssigned) {
+              try {
+                await github.rest.pulls.requestReviewers({
+                  owner,
+                  repo,
+                  pull_number: number,
+                  reviewers: ['thenameisvicky']
+                });
+                
+                console.log(`Successfully assigned @thenameisvicky as reviewer for PR #${number}`);
+                
+                await github.rest.issues.createComment({
+                  owner,
+                  repo,
+                  issue_number: number,
+                  body: `Hi @thenameisvicky! You've been automatically assigned to review this PR. Please review when you have time.`
+                });
+                
+              } catch (error) {
+                console.log(`Failed to assign reviewer: ${error.message}`);
+              }
+            } else {
+              console.log(`@thenameisvicky is already assigned as reviewer for PR #${number}`);
+            }
