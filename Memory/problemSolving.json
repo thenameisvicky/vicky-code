@@ -1,5 +1,5 @@
 {
-  "currentLevel": "Intermediate to Advanced (strong in arrays, strings, binary search, sliding window, hash map; growing in optimization and breadth)",
+  "currentLevel": "Intermediate to Advanced (strong in arrays, strings, binary search, sliding window, hash map, subarray problems; consistently improving with 19 problems solved)",
   "areasOfImprovement": [
     "Expand to more problem types (graphs, trees, dynamic programming, advanced data structures)",
     "Participate in coding contests for speed and breadth",
@@ -7,7 +7,7 @@
     "Revisit and optimize previously solved problems",
     "Increase pace and minimize reliance on AI tools"
   ],
-  "lastSolvedStrategyDate": "2025-01-27",
+  "lastSolvedStrategyDate": "2025-01-28",
   "problems": [
     {
       "name": "Maximum Sum Subarray (Kadane's Algorithm)",
@@ -112,6 +112,13 @@
       "file": "rotatedArraySearch.ts",
       "approach": "Binary Search with Rotation Handling",
       "description": "Searches for a target in a rotated sorted array using binary search. Handles both sorted and unsorted halves by comparing nums[left] with nums[mid]. Correctly manages edge cases and avoids infinite loops. Returns target index or -1 if not found. Time complexity O(log n), space complexity O(1).",
+      "recentlyAdded": true
+    },
+    {
+      "name": "Zero-Filled Subarrays (LeetCode 2348)",
+      "file": "zeroFilledSubArrlength.ts",
+      "approach": "Sliding Window with Streak Counting",
+      "description": "Counts the total number of zero-filled subarrays by maintaining a streak counter. For each consecutive zero, adds the current streak length to the total count. Efficiently handles edge cases and returns the total count of all possible zero-filled subarrays. Time complexity O(n), space complexity O(1).",
       "recentlyAdded": true
     }
   ]

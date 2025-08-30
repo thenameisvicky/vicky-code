@@ -1,160 +1,216 @@
-# Leetcode-Repo
+# LeetCode Practice Repository
 
-A collaborative TypeScript project for implementing, testing, and sharing algorithmic solutions to Leetcode-style problems and real-world engineering challenges. Designed for team growth, learning, and code quality.
+A comprehensive TypeScript project for implementing, testing, and sharing algorithmic solutions to LeetCode problems. This repository is designed for learning, practicing, and improving algorithmic problem-solving skills with a focus on clean, maintainable code.
 
-## 📁 Project Structure
-
-```
-Leetcode-Repo/
-  ├── src/
-  │   ├── leetCodeStyle/      # Algorithm implementations organized by category
-  │   │     ├── arrayManipulation/  # Array manipulation algorithms
-  │   │     │     ├── moveZeros.ts
-  │   │     │     ├── nextPermutation.ts
-  │   │     │     └── maxSumSubarray.ts
-  │   │     ├── hashMap/            # Hash map based solutions
-  │   │     │     ├── groupAnagrams.ts
-  │   │     │     ├── singleNumber.ts
-  │   │     │     ├── twoSum1.ts
-  │   │     │     └── twoSum2.ts
-  │   │     ├── pointers/           # Two-pointer and multi-pointer techniques
-  │   │     │     ├── containerWithMostWater.ts
-  │   │     │     ├── fourSum.ts
-  │   │     │     ├── hillsAndValleysCount.ts
-  │   │     │     ├── maxProductSubarry.ts
-  │   │     │     ├── threeSum.ts
-  │   │     │     └── threeSumClosest.ts
-  │   │     ├── search/             # Binary search and search algorithms
-  │   │     │     ├── binarySearch.ts
-  │   │     │     ├── findInsertPosition.ts
-  │   │     │     └── rotatedArraySearch.ts
-  │   │     ├── slidingWindow/      # Sliding window technique
-  │   │     │     ├── longSubStringNoDup.ts
-  │   │     │     └── minSizeSubarraySum.ts
-  │   │     ├── types.ts            # Common types and interfaces
-  │   │     └── index.ts            # Strategy execution and testing
-  │   ├── engineeringDrills/   # Real-world engineering problems and solutions
-  │   │     ├── systemDesign/      # System architecture and design problems
-  │   │     ├── dataStructures/    # Custom data structure implementations
-  │   │     ├── optimization/      # Performance and efficiency problems
-  │   │     ├── integration/       # API integration and microservice problems
-  │   │     └── testing/           # Testing strategies and test-driven development
-  │   ├── Executors/          # Code to run strategies and handle input/output
-  │   │     ├── problemSolvingExec.ts
-  │   │     └── types/
-  │   │           └── arrays.ts
-  │   └── index.ts            # Main entry point
-  ├── package.json            # NPM scripts and dependencies
-  └── tsconfig.json           # TypeScript configuration
-```
-
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v18+ recommended)
 - [npm](https://www.npmjs.com/)
 
-### Install Dependencies
+### Installation & Setup
 ```bash
+# Clone the repository
+git clone <your-repo-url>
+cd Leetcode
+
+# Install dependencies
 npm install
-```
 
-### Build the Project
-```bash
+# Build the project
 npm run build
+
+# Run LeetCode solutions
+npm run leetcodeDev
 ```
 
-### Run the Project
-```bash
-npm run dev
+## 📁 Project Structure
+
+```
+Leetcode/
+├── src/
+│   ├── leetCodeStyle/           # Algorithm implementations by category
+│   │   ├── arrayManipulation/   # Array manipulation algorithms
+│   │   │   ├── moveZeros.ts     # Move zeroes to end (LeetCode 283)
+│   │   │   ├── nextPermutation.ts # Next permutation (LeetCode 31)
+│   │   │   ├── maxSumSubarray.ts # Maximum subarray sum (LeetCode 53)
+│   │   │   └── zeroFilledSubArrlength.ts # Zero-filled subarrays (LeetCode 2348)
+│   │   ├── hashMap/             # Hash map based solutions
+│   │   │   ├── twoSum1.ts       # Two sum - no duplicates (LeetCode 1)
+│   │   │   ├── twoSum2.ts       # Two sum - with duplicates
+│   │   │   ├── groupAnagrams.ts # Group anagrams (LeetCode 49)
+│   │   │   └── singleNumber.ts  # Single number (LeetCode 136)
+│   │   ├── pointers/            # Two-pointer and multi-pointer techniques
+│   │   │   ├── containerWithMostWater.ts # Container with most water (LeetCode 11)
+│   │   │   ├── threeSum.ts      # Three sum (LeetCode 15)
+│   │   │   ├── threeSumClosest.ts # Three sum closest (LeetCode 16)
+│   │   │   ├── fourSum.ts       # Four sum (LeetCode 18)
+│   │   │   ├── maxProductSubarry.ts # Maximum product subarray (LeetCode 152)
+│   │   │   └── hillsAndValleysCount.ts # Count hills and valleys (LeetCode 2210)
+│   │   ├── search/              # Binary search and search algorithms
+│   │   │   ├── binarySearch.ts  # Binary search (LeetCode 704)
+│   │   │   ├── findInsertPosition.ts # Search insert position (LeetCode 35)
+│   │   │   └── rotatedArraySearch.ts # Search in rotated array (LeetCode 33)
+│   │   ├── slidingWindow/       # Sliding window technique
+│   │   │   ├── longSubStringNoDup.ts # Longest substring without repeating (LeetCode 3)
+│   │   │   └── minSizeSubarraySum.ts # Minimum size subarray sum (LeetCode 209)
+│   │   ├── types.ts             # Common types and interfaces
+│   │   └── index.ts             # Strategy execution and testing
+│   ├── Executors/               # Code execution framework
+│   │   ├── problemSolvingExec.ts # Main execution logic
+│   │   └── types/
+│   │       └── arrays.ts        # Base types and interfaces
+│   └── engineeringDrills/       # Real-world engineering problems (planned)
+├── dist/                        # Compiled JavaScript output
+├── package.json                 # NPM scripts and dependencies
+└── tsconfig.json               # TypeScript configuration
 ```
 
-## 🧩 Implemented Strategies
+## 🧩 Implemented Algorithms
 
 ### Array Manipulation
-- **Move Zeroes:** Move all zeroes to the end while maintaining order
-- **Next Permutation:** Rearrange numbers into the next lexicographically greater permutation
+- **Move Zeroes** (LeetCode 283): Move all zeroes to the end while maintaining relative order
+- **Next Permutation** (LeetCode 31): Rearrange numbers into the next lexicographically greater permutation
+- **Maximum Subarray Sum** (LeetCode 53): Find the contiguous subarray with maximum sum
+- **Zero-Filled Subarrays** (LeetCode 2348): Count the number of zero-filled subarrays
 
 ### Hash Map Solutions
-- **Two Sum (two approaches):** Find indices of two numbers that add up to a target
-- **Group Anagrams:** Group strings that are anagrams of each other
-- **Single Number:** Find the element that appears only once (bitwise XOR)
+- **Two Sum** (LeetCode 1): Find indices of two numbers that add up to a target
+  - Strategy 1: Handles cases with no valid pairs
+  - Strategy 2: Handles cases with duplicate elements
+- **Group Anagrams** (LeetCode 49): Group strings that are anagrams of each other
+- **Single Number** (LeetCode 136): Find the element that appears only once using bitwise XOR
 
 ### Two-Pointer Techniques
-- **Container With Most Water:** Find two lines that together with x-axis forms a container
-- **Three Sum:** Find all unique triplets that sum to zero
-- **Three Sum Closest:** Find three integers whose sum is closest to target
-- **Four Sum:** Find all unique quadruplets that sum to target
-- **Max Product Subarray:** Find the contiguous subarray with maximum product
-- **Hills and Valleys Count:** Count the number of hills and valleys in an array
+- **Container With Most Water** (LeetCode 11): Find two lines that form the largest container
+- **Three Sum** (LeetCode 15): Find all unique triplets that sum to zero
+- **Three Sum Closest** (LeetCode 16): Find three integers whose sum is closest to target
+- **Four Sum** (LeetCode 18): Find all unique quadruplets that sum to target
+- **Maximum Product Subarray** (LeetCode 152): Find the contiguous subarray with maximum product
+- **Count Hills and Valleys** (LeetCode 2210): Count the number of hills and valleys in an array
 
 ### Search Algorithms
-- **Binary Search:** Find the position of a target in a sorted array
-- **Find Insert Position:** Find the index to insert a target in a sorted array
-- **Rotated Array Search:** Search in a rotated sorted array
+- **Binary Search** (LeetCode 704): Find the position of a target in a sorted array
+- **Search Insert Position** (LeetCode 35): Find the index to insert a target in a sorted array
+- **Search in Rotated Sorted Array** (LeetCode 33): Search in a rotated sorted array
 
 ### Sliding Window
-- **Longest Substring Without Repeating Characters:** Find longest substring without duplicates
-- **Maximum Sum Subarray:** Find contiguous subarray with maximum sum
-- **Minimum Size Subarray Sum:** Find minimal length of contiguous subarray with sum ≥ target
+- **Longest Substring Without Repeating Characters** (LeetCode 3): Find longest substring without duplicates
+- **Minimum Size Subarray Sum** (LeetCode 209): Find minimal length of contiguous subarray with sum ≥ target
 
-## 🏭 Engineering Drills
+## 🏗️ Architecture & Design Patterns
 
-Beyond traditional algorithmic challenges, this section focuses on real-world engineering problems and production-ready solutions.
+### Strategy Pattern
+The repository uses the Strategy pattern to organize different algorithmic approaches:
+- Each algorithm implements a common interface (`BaseSingleArrayExecutionStrategy`)
+- Easy to add new solutions without modifying existing code
+- Consistent parameter handling and result formatting
 
-### System Design
-- **Rate Limiting:** Implement various rate limiting strategies (Token Bucket, Leaky Bucket, Fixed Window)
-- **Caching Strategies:** LRU, LFU, and distributed caching implementations
-- **Load Balancing:** Round-robin, least connections, and weighted algorithms
+### Type Safety
+- Full TypeScript implementation with strict type checking
+- Comprehensive interface definitions for all algorithm parameters
+- Generic execution framework that maintains type safety
 
-### Data Structures
-- **Custom Implementations:** Specialized data structures for specific use cases
-- **Performance Optimization:** Memory-efficient and fast data structure variants
-- **Concurrent Structures:** Thread-safe data structures for multi-threaded environments
+### Execution Framework
+- Centralized execution through `contextExecutor` class
+- Consistent logging and result handling
+- Easy to test and debug individual algorithms
 
-### Performance & Optimization
-- **Database Query Optimization:** Index strategies, query planning, and performance tuning
-- **Memory Management:** Efficient memory allocation and garbage collection strategies
-- **Algorithm Complexity:** Time and space complexity optimization techniques
+## 🚀 Running Solutions
 
-### API & Integration
-- **RESTful API Design:** Best practices, versioning, and error handling
-- **Microservice Communication:** Service discovery, load balancing, and fault tolerance
-- **Authentication & Authorization:** JWT, OAuth, and role-based access control
+### Development Mode
+```bash
+npm run leetcodeDev
+```
+This runs all implemented algorithms with predefined test cases and displays results.
 
-### Testing & Quality
-- **Test-Driven Development:** Writing tests before implementation
-- **Performance Testing:** Load testing, stress testing, and benchmarking
-- **Security Testing:** Vulnerability assessment and penetration testing
+### Build & Run
+```bash
+# Build TypeScript to JavaScript
+npm run build
 
-## 🏗️ Adding New Solutions
+# Run the compiled version
+node dist/leetCodeStyle/index.js
+```
 
-### LeetCode Strategies
-1. **Choose the appropriate category** in `src/leetCodeStyle/` based on the algorithm type
-2. **Create a new class** implementing the appropriate interface (see `types.ts`)
-3. **Export your class** and implement the `contextFunction` method
-4. **Update `src/leetCodeStyle/index.ts`** to register and execute your new strategy
-5. **(Optional) Add types** in `src/leetCodeStyle/types.ts` if needed
+## 📝 Adding New Solutions
 
-### Engineering Drills
-1. **Choose the appropriate category** in `src/engineeringDrills/` based on the problem type
-2. **Create a new module** with clear problem description and solution
-3. **Include tests** and performance benchmarks
-4. **Document the approach** and real-world applications
-5. **Update the relevant section** in this README
+### 1. Choose the Right Category
+Place your solution in the appropriate directory based on the algorithm type:
+- `arrayManipulation/` - Array manipulation problems
+- `hashMap/` - Hash map based solutions
+- `pointers/` - Two-pointer techniques
+- `search/` - Binary search and search algorithms
+- `slidingWindow/` - Sliding window problems
 
-## 💡 Why This Structure?
+### 2. Implement the Strategy Interface
+```typescript
+import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
+import { yourParams } from "../types";
 
-- **Organized by Technique:** Strategies are grouped by algorithmic approach for easier navigation
-- **Separation of Concerns:** Each strategy is independent and reusable
-- **Type Safety:** TypeScript ensures fewer bugs and better collaboration
-- **Scalability:** Easy to add, test, and compare multiple solutions
-- **Learning Focus:** Clear categorization helps understand different algorithmic patterns
+export class YourStrategy implements BaseSingleArrayExecutionStrategy<'yourKey'> {
+  contextFunction(params: yourParams): Promise<YourReturnType> {
+    // Your implementation here
+    return Promise.resolve(result);
+  }
+}
+```
+
+### 3. Add Types
+Update `src/leetCodeStyle/types.ts` with your parameter interface:
+```typescript
+export interface yourParams {
+  // Your parameter types
+}
+```
+
+### 4. Update the Executor
+Add your strategy to `src/Executors/types/arrays.ts`:
+```typescript
+export interface paramsMap {
+  // ... existing mappings
+  yourKey: yourParams;
+}
+```
+
+### 5. Register and Test
+Add your strategy to `src/leetCodeStyle/index.ts` and test it.
 
 ## 🤝 Contributing
 
-Share your solutions, review each other's code, and discuss different approaches. This repo is for learning, experimenting, and improving as a team.
+We welcome contributions! Please follow these guidelines:
+
+1. **Fork the repository**
+2. **Create a feature branch**: `git checkout -b feature/your-algorithm-name`
+3. **Implement your solution** following the existing patterns
+4. **Add appropriate tests** and edge cases
+5. **Update documentation** if needed
+6. **Submit a pull request** with a clear description
+
+### Pull Request Guidelines
+- Use the provided PR template
+- Include the LeetCode problem number and link
+- Describe your approach and time/space complexity
+- Test with multiple edge cases
+- Ensure code follows the existing style
+
+## 🎯 Learning Goals
+
+This repository is designed to help you:
+- **Master fundamental algorithms** and data structures
+- **Understand different problem-solving approaches** (two pointers, sliding window, etc.)
+- **Practice clean, maintainable code** with TypeScript
+- **Learn from others** through code reviews and discussions
+- **Build a portfolio** of algorithmic solutions
+
+## 📚 Resources
+
+- [LeetCode](https://leetcode.com/) - Practice problems
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/) - Language reference
+- [Algorithm Visualization](https://visualgo.net/) - Visual learning
 
 ---
 
-**Happy coding!** 🚀 
+**Happy coding and happy learning!** 🚀
+
+*Remember: The best way to learn algorithms is to implement them yourself and then discuss different approaches with others.* 
