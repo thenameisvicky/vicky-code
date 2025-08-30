@@ -19,6 +19,7 @@ const groupAnagrams_1 = require("./hashMap/groupAnagrams");
 const hillsAndValleysCount_1 = require("./pointers/hillsAndValleysCount");
 const maxProductSubarry_1 = require("./pointers/maxProductSubarry");
 const rotatedArraySearch_1 = require("./search/rotatedArraySearch");
+const zeroFilledSubArrlength_1 = require("./arrayManipulation/zeroFilledSubArrlength");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, problemSolvingExec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -73,3 +74,6 @@ const maximumProductSubarray = new maxProductSubarry_1.MaximumProductSubArrayStr
 //RotatedArraySearch: Edge Case handling with all Duplicate
 const rotatedArraySearch = new rotatedArraySearch_1.RotatedArraySearchStrategy();
 (0, problemSolvingExec_1.exec)(rotatedArraySearch, { nums: [1, 1, 3, 1, 1], target: 3 });
+//ZeroFilledSubArray: Expected 6 as output
+const zeroFilledSubArray = new zeroFilledSubArrlength_1.zeroFilledSubArrayStrategy();
+(0, problemSolvingExec_1.exec)(zeroFilledSubArray, { nums: [1, 3, 0, 0, 2, 0, 0, 4] });

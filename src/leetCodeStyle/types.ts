@@ -74,3 +74,7 @@ export interface rotatedArraySearchParams {
   nums: number[];
   target: number;
 }
+
+export interface zeroFilledSubArrParams {
+  nums: number[];
+}

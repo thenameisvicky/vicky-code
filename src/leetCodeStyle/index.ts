@@ -17,6 +17,7 @@ import { GroupAnagramsStrategy } from "./hashMap/groupAnagrams";
 import { CountHillsAndValleysStrategy } from "./pointers/hillsAndValleysCount";
 import { MaximumProductSubArrayStrategy } from "./pointers/maxProductSubarry";
 import { RotatedArraySearchStrategy } from "./search/rotatedArraySearch";
+import { zeroFilledSubArrayStrategy } from "./arrayManipulation/zeroFilledSubArrlength";
 
 
 // TwoSum1: No pair adds to 100
@@ -89,4 +90,8 @@ exec<'maxProductSubarray'>(maximumProductSubarray, { nums: [-2, 0 - 2] }); // âž
 
 //RotatedArraySearch: Edge Case handling with all Duplicate
 const rotatedArraySearch = new RotatedArraySearchStrategy();
-exec<'rotatedArraySearch'>(rotatedArraySearch, { nums: [1,1,3,1,1], target: 3 });
+exec<'rotatedArraySearch'>(rotatedArraySearch, { nums: [1, 1, 3, 1, 1], target: 3 });
+
+//ZeroFilledSubArray: Expected 6 as output
+const zeroFilledSubArray = new zeroFilledSubArrayStrategy();
+exec<'zeroFilledSubArray'>(zeroFilledSubArray, { nums: [1, 3, 0, 0, 2, 0, 0, 4] });
