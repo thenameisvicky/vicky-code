@@ -97,6 +97,6 @@ exec<'rotatedArraySearch'>(rotatedArraySearch, { nums: [1, 1, 3, 1, 1], target: 
 const zeroFilledSubArray = new zeroFilledSubArrayStrategy();
 exec<'zeroFilledSubArray'>(zeroFilledSubArray, { nums: [1, 3, 0, 0, 2, 0, 0, 4] });
 
-//LongestCommonPrefix: Expected fl as output
+//LongestCommonPrefix: Expected "" as output
 const longestCommonPrefix = new LongestCommonPrefixStrategy();
-exec<'longestCommonPrefix'>(longestCommonPrefix, { array: ["flower", "flow", "flight"] });
+exec<'longestCommonPrefix'>(longestCommonPrefix, { array: ["hello", "", "world", "help"] });

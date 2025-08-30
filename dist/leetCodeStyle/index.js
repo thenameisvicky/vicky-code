@@ -78,6 +78,6 @@ const rotatedArraySearch = new rotatedArraySearch_1.RotatedArraySearchStrategy()
 //ZeroFilledSubArray: Expected 6 as output
 const zeroFilledSubArray = new zeroFilledSubArrlength_1.zeroFilledSubArrayStrategy();
 (0, problemSolvingExec_1.exec)(zeroFilledSubArray, { nums: [1, 3, 0, 0, 2, 0, 0, 4] });
-//LongestCommonPrefix: Expected fl as output
+//LongestCommonPrefix: Expected "" as output
 const longestCommonPrefix = new longestCommonPrefix_1.LongestCommonPrefixStrategy();
-(0, problemSolvingExec_1.exec)(longestCommonPrefix, { array: ["flower", "flow", "flight"] });
+(0, problemSolvingExec_1.exec)(longestCommonPrefix, { array: ["hello", "", "world", "help"] });
