@@ -8,11 +8,11 @@ export class LongestCommonPrefixStrategy implements BaseSingleArrayExecutionStra
         const sortedLen = array.sort((a, b) => a.length - b.length);
         let currentWin = sortedLen[0];
         for (let i = 0; i < sortedLen.length; i++) {
-            if (sortedLen[i].startsWith(currentWin)) {
+            while (!sortedLen[i].startsWith(currentWin)) {
                 currentWin = currentWin.slice(0, -1);
                 if (currentWin == "") return "";
             }
         }
-        return sortedLen;
+        return currentWin;
     }
 }

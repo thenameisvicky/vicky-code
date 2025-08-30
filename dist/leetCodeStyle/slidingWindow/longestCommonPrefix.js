@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.LongestCommonPrefixStrategy = void 0;
+class LongestCommonPrefixStrategy {
+    contextFunction(params) {
+        const { array } = params;
+        if (!array.length)
+            return "";
+        const sortedLen = array.sort((a, b) => a.length - b.length);
+        let currentWin = sortedLen[0];
+        for (let i = 0; i < sortedLen.length; i++) {
+            while (!sortedLen[i].startsWith(currentWin)) {
+                currentWin = currentWin.slice(0, -1);
+                if (currentWin == "")
+                    return "";
+            }
+        }
+        return currentWin;
+    }
+}
+exports.LongestCommonPrefixStrategy = LongestCommonPrefixStrategy;
