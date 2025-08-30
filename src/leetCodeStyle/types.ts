@@ -1,80 +1,82 @@
-// Parameter interfaces for all strategy classes
-
-export interface twoSumParams {
-  nums: number[];
+export type  twoSumParams = {
+  nums: Array<number>;
   target: number;
 }
 
-export interface binarySearchParams {
-  nums: number[];
+export type  binarySearchParams = {
+  nums: Array<number>;
   target: number;
 }
 
-export interface minSizeSubarraySumParams {
+export type  minSizeSubarraySumParams = {
   target: number;
-  nums: number[];
+  nums: Array<number>;
 }
 
-export interface moveZerosParams {
-  nums: number[];
+export type  moveZerosParams = {
+  nums: Array<number>;
 }
 
-export interface longSubStringNoDupParams {
+export type  longSubStringNoDupParams = {
   s: string;
 }
 
-export interface findInsertPositionParams {
-  nums: number[];
+export type  findInsertPositionParams = {
+  nums: Array<number>;
   target: number;
 }
 
-export interface nextPermutationParams {
-  nums: number[];
+export type  nextPermutationParams = {
+  nums: Array<number>;
 }
 
-export interface singleNumberParams {
-  num: number[];
+export type  singleNumberParams = {
+  num: Array<number>;
 }
 
-export interface threeSumParams {
-  nums: number[];
+export type  threeSumParams = {
+  nums: Array<number>;
 }
 
-export interface fourSumParams {
-  nums: number[];
+export type  fourSumParams = {
+  nums: Array<number>;
   target: number;
 }
 
-export interface threeSumClosestParams {
-  nums: number[];
+export type  threeSumClosestParams = {
+  nums: Array<number>;
   target: number;
 }
 
-export interface containerWithMostWaterParams {
-  nums: number[];
+export type  containerWithMostWaterParams = {
+  nums: Array<number>;
 }
 
-export interface groupAnagramsParams {
-  strings: string[];
+export type  groupAnagramsParams = {
+  strings: Array<string>;
 }
 
-export interface maxSumSubarrayParams {
-  nums: number[];
+export type  maxSumSubarrayParams = {
+  nums: Array<number>;
 }
 
-export interface countHillsAndValleysParams {
-  nums: number[];
+export type  countHillsAndValleysParams = {
+  nums: Array<number>;
 }
 
-export interface maxProductSubarrayParams {
-  nums: number[];
+export type  maxProductSubarrayParams = {
+  nums: Array<number>;
 }
 
-export interface rotatedArraySearchParams {
-  nums: number[];
+export type  rotatedArraySearchParams = {
+  nums: Array<number>;
   target: number;
 }
 
-export interface zeroFilledSubArrParams {
-  nums: number[];
+export type  zeroFilledSubArrParams = {
+  nums: Array<number>;
+}
+
+export type longestCommonPrefixParams = {
+  array: Array<string>;
 }

@@ -20,6 +20,7 @@ const hillsAndValleysCount_1 = require("./pointers/hillsAndValleysCount");
 const maxProductSubarry_1 = require("./pointers/maxProductSubarry");
 const rotatedArraySearch_1 = require("./search/rotatedArraySearch");
 const zeroFilledSubArrlength_1 = require("./arrayManipulation/zeroFilledSubArrlength");
+const longestCommonPrefix_1 = require("./slidingWindow/longestCommonPrefix");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, problemSolvingExec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -77,3 +78,6 @@ const rotatedArraySearch = new rotatedArraySearch_1.RotatedArraySearchStrategy()
 //ZeroFilledSubArray: Expected 6 as output
 const zeroFilledSubArray = new zeroFilledSubArrlength_1.zeroFilledSubArrayStrategy();
 (0, problemSolvingExec_1.exec)(zeroFilledSubArray, { nums: [1, 3, 0, 0, 2, 0, 0, 4] });
+//LongestCommonPrefix: Expected "" as output
+const longestCommonPrefix = new longestCommonPrefix_1.LongestCommonPrefixStrategy();
+(0, problemSolvingExec_1.exec)(longestCommonPrefix, { array: ["hello", "", "world", "help"] });

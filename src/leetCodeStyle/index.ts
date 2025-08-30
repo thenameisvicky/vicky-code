@@ -18,6 +18,7 @@ import { CountHillsAndValleysStrategy } from "./pointers/hillsAndValleysCount";
 import { MaximumProductSubArrayStrategy } from "./pointers/maxProductSubarry";
 import { RotatedArraySearchStrategy } from "./search/rotatedArraySearch";
 import { zeroFilledSubArrayStrategy } from "./arrayManipulation/zeroFilledSubArrlength";
+import { LongestCommonPrefixStrategy } from "./slidingWindow/longestCommonPrefix";
 
 
 // TwoSum1: No pair adds to 100
@@ -95,3 +96,7 @@ exec<'rotatedArraySearch'>(rotatedArraySearch, { nums: [1, 1, 3, 1, 1], target: 
 //ZeroFilledSubArray: Expected 6 as output
 const zeroFilledSubArray = new zeroFilledSubArrayStrategy();
 exec<'zeroFilledSubArray'>(zeroFilledSubArray, { nums: [1, 3, 0, 0, 2, 0, 0, 4] });
+
+//LongestCommonPrefix: Expected "" as output
+const longestCommonPrefix = new LongestCommonPrefixStrategy();
+exec<'longestCommonPrefix'>(longestCommonPrefix, { array: ["hello", "", "world", "help"] });
