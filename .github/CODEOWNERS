@@ -1,8 +1,0 @@
-# Global code owners - these users will be automatically requested for review on all pull requests
-* @thenameisvicky
-
-# Specific file type ownership
-*.ts @thenameisvicky
-*.js @thenameisvicky
-*.md @thenameisvicky
-*.json @thenameisvicky
