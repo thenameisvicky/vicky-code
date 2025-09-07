@@ -19,6 +19,7 @@ import { MaximumProductSubArrayStrategy } from "./pointers/maxProductSubarry";
 import { RotatedArraySearchStrategy } from "./search/rotatedArraySearch";
 import { zeroFilledSubArrayStrategy } from "./arrayManipulation/zeroFilledSubArrlength";
 import { LongestCommonPrefixStrategy } from "./slidingWindow/longestCommonPrefix";
+import { SumsUpToZeroStrategy } from "./arrayManipulation/sumZero";
 
 
 // TwoSum1: No pair adds to 100
@@ -100,3 +101,7 @@ exec<'zeroFilledSubArray'>(zeroFilledSubArray, { nums: [1, 3, 0, 0, 2, 0, 0, 4] 
 //LongestCommonPrefix: Expected "" as output
 const longestCommonPrefix = new LongestCommonPrefixStrategy();
 exec<'longestCommonPrefix'>(longestCommonPrefix, { array: ["hello", "", "world", "help"] });
+
+//SumsUpToZero: Expected [-1, 0, 1] as output
+const sumUpToZero = new SumsUpToZeroStrategy();
+exec<'sumsUpToZero'>(sumUpToZero, {length: 3});

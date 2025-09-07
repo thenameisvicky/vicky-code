@@ -21,6 +21,7 @@ const maxProductSubarry_1 = require("./pointers/maxProductSubarry");
 const rotatedArraySearch_1 = require("./search/rotatedArraySearch");
 const zeroFilledSubArrlength_1 = require("./arrayManipulation/zeroFilledSubArrlength");
 const longestCommonPrefix_1 = require("./slidingWindow/longestCommonPrefix");
+const sumZero_1 = require("./arrayManipulation/sumZero");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, problemSolvingExec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -81,3 +82,6 @@ const zeroFilledSubArray = new zeroFilledSubArrlength_1.zeroFilledSubArrayStrate
 //LongestCommonPrefix: Expected "" as output
 const longestCommonPrefix = new longestCommonPrefix_1.LongestCommonPrefixStrategy();
 (0, problemSolvingExec_1.exec)(longestCommonPrefix, { array: ["hello", "", "world", "help"] });
+//SumsUpToZero: Expected [-1, 0, 1] as output
+const sumUpToZero = new sumZero_1.SumsUpToZeroStrategy();
+(0, problemSolvingExec_1.exec)(sumUpToZero, { length: 3 });

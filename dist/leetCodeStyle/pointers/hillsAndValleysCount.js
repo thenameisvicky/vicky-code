@@ -14,7 +14,7 @@ class CountHillsAndValleysStrategy {
             }
             let right = i + 1;
             while (right < nums.length && nums[right] == nums[i]) {
-                right--;
+                right++;
             }
             if ((nums[left] < nums[i] && nums[i] > nums[right]) || (nums[left] > nums[i] && nums[i] < nums[right])) {
                 count++;

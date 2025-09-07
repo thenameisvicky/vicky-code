@@ -80,3 +80,7 @@ export type  zeroFilledSubArrParams = {
 export type longestCommonPrefixParams = {
   array: Array<string>;
 }
+
+export type SumsUpToZeroParams = {
+  length: number;
+}

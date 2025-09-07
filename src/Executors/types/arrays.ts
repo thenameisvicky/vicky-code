@@ -1,4 +1,4 @@
-import { binarySearchParams, containerWithMostWaterParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longestCommonPrefixParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, rotatedArraySearchParams, singleNumberParams, threeSumClosestParams, threeSumParams, twoSumParams, zeroFilledSubArrParams } from "../../leetCodeStyle/types";
+import { binarySearchParams, containerWithMostWaterParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longestCommonPrefixParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, rotatedArraySearchParams, singleNumberParams, SumsUpToZeroParams, threeSumClosestParams, threeSumParams, twoSumParams, zeroFilledSubArrParams } from "../../leetCodeStyle/types";
 
 export interface paramsMap {
   twoSum: twoSumParams,
@@ -20,6 +20,7 @@ export interface paramsMap {
   rotatedArraySearch: rotatedArraySearchParams;
   zeroFilledSubArray: zeroFilledSubArrParams;
   longestCommonPrefix: longestCommonPrefixParams;
+  sumsUpToZero: SumsUpToZeroParams;
 }
 
 export interface BaseSingleArrayExecutionStrategy<K extends keyof paramsMap> {
