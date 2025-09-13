@@ -104,4 +104,4 @@ exec<'longestCommonPrefix'>(longestCommonPrefix, { array: ["hello", "", "world",
 
 //SumsUpToZero: Expected [-1, 0, 1] as output
 const sumUpToZero = new SumsUpToZeroStrategy();
-exec<'sumsUpToZero'>(sumUpToZero, {length: 3});
+exec<'sumsUpToZero'>(sumUpToZero, { length: 3 });
