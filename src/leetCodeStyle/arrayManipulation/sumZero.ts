@@ -1,8 +1,8 @@
 import { BaseSingleArrayExecutionStrategy } from "../../Executors/types/arrays";
-import { SumsUpToZeroParams } from "../types";
+import { sumsUpToZeroParams } from "../types";
 
 export class SumsUpToZeroStrategy implements BaseSingleArrayExecutionStrategy<'sumsUpToZero'> {
-    contextFunction(params: SumsUpToZeroParams) {
+    contextFunction(params: sumsUpToZeroParams) {
         const { length } = params;
         if (length == 1) return [0];
         let array = [];

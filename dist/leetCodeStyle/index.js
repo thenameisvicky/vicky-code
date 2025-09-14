@@ -22,6 +22,7 @@ const rotatedArraySearch_1 = require("./search/rotatedArraySearch");
 const zeroFilledSubArrlength_1 = require("./arrayManipulation/zeroFilledSubArrlength");
 const longestCommonPrefix_1 = require("./slidingWindow/longestCommonPrefix");
 const sumZero_1 = require("./arrayManipulation/sumZero");
+const bestTimeStockActivities_1 = require("./arrayManipulation/bestTimeStockActivities");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, problemSolvingExec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -85,3 +86,6 @@ const longestCommonPrefix = new longestCommonPrefix_1.LongestCommonPrefixStrateg
 //SumsUpToZero: Expected [-1, 0, 1] as output
 const sumUpToZero = new sumZero_1.SumsUpToZeroStrategy();
 (0, problemSolvingExec_1.exec)(sumUpToZero, { length: 3 });
+//BestTimeToBuyAndSellStock: Expected 0 as output
+const bestTimeToBuyAndSell = new bestTimeStockActivities_1.BestTimeToBuyAndSellStockStrategy();
+(0, problemSolvingExec_1.exec)(bestTimeToBuyAndSell, { array: [9, 7, 5, 3, 1] });

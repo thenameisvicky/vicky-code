@@ -1,79 +1,79 @@
-export type  twoSumParams = {
+export type twoSumParams = {
   nums: Array<number>;
   target: number;
 }
 
-export type  binarySearchParams = {
+export type binarySearchParams = {
   nums: Array<number>;
   target: number;
 }
 
-export type  minSizeSubarraySumParams = {
+export type minSizeSubarraySumParams = {
   target: number;
   nums: Array<number>;
 }
 
-export type  moveZerosParams = {
+export type moveZerosParams = {
   nums: Array<number>;
 }
 
-export type  longSubStringNoDupParams = {
+export type longSubStringNoDupParams = {
   s: string;
 }
 
-export type  findInsertPositionParams = {
+export type findInsertPositionParams = {
   nums: Array<number>;
   target: number;
 }
 
-export type  nextPermutationParams = {
+export type nextPermutationParams = {
   nums: Array<number>;
 }
 
-export type  singleNumberParams = {
+export type singleNumberParams = {
   num: Array<number>;
 }
 
-export type  threeSumParams = {
+export type threeSumParams = {
   nums: Array<number>;
 }
 
-export type  fourSumParams = {
-  nums: Array<number>;
-  target: number;
-}
-
-export type  threeSumClosestParams = {
+export type fourSumParams = {
   nums: Array<number>;
   target: number;
 }
 
-export type  containerWithMostWaterParams = {
+export type threeSumClosestParams = {
+  nums: Array<number>;
+  target: number;
+}
+
+export type containerWithMostWaterParams = {
   nums: Array<number>;
 }
 
-export type  groupAnagramsParams = {
+export type groupAnagramsParams = {
   strings: Array<string>;
 }
 
-export type  maxSumSubarrayParams = {
+export type maxSumSubarrayParams = {
   nums: Array<number>;
 }
 
-export type  countHillsAndValleysParams = {
+export type countHillsAndValleysParams = {
   nums: Array<number>;
 }
 
-export type  maxProductSubarrayParams = {
+export type maxProductSubarrayParams = {
   nums: Array<number>;
 }
 
-export type  rotatedArraySearchParams = {
+export type rotatedArraySearchParams = {
   nums: Array<number>;
   target: number;
 }
 
-export type  zeroFilledSubArrParams = {
+export type zeroFilledSubArrParams = {
   nums: Array<number>;
 }
 
@@ -81,6 +81,10 @@ export type longestCommonPrefixParams = {
   array: Array<string>;
 }
 
-export type SumsUpToZeroParams = {
+export type sumsUpToZeroParams = {
   length: number;
+}
+
+export type bestTimeToBuyAndSellStockParams = {
+  array: Array<number>;
 }

@@ -20,6 +20,7 @@ import { RotatedArraySearchStrategy } from "./search/rotatedArraySearch";
 import { zeroFilledSubArrayStrategy } from "./arrayManipulation/zeroFilledSubArrlength";
 import { LongestCommonPrefixStrategy } from "./slidingWindow/longestCommonPrefix";
 import { SumsUpToZeroStrategy } from "./arrayManipulation/sumZero";
+import { BestTimeToBuyAndSellStockStrategy } from "./arrayManipulation/bestTimeStockActivities";
 
 
 // TwoSum1: No pair adds to 100
@@ -105,3 +106,7 @@ exec<'longestCommonPrefix'>(longestCommonPrefix, { array: ["hello", "", "world",
 //SumsUpToZero: Expected [-1, 0, 1] as output
 const sumUpToZero = new SumsUpToZeroStrategy();
 exec<'sumsUpToZero'>(sumUpToZero, { length: 3 });
+
+//BestTimeToBuyAndSellStock: Expected 0 as output
+const bestTimeToBuyAndSell = new BestTimeToBuyAndSellStockStrategy();
+exec<'bestTimeToSell'>(bestTimeToBuyAndSell, { array: [9, 7, 5, 3, 1] });
