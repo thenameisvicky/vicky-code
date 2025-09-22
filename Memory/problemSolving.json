@@ -1,5 +1,5 @@
 {
-    "currentLevel": "Intermediate to Advanced (strong in arrays, strings, binary search, sliding window, hash map, subarray problems; consistently improving with 19 problems solved)",
+    "currentLevel": "Intermediate to Advanced (strong in arrays, strings, binary search, sliding window, hash map, subarray problems; consistently improving with 24 problems solved)",
     "areasOfImprovement": [
       "Expand to more problem types (graphs, trees, dynamic programming, advanced data structures)",
       "Participate in coding contests for speed and breadth",
@@ -7,7 +7,7 @@
       "Revisit and optimize previously solved problems",
       "Increase pace and minimize reliance on AI tools"
     ],
-    "lastSolvedStrategyDate": "2025-01-28",
+    "lastSolvedStrategyDate": "2025-09-22",
     "problems": [
       {
         "name": "Maximum Sum Subarray (Kadane's Algorithm)",
@@ -119,6 +119,42 @@
         "file": "zeroFilledSubArrlength.ts",
         "approach": "Sliding Window with Streak Counting",
         "description": "Counts the total number of zero-filled subarrays by maintaining a streak counter. For each consecutive zero, adds the current streak length to the total count. Efficiently handles edge cases and returns the total count of all possible zero-filled subarrays. Time complexity O(n), space complexity O(1).",
+        "recentlyAdded": true
+      }
+      ,
+      {
+        "name": "Best Time to Buy and Sell Stock (LeetCode 121)",
+        "file": "bestTimeStockActivities.ts",
+        "approach": "One-Pass Tracking Min Price and Max Profit",
+        "description": "Scans prices once, tracking the minimum price so far and the maximum profit achievable at each step. Time complexity O(n), space O(1).",
+        "recentlyAdded": true
+      },
+      {
+        "name": "Find N Unique Integers Sum up to Zero (LeetCode 1304)",
+        "file": "sumZero.ts",
+        "approach": "Constructive Symmetric Pairs",
+        "description": "Builds an array of length n using ±i symmetric pairs and optionally 0 for odd n, ensuring the total sum is zero. Time complexity O(n), space O(n).",
+        "recentlyAdded": true
+      },
+      {
+        "name": "Maximum Product Subarray (LeetCode 152)",
+        "file": "maxProductSubarry.ts",
+        "approach": "Dynamic Tracking of Max/Min Products with Swap on Negatives",
+        "description": "Maintains current max and min products to handle negatives; swaps on negative values and updates the global maximum. Time complexity O(n), space O(1).",
+        "recentlyAdded": true
+      },
+      {
+        "name": "Longest Common Prefix (LeetCode 14)",
+        "file": "longestCommonPrefix.ts",
+        "approach": "Iteratively Shrink Candidate Prefix",
+        "description": "Sorts by length and iteratively shrinks the candidate prefix until all strings start with it. Time complexity O(S) where S is total characters.",
+        "recentlyAdded": true
+      },
+      {
+        "name": "Count Elements With Maximum Frequency",
+        "file": "countMaximumFrequence.ts",
+        "approach": "Hash Map Frequency Count and Sum at Max",
+        "description": "Counts occurrences using a hash map, tracks the maximum frequency, and sums counts of elements at that frequency. Time complexity O(n), space O(n).",
         "recentlyAdded": true
       }
     ]
