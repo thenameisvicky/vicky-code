@@ -88,3 +88,7 @@ export type sumsUpToZeroParams = {
 export type bestTimeToBuyAndSellStockParams = {
   array: Array<number>;
 }
+
+export type countElementsWithMaximumFrequencyParams = {
+  array: Array<number>;
+}

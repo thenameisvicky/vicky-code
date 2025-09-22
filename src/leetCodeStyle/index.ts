@@ -21,6 +21,7 @@ import { zeroFilledSubArrayStrategy } from "./arrayManipulation/zeroFilledSubArr
 import { LongestCommonPrefixStrategy } from "./slidingWindow/longestCommonPrefix";
 import { SumsUpToZeroStrategy } from "./arrayManipulation/sumZero";
 import { BestTimeToBuyAndSellStockStrategy } from "./arrayManipulation/bestTimeStockActivities";
+import { CountElementsWithMaximumFrequencyStrategy } from "./hashMap/countMaximumFrequence";
 
 
 // TwoSum1: No pair adds to 100
@@ -110,3 +111,7 @@ exec<'sumsUpToZero'>(sumUpToZero, { length: 3 });
 //BestTimeToBuyAndSellStock: Expected 0 as output
 const bestTimeToBuyAndSell = new BestTimeToBuyAndSellStockStrategy();
 exec<'bestTimeToSell'>(bestTimeToBuyAndSell, { array: [9, 7, 5, 3, 1] });
+
+//CountElementsWithMostFrequency: Expected 4 as output
+const countElemWithMostFre = new CountElementsWithMaximumFrequencyStrategy();
+exec<"countElemWithMostFrequency">(countElemWithMostFre, { array: [1, 2, 2, 3, 1, 4] });

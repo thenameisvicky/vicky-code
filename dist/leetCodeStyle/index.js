@@ -23,6 +23,7 @@ const zeroFilledSubArrlength_1 = require("./arrayManipulation/zeroFilledSubArrle
 const longestCommonPrefix_1 = require("./slidingWindow/longestCommonPrefix");
 const sumZero_1 = require("./arrayManipulation/sumZero");
 const bestTimeStockActivities_1 = require("./arrayManipulation/bestTimeStockActivities");
+const countMaximumFrequence_1 = require("./hashMap/countMaximumFrequence");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, problemSolvingExec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -89,3 +90,6 @@ const sumUpToZero = new sumZero_1.SumsUpToZeroStrategy();
 //BestTimeToBuyAndSellStock: Expected 0 as output
 const bestTimeToBuyAndSell = new bestTimeStockActivities_1.BestTimeToBuyAndSellStockStrategy();
 (0, problemSolvingExec_1.exec)(bestTimeToBuyAndSell, { array: [9, 7, 5, 3, 1] });
+//CountElementsWithMostFrequency: Expected 4 as output
+const countElemWithMostFre = new countMaximumFrequence_1.CountElementsWithMaximumFrequencyStrategy();
+(0, problemSolvingExec_1.exec)(countElemWithMostFre, { array: [1, 2, 2, 3, 1, 4] });
