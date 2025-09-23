@@ -22,6 +22,7 @@ import { LongestCommonPrefixStrategy } from "./slidingWindow/longestCommonPrefix
 import { SumsUpToZeroStrategy } from "./arrayManipulation/sumZero";
 import { BestTimeToBuyAndSellStockStrategy } from "./arrayManipulation/bestTimeStockActivities";
 import { CountElementsWithMaximumFrequencyStrategy } from "./hashMap/countMaximumFrequence";
+import { PermutationsStrategy } from "./arrayManipulation/permutations";
 
 
 // TwoSum1: No pair adds to 100
@@ -115,3 +116,7 @@ exec<'bestTimeToSell'>(bestTimeToBuyAndSell, { array: [9, 7, 5, 3, 1] });
 //CountElementsWithMostFrequency: Expected 4 as output
 const countElemWithMostFre = new CountElementsWithMaximumFrequencyStrategy();
 exec<"countElemWithMostFrequency">(countElemWithMostFre, { array: [1, 2, 2, 3, 1, 4] });
+
+//Permutations: Expected [ [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1] ] as output in any order
+const permutations = new PermutationsStrategy();
+exec<'nextPermutation'>(permutations, { nums: [1, 2, 3] });

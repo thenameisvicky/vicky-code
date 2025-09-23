@@ -24,6 +24,7 @@ const longestCommonPrefix_1 = require("./slidingWindow/longestCommonPrefix");
 const sumZero_1 = require("./arrayManipulation/sumZero");
 const bestTimeStockActivities_1 = require("./arrayManipulation/bestTimeStockActivities");
 const countMaximumFrequence_1 = require("./hashMap/countMaximumFrequence");
+const permutations_1 = require("./arrayManipulation/permutations");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, problemSolvingExec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -93,3 +94,6 @@ const bestTimeToBuyAndSell = new bestTimeStockActivities_1.BestTimeToBuyAndSellS
 //CountElementsWithMostFrequency: Expected 4 as output
 const countElemWithMostFre = new countMaximumFrequence_1.CountElementsWithMaximumFrequencyStrategy();
 (0, problemSolvingExec_1.exec)(countElemWithMostFre, { array: [1, 2, 2, 3, 1, 4] });
+//Permutations: Expected [ [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1] ] as output in any order
+const permutations = new permutations_1.PermutationsStrategy();
+(0, problemSolvingExec_1.exec)(permutations, { nums: [1, 2, 3] });
