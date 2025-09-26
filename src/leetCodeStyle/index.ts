@@ -23,6 +23,7 @@ import { SumsUpToZeroStrategy } from "./arrayManipulation/sumZero";
 import { BestTimeToBuyAndSellStockStrategy } from "./arrayManipulation/bestTimeStockActivities";
 import { CountElementsWithMaximumFrequencyStrategy } from "./hashMap/countMaximumFrequence";
 import { PermutationsStrategy } from "./arrayManipulation/permutations";
+import { ConsecutiveOddsStrategy } from "./arrayManipulation/consecutiveOdds";
 
 
 // TwoSum1: No pair adds to 100
@@ -120,3 +121,7 @@ exec<"countElemWithMostFrequency">(countElemWithMostFre, { array: [1, 2, 2, 3, 1
 //Permutations: Expected [ [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1] ] as output in any order
 const permutations = new PermutationsStrategy();
 exec<'nextPermutation'>(permutations, { nums: [1, 2, 3] });
+
+//Consecutive Odds: Expected true
+const consecutiveOdds = new ConsecutiveOddsStrategy();
+exec<'consecutiveOdds'>(consecutiveOdds, { array: [0, 0, 0, 0, 0, 1, 23, 5, 0, 0, 0, 7, 5, 3] });

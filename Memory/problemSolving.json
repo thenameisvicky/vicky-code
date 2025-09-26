@@ -1,5 +1,5 @@
 {
-    "currentLevel": "Intermediate to Advanced (strong in arrays, strings, binary search, sliding window, hash map, subarray problems; consistently improving with 25 problems solved)",
+    "currentLevel": "Intermediate to Advanced (strong in arrays, strings, binary search, sliding window, hash map, subarray problems; consistently improving with 26 problems solved)",
     "areasOfImprovement": [
       "Expand to more problem types (graphs, trees, dynamic programming, advanced data structures)",
       "Participate in coding contests for speed and breadth",
@@ -7,7 +7,7 @@
       "Revisit and optimize previously solved problems",
       "Increase pace and minimize reliance on AI tools"
     ],
-    "lastSolvedStrategyDate": "2025-09-23",
+    "lastSolvedStrategyDate": "2025-09-26",
     "problems": [
       {
         "name": "Maximum Sum Subarray (Kadane's Algorithm)",
@@ -158,10 +158,10 @@
         "recentlyAdded": true
       },
       {
-        "name": "Permutations (Generate All via Next Permutation)",
-        "file": "permutations.ts",
-        "approach": "Iterative generation using repeated next-permutation",
-        "description": "Generates all permutations by iteratively applying the next permutation algorithm factorial(n) times, collecting snapshots on each step.",
+        "name": "Consecutive Odds (Three in a Row)",
+        "file": "consecutiveOdds.ts",
+        "approach": "Single pass scan with modulus checks",
+        "description": "Checks if an array contains three consecutive odd numbers by scanning once and verifying triplets with modulo arithmetic. Time complexity O(n), space O(1).",
         "recentlyAdded": true
       }
     ]

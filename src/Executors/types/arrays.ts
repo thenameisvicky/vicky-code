@@ -1,4 +1,4 @@
-import { bestTimeToBuyAndSellStockParams, binarySearchParams, containerWithMostWaterParams, countElementsWithMaximumFrequencyParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longestCommonPrefixParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, rotatedArraySearchParams, singleNumberParams, sumsUpToZeroParams, threeSumClosestParams, threeSumParams, twoSumParams, zeroFilledSubArrParams } from "../../leetCodeStyle/types";
+import { bestTimeToBuyAndSellStockParams, binarySearchParams, consecutiveOddsParams, containerWithMostWaterParams, countElementsWithMaximumFrequencyParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longestCommonPrefixParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, rotatedArraySearchParams, singleNumberParams, sumsUpToZeroParams, threeSumClosestParams, threeSumParams, twoSumParams, zeroFilledSubArrParams } from "../../leetCodeStyle/types";
 
 export interface paramsMap {
   twoSum: twoSumParams,
@@ -23,6 +23,7 @@ export interface paramsMap {
   sumsUpToZero: sumsUpToZeroParams;
   bestTimeToSell: bestTimeToBuyAndSellStockParams;
   countElemWithMostFrequency: countElementsWithMaximumFrequencyParams;
+  consecutiveOdds: consecutiveOddsParams;
 }
 
 export interface BaseSingleArrayExecutionStrategy<K extends keyof paramsMap> {

@@ -25,6 +25,7 @@ const sumZero_1 = require("./arrayManipulation/sumZero");
 const bestTimeStockActivities_1 = require("./arrayManipulation/bestTimeStockActivities");
 const countMaximumFrequence_1 = require("./hashMap/countMaximumFrequence");
 const permutations_1 = require("./arrayManipulation/permutations");
+const consecutiveOdds_1 = require("./arrayManipulation/consecutiveOdds");
 // TwoSum1: No pair adds to 100
 const twoSum1 = new twoSum1_1.TwoSumStrategy1();
 (0, problemSolvingExec_1.exec)(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
@@ -97,3 +98,6 @@ const countElemWithMostFre = new countMaximumFrequence_1.CountElementsWithMaximu
 //Permutations: Expected [ [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1] ] as output in any order
 const permutations = new permutations_1.PermutationsStrategy();
 (0, problemSolvingExec_1.exec)(permutations, { nums: [1, 2, 3] });
+//Consecutive Odds: Expected true
+const consecutiveOdds = new consecutiveOdds_1.ConsecutiveOddsStrategy();
+(0, problemSolvingExec_1.exec)(consecutiveOdds, { array: [0, 0, 0, 0, 0, 1, 23, 5, 0, 0, 0, 7, 5, 3] });

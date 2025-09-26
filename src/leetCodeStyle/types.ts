@@ -92,3 +92,7 @@ export type bestTimeToBuyAndSellStockParams = {
 export type countElementsWithMaximumFrequencyParams = {
   array: Array<number>;
 }
+
+export type consecutiveOddsParams = {
+  array: Array<number>;
+}
