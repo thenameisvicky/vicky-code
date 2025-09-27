@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const problemSolvingExec_1 = require("../Executors/problemSolvingExec");
+const problemSolvingExec_1 = require("../../Executors/problemSolvingExec");
 const binarySearch_1 = require("./search/binarySearch");
 const findInsertPosition_1 = require("./search/findInsertPosition");
 const fourSum_1 = require("./pointers/fourSum");

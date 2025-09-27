@@ -5,7 +5,7 @@
         "type": "node",
         "request": "launch",
         "name": "launch Leetcode",
-        "program": "${workspaceFolder}/dist/leetCodeStyle/index.js",
+        "program": "${workspaceFolder}/dist/modules/leetCodeStyle/index.js",
         "preLaunchTask": "tsc: build - tsconfig.json",
         "outFiles": ["${workspaceFolder}/dist/**/*.js"]
       }
