@@ -7,8 +7,13 @@
     "esModuleInterop": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "sourceMap": false,
   },
-  "include": ["src/**/*"],
-  "exclude": ["dist"]
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "dist"
+  ]
 }
