@@ -1,4 +1,5 @@
-import { TreeNode } from "../../Executors/treeNodes";
+import { TreeNode } from ".";
+
 
 //Construct Tree
 const root = new TreeNode(1);

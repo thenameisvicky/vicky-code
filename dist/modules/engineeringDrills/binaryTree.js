@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BinaryTree = void 0;
-const treeNodes_1 = require("../../Executors/treeNodes");
+const _1 = require(".");
 //Construct Tree
-const root = new treeNodes_1.TreeNode(1);
-root.left = new treeNodes_1.TreeNode(2);
-root.right = new treeNodes_1.TreeNode(3);
-root.left.left = new treeNodes_1.TreeNode(4);
-root.left.right = new treeNodes_1.TreeNode(5);
-root.right.right = new treeNodes_1.TreeNode(6);
+const root = new _1.TreeNode(1);
+root.left = new _1.TreeNode(2);
+root.right = new _1.TreeNode(3);
+root.left.left = new _1.TreeNode(4);
+root.left.right = new _1.TreeNode(5);
+root.right.right = new _1.TreeNode(6);
 //Traverse the Tree
 class BinaryTree {
     constructor(root = null) {
