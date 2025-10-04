@@ -26,4 +26,48 @@
         "name": "Redux Social Media App",
         "description": "Redux toolkit-based app with mock services and custom hooks."
     }
+    ,
+    "dtbGuard": {
+        "name": "DTB-Guard – IoV Vehicle Management and Security",
+        "description": "Final-year MERN + React Native system to manage and track vehicles with a deception-based (honeypot) digital twin security architecture for Internet of Vehicles (IoV).",
+        "features": [
+            "Real-time telemetry streaming via WebSocket for alerts and status",
+            "Digital Twin replica and deception engine to lure and study attackers",
+            "Admin web dashboard (MERN) for monitoring, alerts, and metrics",
+            "React Native mobile app for vehicle tracking and management",
+            "Monitoring and event logging with <2s data sync latency",
+            "Scalable multi-core server design; reduced false positives via decoys (diverted ~85% simulated intrusions)"
+        ],
+        "tech": ["MongoDB", "Express.js", "React", "Node.js", "React Native", "WebSocket"],
+        "links": {},
+        "duration": "Academic project"
+    }
+    ,
+    "reduxDocsTutorial": {
+        "name": "Redux Toolkit Docs Walkthrough",
+        "description": "Self-directed implementation following official Redux Toolkit documentation: slices, async flows, RTK Query.",
+        "features": [
+            "Configured store with slices, selectors, and typed middleware",
+            "Implemented async thunks and normalized state patterns",
+            "Adopted RTK Query for data fetching, caching and invalidation",
+            "TypeScript-first setup for actions, reducers, and selectors"
+        ],
+        "tech": ["React", "Redux Toolkit", "TypeScript"],
+        "links": {},
+        "duration": "Learning project"
+    }
+    ,
+    "nextjsDocsTutorial": {
+        "name": "Next.js Docs Learning Project",
+        "description": "Tutorial-driven exploration of Next.js: routing, data fetching (SSR/SSG/ISR), API routes, and SEO.",
+        "features": [
+            "File-based routing with dynamic routes and layouts",
+            "Server-side rendering, static generation, and incremental regeneration",
+            "API routes and middleware basics",
+            "Image optimization and metadata for SEO"
+        ],
+        "tech": ["Next.js", "React", "TypeScript"],
+        "links": {},
+        "duration": "Learning project"
+    }
 }
