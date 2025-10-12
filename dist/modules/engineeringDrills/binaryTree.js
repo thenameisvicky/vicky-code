@@ -1,15 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BinaryTree = void 0;
-const _1 = require(".");
-//Construct Tree
-const root = new _1.TreeNode(1);
-root.left = new _1.TreeNode(2);
-root.right = new _1.TreeNode(3);
-root.left.left = new _1.TreeNode(4);
-root.left.right = new _1.TreeNode(5);
-root.right.right = new _1.TreeNode(6);
-//Traverse the Tree
 class BinaryTree {
     constructor(root = null) {
         this.root = root;
@@ -17,7 +8,7 @@ class BinaryTree {
     preOrder(node = this.root, result) {
         if (!node)
             return result;
-        result.push(node.val);
+        result.push(node.value);
         this.preOrder(node.left, result);
         this.preOrder(node.right, result);
         return result;
@@ -27,14 +18,14 @@ class BinaryTree {
             return result;
         this.postOrder(node.right, result);
         this.postOrder(node.left, result);
-        result.push(node.val);
+        result.push(node.value);
         return result;
     }
     inOrder(node = this.root, result) {
         if (!node)
             return result;
         this.inOrder(node.left, result);
-        result.push(node.val);
+        result.push(node.value);
         this.inOrder(node.right, result);
         return result;
     }
@@ -45,7 +36,7 @@ class BinaryTree {
         queue.push(node);
         while (queue.length > 0) {
             const currentNode = queue.shift();
-            result.push(currentNode ? currentNode.val : 0);
+            result.push(currentNode ? currentNode.value : 0);
             if (currentNode?.left)
                 queue.push(currentNode.left);
             if (currentNode?.right)
