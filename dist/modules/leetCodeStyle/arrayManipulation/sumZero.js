@@ -4,10 +4,10 @@ exports.SumsUpToZeroStrategy = void 0;
 class SumsUpToZeroStrategy {
     contextFunction(params) {
         const { length } = params;
-        if (length == 1)
+        if (length === 1)
             return [0];
-        let array = [];
-        if (length % 2 == 0) {
+        const array = [];
+        if (length % 2 === 0) {
             for (let i = 1; i < length; i++) {
                 array.push(i * -1);
                 array.push(i);

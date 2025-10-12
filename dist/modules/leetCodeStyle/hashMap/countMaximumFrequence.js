@@ -5,8 +5,9 @@ class CountElementsWithMaximumFrequencyStrategy {
     contextFunction(params) {
         const { array } = params;
         const map = new Map();
-        let maxFreCount = 0, maxFre = 0;
-        for (let element of array) {
+        let maxFreCount = 0;
+        let maxFre = 0;
+        for (const element of array) {
             if (map.has(element)) {
                 map.set(element, map.get(element) + 1);
             }
@@ -14,8 +15,8 @@ class CountElementsWithMaximumFrequencyStrategy {
                 map.set(element, 1);
             }
         }
-        for (let [key, value] of map) {
-            if (value == maxFre) {
+        for (const [value] of map) {
+            if (value === maxFre) {
                 maxFreCount += value;
             }
             else if (value > maxFre) {

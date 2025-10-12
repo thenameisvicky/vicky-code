@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.engineeringContextExecutor = exports.contextExecutor = void 0;
-class contextExecutor {
+exports.engineeringContextExecutor = exports.ContextExecutor = void 0;
+class ContextExecutor {
     constructor(Strategy) {
         this.strategy = Strategy;
     }
@@ -9,7 +9,7 @@ class contextExecutor {
         return this.strategy.contextFunction(params);
     }
 }
-exports.contextExecutor = contextExecutor;
+exports.ContextExecutor = ContextExecutor;
 class engineeringContextExecutor {
     constructor(Strategy) {
         this.strategy = Strategy;

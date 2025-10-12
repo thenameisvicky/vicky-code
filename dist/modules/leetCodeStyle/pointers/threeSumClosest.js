@@ -7,7 +7,7 @@ class ThreeSumClosestStrategy {
         nums.sort((a, b) => a - b);
         let closest = -Infinity;
         for (let i = 0; i < nums.length - 2; i++) {
-            if (i > 0 && nums[i] == nums[i - 1])
+            if (i > 0 && nums[i] === nums[i - 1])
                 continue;
             let j = i + 1;
             let k = nums.length - 1;

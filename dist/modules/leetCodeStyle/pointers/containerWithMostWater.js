@@ -8,8 +8,8 @@ class ContainerWithMostWaterStrategy {
         let right = nums.length - 1;
         let maxArea = -Infinity;
         while (left < right) {
-            let distance = right - left;
-            let area = Math.floor(Math.min(nums[left], nums[right]) * distance);
+            const distance = right - left;
+            const area = Math.floor(Math.min(nums[left], nums[right]) * distance);
             maxArea = Math.max(area, maxArea);
             if (nums[right] > nums[left]) {
                 left++;

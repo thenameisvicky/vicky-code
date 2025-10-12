@@ -5,12 +5,6 @@ class PermutationsStrategy {
     contextFunction(params) {
         const { nums } = params;
         const resultArr = [];
-        const length = getCount();
-        for (let i = 0; i <= length; i++) {
-            resultArr.push([...nums]);
-            permutate();
-        }
-        return resultArr;
         function getCount() {
             let count = 1;
             for (let i = 2; i <= nums.length; i++) {
@@ -39,6 +33,12 @@ class PermutationsStrategy {
             }
             return nums;
         }
+        const length = getCount();
+        for (let i = 0; i <= length; i++) {
+            resultArr.push([...nums]);
+            permutate();
+        }
+        return resultArr;
     }
 }
 exports.PermutationsStrategy = PermutationsStrategy;
