@@ -1,4 +1,4 @@
-import { bestTimeToBuyAndSellStockParams, binarySearchParams, consecutiveOddsParams, containerWithMostWaterParams, countElementsWithMaximumFrequencyParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longestCommonPrefixParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, rotatedArraySearchParams, singleNumberParams, sumsUpToZeroParams, threeSumClosestParams, threeSumParams, twoSumParams, zeroFilledSubArrParams } from "../../modules/leetCodeStyle/types";
+import { bestTimeToBuyAndSellStockParams, binarySearchParams, consecutiveOddsParams, containerWithMostWaterParams, countElementsWithMaximumFrequencyParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longestCommonPrefixParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, rotatedArraySearchParams, singleNumberParams, sumsUpToZeroParams, threeSumClosestParams, threeSumParams, twoSumParams, zeroFilledSubArrParams } from '../../modules/leetCodeStyle/types'
 
 export interface paramsMap {
   twoSum: twoSumParams,
@@ -30,14 +30,14 @@ export interface BaseSingleArrayExecutionStrategy<K extends keyof paramsMap> {
   contextFunction: (params: paramsMap[K]) => any;
 }
 
-export class contextExecutor<K extends keyof paramsMap> {
-  private strategy: BaseSingleArrayExecutionStrategy<K>;
-  constructor(Strategy: BaseSingleArrayExecutionStrategy<K>) {
-    this.strategy = Strategy;
+export class ContextExecutor<K extends keyof paramsMap> {
+  private strategy: BaseSingleArrayExecutionStrategy<K>
+  constructor (Strategy: BaseSingleArrayExecutionStrategy<K>) {
+    this.strategy = Strategy
   }
 
-  execute(params: paramsMap[K]): any {
-    return this.strategy.contextFunction(params);
+  execute (params: paramsMap[K]): any {
+    return this.strategy.contextFunction(params)
   }
 }
 
@@ -54,12 +54,12 @@ export interface BaseEngineeringExecutionStrategy<K extends keyof engineeringPar
 }
 
 export class engineeringContextExecutor<K extends keyof engineeringParamsMap> {
-  private strategy: BaseEngineeringExecutionStrategy<K>;
-  constructor(Strategy: BaseEngineeringExecutionStrategy<K>) {
-    this.strategy = Strategy;
+  private strategy: BaseEngineeringExecutionStrategy<K>
+  constructor (Strategy: BaseEngineeringExecutionStrategy<K>) {
+    this.strategy = Strategy
   }
 
-  execute(params: engineeringParamsMap[K]): any {
-    return this.strategy.contextFunction(params);
+  execute (params: engineeringParamsMap[K]): any {
+    return this.strategy.contextFunction(params)
   }
 }

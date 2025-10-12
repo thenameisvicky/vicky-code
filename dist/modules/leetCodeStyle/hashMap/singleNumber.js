@@ -5,7 +5,7 @@ class SingleOccuringNumberStrategy {
     contextFunction(params) {
         const { num } = params;
         let result = 0;
-        for (let n of num) {
+        for (const n of num) {
             result ^= n;
         }
         return result;

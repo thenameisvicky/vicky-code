@@ -4,7 +4,9 @@ exports.MinimumSizeSubarraySumStrategy = void 0;
 class MinimumSizeSubarraySumStrategy {
     contextFunction(params) {
         const { nums, target } = params;
-        let left = 0, min = Infinity, sum = 0;
+        let left = 0;
+        let min = Infinity;
+        let sum = 0;
         for (let i = 0; i < nums.length; i++) {
             sum += nums[i];
             while (sum >= target) {

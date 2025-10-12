@@ -12,7 +12,8 @@ function getRoot(array) {
         const current = queue.shift();
         if (!current)
             continue;
-        const left = array[i++], right = array[i++];
+        const left = array[i++];
+        const right = array[i++];
         if (left && right) {
             current.left = new helperClasses_1.TreeNode(left);
             current.right = new helperClasses_1.TreeNode(right);

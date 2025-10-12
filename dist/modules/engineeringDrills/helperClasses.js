@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.heap = exports.TreeNode = void 0;
+exports.Heap = exports.TreeNode = void 0;
 class TreeNode {
     constructor(val) {
         this.value = val;
@@ -9,8 +9,8 @@ class TreeNode {
     }
 }
 exports.TreeNode = TreeNode;
-class heap {
-    //Class constructor
+class Heap {
+    // Class constructor
     constructor(compareFn) {
         this.data = [];
         this.compare = compareFn;
@@ -23,8 +23,8 @@ class heap {
         return this.data[0];
     }
     remove(element) {
-        const index = this.data.findIndex((elem) => elem == element);
-        if (index == -1)
+        const index = this.data.findIndex((elem) => elem === element);
+        if (index === -1)
             return;
         const last = this.data.pop();
         if (index < this.data.length && last) {
@@ -47,7 +47,7 @@ class heap {
     size() {
         return this.data.length;
     }
-    //Private Helpers
+    // Private Helpers
     parent(index) {
         return Math.floor((index - 1) / 2);
     }
@@ -91,4 +91,4 @@ class heap {
         }
     }
 }
-exports.heap = heap;
+exports.Heap = Heap;

@@ -4,7 +4,9 @@ exports.LongestSubStrWithNoRepeatCharStrategy = void 0;
 class LongestSubStrWithNoRepeatCharStrategy {
     contextFunction(params) {
         const { s } = params;
-        let left = 0, map = new Map(), max = 0;
+        let left = 0;
+        const map = new Map();
+        let max = 0;
         for (let i = 0; i < s.length; i++) {
             while (map.has(s[i])) {
                 map.delete(s[left]);

@@ -5,12 +5,12 @@ const helperClasses_1 = require("./helperClasses");
 class TaskManager {
     constructor(tasks) {
         this.task = {};
-        this.heap = new helperClasses_1.heap((a, b) => {
+        this.heap = new helperClasses_1.Heap((a, b) => {
             if (a.priority !== b.priority)
                 return b.priority - a.priority;
             return b.taskId - a.taskId;
         });
-        for (let [userId, taskId, priority] of tasks) {
+        for (const [userId, taskId, priority] of tasks) {
             const taskWithVersion = { userId, taskId, priority, version: 1 };
             this.task[taskId] = taskWithVersion;
             this.heap.insert(taskWithVersion);
@@ -36,7 +36,7 @@ class TaskManager {
             if (!top)
                 return -1;
             const valid = this.task[top.taskId];
-            if (valid.version == top.version) {
+            if (valid.version === top.version) {
                 delete this.task[top.taskId];
                 return valid.userId;
             }
