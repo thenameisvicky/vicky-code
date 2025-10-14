@@ -1,58 +1,58 @@
-import { Heap } from './helperClasses'
+import { Heap } from "./helperClasses";
 
 type task = {
-    userId: number;
-    taskId: number;
-    priority: number;
-    version: number;
-}
+  userId: number;
+  taskId: number;
+  priority: number;
+  version: number;
+};
 export class TaskManager {
-  private task: Record<number, task>
-  private heap: Heap<task>
-  constructor (tasks: number[][]) {
-    this.task = {}
+  private task: Record<number, task>;
+  private heap: Heap<task>;
+  constructor(tasks: number[][]) {
+    this.task = {};
     this.heap = new Heap((a, b) => {
-      if (a.priority !== b.priority) return b.priority - a.priority
-      return b.taskId - a.taskId
-    })
+      if (a.priority !== b.priority) return b.priority - a.priority;
+      return b.taskId - a.taskId;
+    });
 
     for (const [userId, taskId, priority] of tasks) {
-      const taskWithVersion: task = { userId, taskId, priority, version: 1 }
-      this.task[taskId] = taskWithVersion
-      this.heap.insert(taskWithVersion)
+      const taskWithVersion: task = { userId, taskId, priority, version: 1 };
+      this.task[taskId] = taskWithVersion;
+      this.heap.insert(taskWithVersion);
     }
   }
 
-  add (userId: number, taskId: number, priority: number): void {
-    const newTask: task = { userId, taskId, priority, version: 1 }
-    this.task[taskId] = newTask
-    this.heap.insert(newTask)
+  add(userId: number, taskId: number, priority: number): void {
+    const newTask: task = { userId, taskId, priority, version: 1 };
+    this.task[taskId] = newTask;
+    this.heap.insert(newTask);
   }
 
-  edit (taskId: number, newPriority: number): void {
-    const oldTask = this.task[taskId]
-    oldTask.version++
-    oldTask.priority = newPriority
+  edit(taskId: number, newPriority: number): void {
+    const oldTask = this.task[taskId];
+    oldTask.version++;
+    oldTask.priority = newPriority;
 
-    this.heap.insert({ ...oldTask })
+    this.heap.insert({ ...oldTask });
   }
 
-  rmv (taskId: number): void {
-    delete this.task[taskId]
+  rmv(taskId: number): void {
+    delete this.task[taskId];
   }
 
-  execTop (): number {
+  execTop(): number {
     while (this.heap.size()) {
-      const top = this.heap.poll()
+      const top = this.heap.poll();
 
-      if (!top) return -1
+      if (!top) return -1;
 
-      const valid = this.task[top.taskId]
+      const valid = this.task[top.taskId];
       if (valid.version === top.version) {
-        delete this.task[top.taskId]
-        return valid.userId
+        delete this.task[top.taskId];
+        return valid.userId;
       }
     }
-    return -1
+    return -1;
   }
 }

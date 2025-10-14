@@ -4,18 +4,23 @@
     "typescript": "5.8.3"
   },
   "devDependencies": {
-    "eslint": "8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-config-standard": "17.1.0",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-n": "16.6.2",
+    "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-promise": "6.1.1",
-    "@typescript-eslint/eslint-plugin": "6.18.0",
-    "@typescript-eslint/parser": "6.18.0"
+    "prettier": "^3.6.2"
   },
   "scripts": {
     "build": "tsc",
     "leetcodeDev": "node dist/leetCodeStyle/index.js",
     "engineeringDrills": "node dist/engineeringDrills/index.js",
-    "lint:fix": "eslint src --ext .ts,.js --fix"
+    "lint:fix": "eslint src --ext .ts,.js --fix",
+    "format": "prettier --write \"src/**/*.{ts,js}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,js}\""
   }
 }

@@ -1,29 +1,34 @@
-import { BaseSingleArrayExecutionStrategy } from '../../../Executors/types/arrays'
-import { countHillsAndValleysParams } from '../types'
+import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
+import { countHillsAndValleysParams } from "../types";
 
-export class CountHillsAndValleysStrategy implements BaseSingleArrayExecutionStrategy<'countHillsAndValley'> {
-  contextFunction (params: countHillsAndValleysParams): any {
-    const { nums } = params
+export class CountHillsAndValleysStrategy
+  implements BaseSingleArrayExecutionStrategy<"countHillsAndValley">
+{
+  contextFunction(params: countHillsAndValleysParams): any {
+    const { nums } = params;
 
-    let count = 0
+    let count = 0;
 
     for (let i = 1; i < nums.length - 1; i++) {
-      if (nums[i] === nums[i - 1]) continue
+      if (nums[i] === nums[i - 1]) continue;
 
-      let left = i - 1
+      let left = i - 1;
       while (left >= 0 && nums[left] === nums[i]) {
-        left--
+        left--;
       }
 
-      let right = i + 1
+      let right = i + 1;
       while (right < nums.length && nums[right] === nums[i]) {
-        right++
+        right++;
       }
 
-      if ((nums[left] < nums[i] && nums[i] > nums[right]) || (nums[left] > nums[i] && nums[i] < nums[right])) {
-        count++
+      if (
+        (nums[left] < nums[i] && nums[i] > nums[right]) ||
+        (nums[left] > nums[i] && nums[i] < nums[right])
+      ) {
+        count++;
       }
     }
-    return count
+    return count;
   }
 }

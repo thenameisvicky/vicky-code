@@ -1,10 +1,34 @@
-import { bestTimeToBuyAndSellStockParams, binarySearchParams, consecutiveOddsParams, containerWithMostWaterParams, countElementsWithMaximumFrequencyParams, countHillsAndValleysParams, findInsertPositionParams, fourSumParams, groupAnagramsParams, longestCommonPrefixParams, longSubStringNoDupParams, maxProductSubarrayParams, maxSumSubarrayParams, minSizeSubarraySumParams, moveZerosParams, nextPermutationParams, rotatedArraySearchParams, singleNumberParams, sumsUpToZeroParams, threeSumClosestParams, threeSumParams, twoSumParams, zeroFilledSubArrParams } from '../../modules/leetCodeStyle/types'
+import {
+  bestTimeToBuyAndSellStockParams,
+  binarySearchParams,
+  consecutiveOddsParams,
+  containerWithMostWaterParams,
+  countElementsWithMaximumFrequencyParams,
+  countHillsAndValleysParams,
+  findInsertPositionParams,
+  fourSumParams,
+  groupAnagramsParams,
+  longestCommonPrefixParams,
+  longSubStringNoDupParams,
+  maxProductSubarrayParams,
+  maxSumSubarrayParams,
+  minSizeSubarraySumParams,
+  moveZerosParams,
+  nextPermutationParams,
+  rotatedArraySearchParams,
+  singleNumberParams,
+  sumsUpToZeroParams,
+  threeSumClosestParams,
+  threeSumParams,
+  twoSumParams,
+  zeroFilledSubArrParams,
+} from "../../modules/leetCodeStyle/types";
 
 export interface paramsMap {
-  twoSum: twoSumParams,
-  binarySearch: binarySearchParams,
-  minSizeSubarrSum: minSizeSubarraySumParams,
-  moveZeros: moveZerosParams,
+  twoSum: twoSumParams;
+  binarySearch: binarySearchParams;
+  minSizeSubarrSum: minSizeSubarraySumParams;
+  moveZeros: moveZerosParams;
   longestSubStringNoDup: longSubStringNoDupParams;
   findInsertPosition: findInsertPositionParams;
   nextPermutation: nextPermutationParams;
@@ -31,13 +55,13 @@ export interface BaseSingleArrayExecutionStrategy<K extends keyof paramsMap> {
 }
 
 export class ContextExecutor<K extends keyof paramsMap> {
-  private strategy: BaseSingleArrayExecutionStrategy<K>
-  constructor (Strategy: BaseSingleArrayExecutionStrategy<K>) {
-    this.strategy = Strategy
+  private strategy: BaseSingleArrayExecutionStrategy<K>;
+  constructor(Strategy: BaseSingleArrayExecutionStrategy<K>) {
+    this.strategy = Strategy;
   }
 
-  execute (params: paramsMap[K]): any {
-    return this.strategy.contextFunction(params)
+  execute(params: paramsMap[K]): any {
+    return this.strategy.contextFunction(params);
   }
 }
 
@@ -49,17 +73,19 @@ export interface engineeringParamsMap {
   // taskManagerInit: { tasks: number[][] };
 }
 
-export interface BaseEngineeringExecutionStrategy<K extends keyof engineeringParamsMap> {
+export interface BaseEngineeringExecutionStrategy<
+  K extends keyof engineeringParamsMap,
+> {
   contextFunction: (params: engineeringParamsMap[K]) => any;
 }
 
 export class engineeringContextExecutor<K extends keyof engineeringParamsMap> {
-  private strategy: BaseEngineeringExecutionStrategy<K>
-  constructor (Strategy: BaseEngineeringExecutionStrategy<K>) {
-    this.strategy = Strategy
+  private strategy: BaseEngineeringExecutionStrategy<K>;
+  constructor(Strategy: BaseEngineeringExecutionStrategy<K>) {
+    this.strategy = Strategy;
   }
 
-  execute (params: engineeringParamsMap[K]): any {
-    return this.strategy.contextFunction(params)
+  execute(params: engineeringParamsMap[K]): any {
+    return this.strategy.contextFunction(params);
   }
 }
