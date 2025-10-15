@@ -11,8 +11,8 @@ export class TreeNode<T> {
 }
 
 export class Heap<T> {
-  private data: T[];
-  private compare: (a: T, b: T) => number;
+  public data: T[];
+  public compare: (a: T, b: T) => number;
 
   // Class constructor
   constructor(compareFn: (a: T, b: T) => number) {

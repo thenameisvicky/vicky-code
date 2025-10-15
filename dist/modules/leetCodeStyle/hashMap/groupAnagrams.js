@@ -6,7 +6,7 @@ class GroupAnagramsStrategy {
         const { strings } = params;
         const map = new Map();
         for (let i = 0; i < strings.length; i++) {
-            const generalized = strings[i].split('').sort().join('');
+            const generalized = strings[i].split("").sort().join("");
             if (!map.has(generalized)) {
                 map.set(generalized, []);
             }

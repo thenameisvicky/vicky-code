@@ -16,7 +16,8 @@ class CountHillsAndValleysStrategy {
             while (right < nums.length && nums[right] === nums[i]) {
                 right++;
             }
-            if ((nums[left] < nums[i] && nums[i] > nums[right]) || (nums[left] > nums[i] && nums[i] < nums[right])) {
+            if ((nums[left] < nums[i] && nums[i] > nums[right]) ||
+                (nums[left] > nums[i] && nums[i] < nums[right])) {
                 count++;
             }
         }

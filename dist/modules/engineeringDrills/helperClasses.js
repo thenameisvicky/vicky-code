@@ -61,7 +61,10 @@ class Heap {
         while (index > 0) {
             const parent = this.parent(index);
             if (this.compare(this.data[index], this.data[parent]) < 0) {
-                [this.data[index], this.data[parent]] = [this.data[parent], this.data[index]];
+                [this.data[index], this.data[parent]] = [
+                    this.data[parent],
+                    this.data[index],
+                ];
                 index = parent;
             }
             else {
@@ -75,14 +78,19 @@ class Heap {
             const leftIndex = this.left(index);
             const rightIndex = this.right(index);
             let effecientIndex = index;
-            if (leftIndex < length && this.compare(this.data[leftIndex], this.data[effecientIndex]) < 0) {
+            if (leftIndex < length &&
+                this.compare(this.data[leftIndex], this.data[effecientIndex]) < 0) {
                 effecientIndex = leftIndex;
             }
-            if (rightIndex < length && this.compare(this.data[rightIndex], this.data[effecientIndex]) < 0) {
+            if (rightIndex < length &&
+                this.compare(this.data[rightIndex], this.data[effecientIndex]) < 0) {
                 effecientIndex = rightIndex;
             }
             if (effecientIndex !== index) {
-                [this.data[index], this.data[effecientIndex]] = [this.data[effecientIndex], this.data[index]];
+                [this.data[index], this.data[effecientIndex]] = [
+                    this.data[effecientIndex],
+                    this.data[index],
+                ];
                 index = effecientIndex;
             }
             else {
