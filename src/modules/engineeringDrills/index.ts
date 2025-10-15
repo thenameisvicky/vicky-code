@@ -24,7 +24,9 @@ const manager = new TaskManager([
 const result = tree.levelOrder(root, []);
 const exeTask = manager.execTop();
 const kthLargestElementResponse = kthLargestElement([3, 2, 1, 5, 6, 4], 2);
+const kthLargestElementHc = kthLargestElement([3, 2, 1, 5, 6, 4], 2);
 
 console.log(`Binary Traversal Result: ${result}`);
 console.log(`Task Manager result: ${exeTask}`);
-console.log(`Kth LargestElement: ${kthLargestElementResponse}`);
+console.log(`Kth LargestElementHeap: ${kthLargestElementResponse}`);
+console.log(`Kth LargestElementHc: ${kthLargestElementHc}`);
