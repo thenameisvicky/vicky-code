@@ -57,23 +57,10 @@ export class Heap<T> {
   size(): number {
     return this.data.length;
   }
-
-  // Private Helpers
-  private parent(index: number): number {
-    return Math.floor((index - 1) / 2);
-  }
-
-  private left(index: number): number {
-    return index * 2 + 1;
-  }
-
-  private right(index: number): number {
-    return index * 2 + 2;
-  }
-
+  
   private bubbleUp(index: number): void {
     while (index > 0) {
-      const parent = this.parent(index);
+      const parent = Math.floor((index - 1) / 2);
       if (this.compare(this.data[index], this.data[parent]) < 0) {
         [this.data[index], this.data[parent]] = [
           this.data[parent],
@@ -89,8 +76,8 @@ export class Heap<T> {
   private bubbleDown(index: number): void {
     const length = this.data.length;
     while (true) {
-      const leftIndex = this.left(index);
-      const rightIndex = this.right(index);
+      const leftIndex = index * 2 + 1;
+      const rightIndex = index * 2 + 2;
       let effecientIndex = index;
 
       if (
