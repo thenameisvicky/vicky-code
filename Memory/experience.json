@@ -2,11 +2,11 @@
     "currentPosition": {
         "company": "Klenty Soft Inc",
         "role": "Software Development Engineer Intern",
-        "duration": "March 2025 - August 2025",
+        "duration": "March 2025 - September 2025",
         "owner": "Vigneshwaran B SDE - Intern",
         "createdDate": "June 14 2025",
-        "lastUpdatedDate": "October 04 2025",
-        "totalTasksCompleted": 36,
+        "lastUpdatedDate": "January 27 2025",
+        "totalTasksCompleted": 39,
         "achievements": [
             "Wrote scripts using Bluebird and MongoDB streams to extract credit charge data from the database, grouped, and exported as CSV.",
             "Developed and shipped 20+ front-end and full-stack features",
@@ -612,23 +612,28 @@
             },
             {
                 "taskNumber": 33,
-                "assignedDate": "September 23 Tuesday",
-                "title": "Voxy Schedx - Custom column enhancement",
+                "assignedDate": "September 24 Tuesday",
+                "title": "Voxy-Schedx, Syncing Admin settings on Customised column with all the users and handling stale state",
                 "type": "FullStack",
                 "changesMade": [
-                    "Voxy-client: Synced Redux store on navigation to refresh dynamic headers; admin-only split save flow via dropdown",
-                    "Sep-Webapp: Added endpoint to fetch recent user settings",
-                    "Webapp: Added updateMany path for company-level saves with flag"
+                    "Voxy-client: Added function to update redux store with values from backend, called inside handleRefresh()",
+                    "Added dependencies in <AgentTable/> to trigger re-render of Dynamic header function",
+                    "Sent isAdmin as prop to <CustomDropDownComponent />, show split button for admin",
+                    "onSave function updates usersettings in db with API call sending isSaveAll as true",
+                    "Sep-Webapp: Written new endpoint which returns recent document of usersettingsdetails",
+                    "Webapp: Added extra prop to send only company and alter query as updateMany"
                 ],
-                "developmentPeriod": "September 23 - September 29 (6 Hours)",
-                "liveDate": "September 29 Tuesday",
+                "developmentPeriod": "September 24 - September 30 (18 Hours)",
+                "liveDate": "October 01 Tuesday",
                 "learnings": [
-                    "Deepened understanding of useEffect dependencies",
-                    "Frontend state synchronization patterns"
+                    "Have learned how to handle complex components which are tightly coupled",
+                    "Have improved knowledge in react batch processing and function references",
+                    "Have learnt the side effects of deeply nested components redux life cycle",
+                    "Have learnt to debug in Production CDN",
+                    "Have learnt to watch the call stack closely and identify the functions in stack"
                 ],
-                "hotFixes": []
-            }
-            ,
+                "hotFixes": ["Have missed Users word in Copy of column customizer drag and drop"]
+            },
             {
                 "taskNumber": 34,
                 "assignedDate": "October 01 Wednesday",
@@ -677,12 +682,298 @@
                     "SaveProblemsData to obtain DxId; GetClinicalSummary exploration",
                     "Map patient request to appropriate order type and execute save order flow"
                 ],
-                "developmentPeriod": "July 21 - July 22 (12 Hours)",
-                "liveDate": "July 22 Tuesday",
+                "developmentPeriod": "July 21 - July 24 (12 Hours + On Hold: 3 Hours + Reopen: 6 Hours)",
+                "liveDate": "July 24 Thursday (Closed branch due to Veradigm data mapping blocker)",
                 "learnings": [
                     "Learnt about what an order is in EHR",
                     "Flow to attribute creation in Call Agent",
                     "Learnt Veradigm endpoints: Get Problems and SaveOrder"
+                ],
+                "hotFixes": [],
+                "blockers": "Goal: Save clinical orders using SaveOrder. Problem: SaveOrder needs valid DxId, but most transid values from GetClinicalSummary fail. Only 8-9 out of 57 transid values worked. Veradigm may expect IDs from GetProblems, SaveProblemsData, or hpsite.dx. Missing contact/encounter links might invalidate DxId."
+            },
+            {
+                "taskNumber": 37,
+                "assignedDate": "October 07 Monday",
+                "title": "VoxyAI - voxy console workflow configuration UI and backend enhancement",
+                "type": "FullStack",
+                "changesMade": [
+                    "Voxy-console (client): Used window location to route from angular client to react client, sending username and company as queryparams",
+                    "Voxy-console (react-client): Accessed username and company from queryparams, called Backend API to get all agents, listed in workflowList component with map, create, edit and unmap workflow",
+                    "When user clicks edit workflow, workflow edit component mounts with route workflow/workflowId/agent/agentId",
+                    "Editing system prompt, node and workflow all saved to database sending workflowId and agentId from window location as param to backend APIs",
+                    "If new workflow created, user routed to workflow edit component with route workflow/agent/agentId",
+                    "Voxy-console (server): Written new endpoints getAllAgents(), updateAgentWorkflow() and updateAgentSystemPrompt()",
+                    "Enhanced creation of workflow by mapping agent with newly created workflow"
+                ],
+                "developmentPeriod": "October 07 - October 07 (12 Hours)",
+                "liveDate": "Not Available",
+                "learnings": [
+                    "Learnt how to design a agentic workflow",
+                    "Learnt how to call internal methods from agent response according to conversation with user in call",
+                    "Learnt how integration with Elvenlabs works during a call via websocket",
+                    "Learnt how tools (methods) are called by the agent according to scenario",
+                    "Learnt how to manage tools and setup workflows",
+                    "Learnt how to fast prototype with cursor and optimize, refactor later",
+                    "Improved knowledge on react and angular routing",
+                    "Learnt how effective pair programming with seniors is",
+                    "Learnt how to route from angular to react build using window location",
+                    "Learnt how to use query param"
+                ],
+                "hotFixes": []
+            },
+            {
+                "taskNumber": 38,
+                "assignedDate": "October 14 Monday",
+                "title": "Disabling sms features in Pending table",
+                "type": "Frontend",
+                "changesMade": [
+                    "Voxy client - schedx: Used userPreferences.enableSMS condition (true when defaultEnableMessaging is true at company level)",
+                    "Used to hide and show one off message icon in Prospect Table's prospect actions",
+                    "Also used to disable SMS cadence, Prospect Panel Messaging",
+                    "Sent isSmsDisabled: userPreferences.enableSMS in places where <ActionTab/> Organim component used in AgentTable as Call Actions",
+                    "Added new prop isSmsDisabled to organim component which disables message button from action tab if userPreferences.enableSMS is false"
+                ],
+                "developmentPeriod": "October 14 - October 14 (3 Hours)",
+                "liveDate": "October 14 Monday",
+                "learnings": [],
+                "hotFixes": []
+            },
+            {
+                "taskNumber": 39,
+                "assignedDate": "October 15 Tuesday",
+                "title": "SMS error handling and Tool tip added",
+                "type": "Frontend",
+                "changesMade": [
+                    "Voxy client - schedx: Added new condition to check if SMS failed in Promise.allSettled, then set smsUnavailable error in form data",
+                    "Sent errors.smsText prop to <FollowUpSMS/>",
+                    "Wrapped section 'Also send Text Message' with ToolTip and sent content"
+                ],
+                "developmentPeriod": "October 15 - October 15 (3 Hours)",
+                "liveDate": "October 15 Tuesday",
+                "learnings": [],
+                "hotFixes": []
+            }
+        ]
+    },
+    "currentFullTimePosition": {
+        "company": "VoxyHealth (Klenty Soft Inc)",
+        "role": "Software Development Engineer",
+        "duration": "October 2025 - Present",
+        "owner": "Vigneshwaran B SDE",
+        "createdDate": "January 27 2025",
+        "lastUpdatedDate": "January 27 2025",
+        "totalTasksCompleted": 8,
+        "achievements": [
+            "Converted from Intern to Full-time SDE",
+            "Built comprehensive workflow management system with React and Angular integration",
+            "Enhanced EHR integration with Veradigm endpoints",
+            "Improved patient activity tracking and timeline features",
+            "Implemented email notification systems for SFTP imports"
+        ],
+        "detailedTasks": [
+            {
+                "taskNumber": 1,
+                "ticket": "SQ2-1983",
+                "assignedDate": "October 22 Tuesday",
+                "title": "Refactoring Workflow UI",
+                "type": "FullStack",
+                "changesMade": [
+                    "Voxy console - Angular Client: Added 'Open workflow' button at company level, added routing from Angular client to React client (replacing window location, added company name)",
+                    "Voxy console - React Client: Changed React app base URL to point to console namespace (instead of auth namespace) for React client in Test and Production",
+                    "Added /workflows route to get query params and hit /userAgents API to retrieve created agents",
+                    "Agents shown in table in <workFlowList/> component with response containing agent information from ElevenLabs",
+                    "Each agent has 4 actions: Edit, Map, unMap workflows, and Switch to ElevenLabs agent",
+                    "Edit/Add based on agent's workflow: if mapped, Edit icon appears; otherwise, Add icon",
+                    "Clicking Map shows workflow modal with list of workflows; choosing one maps it",
+                    "UnMap removes workflow ID from agent document",
+                    "Clicking Edit shows <WorkflowEdit/> component; if workflow exists, it's displayed; otherwise, empty state for new workflow",
+                    "<WorkflowEdit/> contains RightPanel and WorkflowCanvas components",
+                    "RightPanel has two tabs: 'System Prompt' (synced with ElevenLabs) and 'Scenario'",
+                    "After API sync, updated prompt from ElevenLabs is set in context and local state",
+                    "Scenario tab offers options to create and add dependency scenarios",
+                    "New scenarios visible in list and can be expanded to show nodes",
+                    "Button to add nodes available; added nodes appear in expanded card as list",
+                    "Both scenarios and nodes have edit and delete actions",
+                    "Order of creation is retained",
+                    "Add/edit node opens <NodeEditorModal/>",
+                    "Nodes shown in <workFlowCanvas/> component after adding/selecting scenarios",
+                    "Clicking node in <workFlowCanvas/> opens node editor modal",
+                    "Save button saves workflow to database and routes to workflow/workflowId/agents/agentid",
+                    "Voxy console - server: Added 3 new endpoints to sync system prompt to ElevenLabs, get user agents, and save workflow",
+                    "Wrote new class with ElevenLabs endpoint for get agents and save system prompt functionality"
+                ],
+                "developmentPeriod": "October 22 - October 25 (12 Hours)",
+                "liveDate": "October 28 Monday",
+                "learnings": [
+                    "Learnt about Arch Voxy console - server",
+                    "Learnt how to integrate Angular and React clients",
+                    "Learnt workflow management system design",
+                    "Learnt ElevenLabs API integration",
+                    "Learnt complex state management with context and local state"
+                ],
+                "hotFixes": []
+            },
+            {
+                "taskNumber": 2,
+                "ticket": "SQ2-1989",
+                "assignedDate": "October 25 Friday",
+                "title": "Adding new end point from Veradigm's EHR",
+                "type": "FullStack",
+                "changesMade": [
+                    "Voxy Client - Schedx: Added new 'Encounters' tab (using same component/styles as Task Tab)",
+                    "Wrote new API service in services.ts for Veradigm folder",
+                    "Wrote Payload and Response types for new API service",
+                    "Used this endpoint to get document details by sending document ID from client",
+                    "Parsed XML response to display document details in a table",
+                    "Used DOMParser() in built Javascript class to get attributes and information from XML",
+                    "Sep - Webapp: Wrote new route /api/v1/ehr/documents in sep-webapp that calls getEHRDocuments function using VeradigmClient",
+                    "Added Response and Payload types in VeradigmClient class"
+                ],
+                "developmentPeriod": "October 25 - October 25 (4 Hours)",
+                "liveDate": "October 25 Friday",
+                "learnings": [
+                    "Learnt how to parse XML using DOMParser",
+                    "Learnt PatientID is required parameter for GetDocuments endpoint, along with startDate and endDate",
+                    "Learnt this endpoint returns document information when PatientID and documentID are sent",
+                    "Learnt no complex business logic in backend, just returning response to client"
+                ],
+                "hotFixes": []
+            },
+            {
+                "taskNumber": 3,
+                "ticket": "SQ2-1991",
+                "assignedDate": "October 27 Sunday",
+                "title": "Prospect panel Agent calling and Agent settings updation fix",
+                "type": "Frontend",
+                "changesMade": [
+                    "Voxy Client - schedx: Wrapped <AgentFollowTodo/> component from Prospect panel with <UserActivityProvider/>",
+                    "In Agent settings page, polling logic after fetching data from backend was not updating agent type locally",
+                    "Used local state as context function was not returning state",
+                    "Comparison logic updates agent type based on local state"
+                ],
+                "developmentPeriod": "October 27 - October 27 (4 Hours)",
+                "liveDate": "October 28 Monday",
+                "learnings": [
+                    "Learnt how to debug polling logic",
+                    "Learnt fetchvoices() functions run repeatedly alongside polling, setting state",
+                    "Learnt about context vs local state management"
+                ],
+                "hotFixes": []
+            },
+            {
+                "taskNumber": 4,
+                "ticket": "SQ2-1996",
+                "assignedDate": "October 29 Tuesday",
+                "title": "Prospect Activity's Call card Enhancement",
+                "type": "Frontend",
+                "changesMade": [
+                    "Voxy Client: Added local state to open/close <StartCall/> 3-column modal in <CallCardWrapper/>",
+                    "onCardClick prop {(0) => setOpenStartCall()} passed to <CallCard/> so clicking card opens <StartCall/>",
+                    "Sent prospect and call ID from current activity (passed as prop to <CallCardWrapper/> to <StartCall/>)",
+                    "Wrapped <NewActivityTimeline/> with <UserActivityProvider/> because <StartCall/> uses Action tab"
+                ],
+                "developmentPeriod": "October 29 - October 29 (1 Hour)",
+                "liveDate": "November 28 Friday",
+                "learnings": [
+                    "Learnt Activities tracking",
+                    "Learnt Context flow",
+                    "Learnt how to integrate modals with activity components"
+                ],
+                "hotFixes": []
+            },
+            {
+                "taskNumber": 5,
+                "ticket": "SQ2-2006",
+                "assignedDate": "November 03 Monday",
+                "title": "Patient Activity Timeline enhancement and Login routing Fix",
+                "type": "FullStack",
+                "changesMade": [
+                    "Voxy - client: Added Tooltip to Patient details (name) card",
+                    "Changed Comments -> Call Notes values to bold",
+                    "Sent calldetails prop to <LineLog/> to open call details when reassign log is clicked",
+                    "Logic to show 'Requested' on Tooltip copy with Request's date from Activity object's metadata",
+                    "Added new icons to existing <SpriteIcon/> component",
+                    "Filter rendered alongside Activity History heading (sent as rightComponent prop to <WithHeader/>)",
+                    "Added styles for 'reassigned' case in getDisplayText() when displaying Tooltip",
+                    "Set 'All Activities' as default Activity Timeline",
+                    "Removed OUTCOME_UPDATED, STATE_UPDATED activities from Timeline",
+                    "Added cases to getIcon() to return appropriate icon",
+                    "Fixed Assign To column click event when request is scheduled",
+                    "Sent single callId instead of Array",
+                    "Added metadata type to Activity type interface",
+                    "Auth - service: Set baseUrl as PRODUCT_ROUTES.schedx",
+                    "Sep-webapp: Altered calldetails update query condition to accept one callId",
+                    "Logged an activity using logUserProspectActivity helper with constructed payload (activity object)"
+                ],
+                "developmentPeriod": "November 03 - November 04 (9 Hours)",
+                "liveDate": "November 10 Monday",
+                "learnings": [
+                    "Learnt Icon organization",
+                    "Learnt Activity Object holds metadata (requestTime, assignedTo) used in webapp to construct",
+                    "Learnt how the Icon works",
+                    "Added metadata to model's schema",
+                    "Learnt in depth about Webapp",
+                    "Learnt Activities flow",
+                    "In prepareTimelineDetails() function, added new RE_ASSIGNED case and constructed display text/data",
+                    "To route to Voxy while session login, changed route to /voxy - homeUrl when auth service gets / as API",
+                    "Learnt login flow"
+                ],
+                "hotFixes": []
+            },
+            {
+                "taskNumber": 6,
+                "ticket": "SQ2-2015",
+                "assignedDate": "November 11 Tuesday",
+                "title": "Followup modal schedules call even if sms errored",
+                "type": "Frontend",
+                "changesMade": [
+                    "Voxy-client: Split Promise.allSettled logic and first attempted SMS when both SMS and schedule call chosen",
+                    "If SMS fails, set error and return"
+                ],
+                "developmentPeriod": "November 11 - November 11 (1 Hour)",
+                "liveDate": "November 12 Wednesday",
+                "learnings": [],
+                "hotFixes": []
+            },
+            {
+                "taskNumber": 7,
+                "ticket": "SQ2-2018",
+                "assignedDate": "November 11 Tuesday",
+                "title": "Daily todo report Email URL fix",
+                "type": "Backend",
+                "changesMade": [
+                    "Inside dailytodoreport.html, routing to application URL was /schedx, changed to /voxy"
+                ],
+                "developmentPeriod": "November 11 - November 11 (1 Hour)",
+                "liveDate": "November 13 Wednesday",
+                "status": "Live",
+                "learnings": [
+                    "Learnt how Email - Sep-webapp works",
+                    "Learnt how to send emails"
+                ],
+                "hotFixes": []
+            },
+            {
+                "taskNumber": 8,
+                "ticket": "SQ2-2019",
+                "assignedDate": "November 12 Wednesday",
+                "title": "SFTP Post Import Email",
+                "type": "Backend",
+                "changesMade": [
+                    "Sep-Webapp: Wrote helper function sendSFTPNotification() in sftp.helper.ts",
+                    "Parameters are fileName, totalRecordProcessed, toEmailIds, bccEmailIds (queried while updating)",
+                    "For each file import, an email is sent to toEmailIds",
+                    "Inside sendSFTPNotification(), read HTML file from path, replaced HTML content's placeholder values",
+                    "Sending subject, toEmailIds, and htmlContent to helper function sendEmailViaSendGrid()"
+                ],
+                "developmentPeriod": "November 12 - November 12 (1 Hour)",
+                "liveDate": "November 13 Wednesday",
+                "status": "Live",
+                "learnings": [
+                    "Learnt SFTP server",
+                    "Learnt SFTP integration",
+                    "Learnt SendGrid"
                 ],
                 "hotFixes": []
             }

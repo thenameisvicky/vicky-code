@@ -1,4 +1,4 @@
-import { TreeNode } from "./helperClasses";
+import { TreeNode } from "./tree.helper";
 
 export function getRoot<T>(array: Array<T>): TreeNode<T> | null {
   if (!array.length || array[0] == null) return null;

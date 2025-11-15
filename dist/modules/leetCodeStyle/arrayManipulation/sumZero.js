@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SumsUpToZeroStrategy = void 0;
 class SumsUpToZeroStrategy {
-    contextFunction(params) {
+    function(params) {
         const { length } = params;
         if (length === 1)
             return [0];

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RotatedArraySearchStrategy = void 0;
 class RotatedArraySearchStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums, target } = params;
         let left = 0;
         let right = nums.length - 1;

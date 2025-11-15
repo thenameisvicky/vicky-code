@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.BestTimeToBuyAndSellStockStrategy = void 0;
 class BestTimeToBuyAndSellStockStrategy {
-    contextFunction(params) {
+    function(params) {
         const { array } = params;
         let min = Infinity;
         let max = 0;

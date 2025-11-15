@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { countHillsAndValleysParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class CountHillsAndValleysStrategy
-  implements BaseSingleArrayExecutionStrategy<"countHillsAndValley">
+  implements LeetcodeStrategy<{ nums: Array<number> }, number>
 {
-  contextFunction(params: countHillsAndValleysParams): any {
+  function(params: { nums: Array<number> }): number {
     const { nums } = params;
 
     let count = 0;

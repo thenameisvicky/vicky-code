@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { bestTimeToBuyAndSellStockParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class BestTimeToBuyAndSellStockStrategy
-  implements BaseSingleArrayExecutionStrategy<"bestTimeToSell">
+  implements LeetcodeStrategy<{ array: Array<number> }, number>
 {
-  contextFunction(params: bestTimeToBuyAndSellStockParams): any {
+  function(params: { array: Array<number> }): number {
     const { array } = params;
     let min = Infinity;
     let max = 0;

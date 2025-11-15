@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ThreeSumStrategy = void 0;
 class ThreeSumStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums } = params;
         const result = [];
         nums.sort((a, b) => a - b);

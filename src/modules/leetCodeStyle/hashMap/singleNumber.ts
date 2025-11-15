@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { singleNumberParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class SingleOccuringNumberStrategy
-  implements BaseSingleArrayExecutionStrategy<"singleOccuringNumber">
+  implements LeetcodeStrategy<{ num: Array<number> }, number>
 {
-  contextFunction(params: singleNumberParams): any {
+  function(params: { num: Array<number> }): number {
     const { num } = params;
     let result = 0;
     for (const n of num) {

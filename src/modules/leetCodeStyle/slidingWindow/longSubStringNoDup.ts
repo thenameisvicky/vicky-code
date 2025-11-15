@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { longSubStringNoDupParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class LongestSubStrWithNoRepeatCharStrategy
-  implements BaseSingleArrayExecutionStrategy<"longestSubStringNoDup">
+  implements LeetcodeStrategy<{ s: string }, number>
 {
-  contextFunction(params: longSubStringNoDupParams): any {
+  function(params: { s: string }): number {
     const { s } = params;
     let left = 0;
     const map = new Map();

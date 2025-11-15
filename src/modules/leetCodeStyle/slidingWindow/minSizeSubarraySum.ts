@@ -1,10 +1,8 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { minSizeSubarraySumParams } from "../types";
-
+import { LeetcodeStrategy } from "../../helpers";
 export class MinimumSizeSubarraySumStrategy
-  implements BaseSingleArrayExecutionStrategy<"minSizeSubarrSum">
+  implements LeetcodeStrategy<{ nums: Array<number>; target: number }, number>
 {
-  contextFunction(params: minSizeSubarraySumParams): any {
+  function(params: { nums: Array<number>; target: number }): number {
     const { nums, target } = params;
     let left = 0;
     let min = Infinity;

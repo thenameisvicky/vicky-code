@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CountHillsAndValleysStrategy = void 0;
 class CountHillsAndValleysStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums } = params;
         let count = 0;
         for (let i = 1; i < nums.length - 1; i++) {

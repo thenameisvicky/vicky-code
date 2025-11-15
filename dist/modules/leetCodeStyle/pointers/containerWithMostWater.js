@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ContainerWithMostWaterStrategy = void 0;
 class ContainerWithMostWaterStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums } = params;
         let left = 0;
         let right = nums.length - 1;

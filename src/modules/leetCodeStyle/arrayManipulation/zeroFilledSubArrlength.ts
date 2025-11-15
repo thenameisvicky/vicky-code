@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { zeroFilledSubArrParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class ZeroFilledSubArrayStrategy
-  implements BaseSingleArrayExecutionStrategy<"zeroFilledSubArray">
+  implements LeetcodeStrategy<{ nums: Array<number> }, number>
 {
-  contextFunction(params: zeroFilledSubArrParams): any {
+  function(params: { nums: Array<number> }): number {
     const { nums } = params;
     let count = 0;
     let streak = 0;

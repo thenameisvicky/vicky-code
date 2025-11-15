@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { findInsertPositionParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class FindInsertPositionStrategy
-  implements BaseSingleArrayExecutionStrategy<"findInsertPosition">
+  implements LeetcodeStrategy<{ nums: Array<number>; target: number }, number>
 {
-  contextFunction(params: findInsertPositionParams): any {
+  function(params: { nums: Array<number>; target: number }): number {
     const { nums, target } = params;
     let left = 0;
     let right = nums.length - 1;

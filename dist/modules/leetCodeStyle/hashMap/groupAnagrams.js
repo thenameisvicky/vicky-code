@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.GroupAnagramsStrategy = void 0;
 class GroupAnagramsStrategy {
-    contextFunction(params) {
+    function(params) {
         const { strings } = params;
         const map = new Map();
         for (let i = 0; i < strings.length; i++) {

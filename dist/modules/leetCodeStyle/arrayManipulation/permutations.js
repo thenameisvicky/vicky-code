@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PermutationsStrategy = void 0;
 class PermutationsStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums } = params;
         const resultArr = [];
         function getCount() {

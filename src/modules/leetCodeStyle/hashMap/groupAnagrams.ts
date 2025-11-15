@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { groupAnagramsParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class GroupAnagramsStrategy
-  implements BaseSingleArrayExecutionStrategy<"groupAnagrams">
+  implements LeetcodeStrategy<{ strings: Array<string> }, Array<Array<string>>>
 {
-  contextFunction(params: groupAnagramsParams): any {
+  function(params: { strings: Array<string> }): Array<Array<string>> {
     const { strings } = params;
     const map = new Map();
     for (let i = 0; i < strings.length; i++) {

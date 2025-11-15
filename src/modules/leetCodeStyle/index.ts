@@ -1,147 +1,104 @@
-import { exec } from "../../Executors/problemSolvingExec";
-import { BinarySearchStrategy } from "./search/binarySearch";
-import { FindInsertPositionStrategy } from "./search/findInsertPosition";
-import { FourSumStrategy } from "./pointers/fourSum";
-import { LongestSubStrWithNoRepeatCharStrategy } from "./slidingWindow/longSubStringNoDup";
-import { MinimumSizeSubarraySumStrategy } from "./slidingWindow/minSizeSubarraySum";
-import { MaximumSumSubArrayStrategy } from "./arrayManipulation/maxSumSubarray";
-import { MoveZeroStrategy } from "./arrayManipulation/moveZeros";
-import { NextPermutationStrategy } from "./arrayManipulation/nextPermutation";
-import { SingleOccuringNumberStrategy } from "./hashMap/singleNumber";
-import { ThreeSumStrategy } from "./pointers/threeSum";
-import { ThreeSumClosestStrategy } from "./pointers/threeSumClosest";
-import { TwoSumStrategy1 } from "./hashMap/twoSum1";
-import { TwoSumStrategy2 } from "./hashMap/twoSum2";
-import { ContainerWithMostWaterStrategy } from "./pointers/containerWithMostWater";
-import { GroupAnagramsStrategy } from "./hashMap/groupAnagrams";
-import { CountHillsAndValleysStrategy } from "./pointers/hillsAndValleysCount";
-import { MaximumProductSubArrayStrategy } from "./pointers/maxProductSubarry";
-import { RotatedArraySearchStrategy } from "./search/rotatedArraySearch";
-import { ZeroFilledSubArrayStrategy } from "./arrayManipulation/zeroFilledSubArrlength";
-import { LongestCommonPrefixStrategy } from "./slidingWindow/longestCommonPrefix";
-import { SumsUpToZeroStrategy } from "./arrayManipulation/sumZero";
-import { BestTimeToBuyAndSellStockStrategy } from "./arrayManipulation/bestTimeStockActivities";
-import { CountElementsWithMaximumFrequencyStrategy } from "./hashMap/countMaximumFrequence";
-import { PermutationsStrategy } from "./arrayManipulation/permutations";
-import { ConsecutiveOddsStrategy } from "./arrayManipulation/consecutiveOdds";
+import { getLeetcodeResult } from "../helpers";
 
 // TwoSum1: No pair adds to 100
-const twoSum1 = new TwoSumStrategy1();
-exec<"twoSum">(twoSum1, { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
+getLeetcodeResult("TWO_SUM_1", { nums: [1, 2, 3, 4, 5], target: 100 }); // ➞ [-1,-1]
 
 // TwoSum2: Multiple duplicates that sum to target
-const twoSum2 = new TwoSumStrategy2();
-exec<"twoSum">(twoSum2, { nums: [2, 3, 3, 4, 5], target: 6 }); // ➞ [0,3]
+getLeetcodeResult("TWO_SUM_2", { nums: [2, 3, 3, 4, 5], target: 6 }); // ➞ [0,3]
 
 // MoveZeros: All zeros
-const moveZeros = new MoveZeroStrategy();
-exec<"moveZeros">(moveZeros, { nums: [0, 0, 0, 0] }); // ➞ [0, 0, 0, 0]
+getLeetcodeResult("MOVE_ZEROS", { nums: [0, 0, 0, 0] }); // ➞ [0, 0, 0, 0]
 
 // BinarySearch: Target not found
-const binarySearch = new BinarySearchStrategy();
-exec<"binarySearch">(binarySearch, { nums: [1, 2, 4, 5, 6], target: 3 }); // ➞ -1
+getLeetcodeResult("BINARY_SEARCH", { nums: [1, 2, 4, 5, 6], target: 3 }); // ➞ -1
 
 // MinimumSizeSubarraySum: No subarray meets target
-const minSizesubarrSum = new MinimumSizeSubarraySumStrategy();
-exec<"minSizeSubarrSum">(minSizesubarrSum, { nums: [1, 1, 1, 1], target: 10 }); // ➞ 0
+getLeetcodeResult("MINIMUM_SIZE_SUBARRAY_SUM", {
+  nums: [1, 1, 1, 1],
+  target: 10,
+}); // ➞ 0
 
 // LongestSubStringNoDup: All same characters
-const longSizesubstrNoDupLen = new LongestSubStrWithNoRepeatCharStrategy();
-exec<"longestSubStringNoDup">(longSizesubstrNoDupLen, { s: "aaaaaa" }); // ➞ 1
+getLeetcodeResult("LONGEST_SUBSTRING_NO_REPEAT_CHAR", { s: "aaaaaa" }); // ➞ 1
 
 // FindInsertPosition: Insert in middle
-const findInserPosition = new FindInsertPositionStrategy();
-exec<"findInsertPosition">(findInserPosition, {
+getLeetcodeResult("FIND_INSERT_POSITION", {
   nums: [1, 3, 5, 6],
   target: 4,
 }); // ➞ 2
 
 // NextPermutation: Already in descending order
-const nextPermutation = new NextPermutationStrategy();
-exec<"nextPermutation">(nextPermutation, { nums: [3, 2, 1] }); // ➞ [1, 2, 3]
+getLeetcodeResult("NEXT_PERMUTATION", { nums: [3, 2, 1] }); // ➞ [1, 2, 3]
 
 // SingleOccuringNumber: Only one unique
-const singleNumber = new SingleOccuringNumberStrategy();
-exec<"singleOccuringNumber">(singleNumber, {
+getLeetcodeResult("SINGLE_OCCURRING_NUMBER", {
   num: [7, 3, 3, 7, 1, 1, 4, 4, 9],
 }); // ➞ 9
 
 // ThreeSum: Only valid triplet
-const threeSum = new ThreeSumStrategy();
-exec<"threeSum">(threeSum, { nums: [-1, 0, 1, 2, -1, -4] }); // ➞ [[-1, -1, 2], [-1, 0, 1]]
+getLeetcodeResult("THREE_SUM", { nums: [-1, 0, 1, 2, -1, -4] }); // ➞ [[-1, -1, 2], [-1, 0, 1]]
 
 // FourSum: All elements same, only one unique quadruplet
-const fourSum = new FourSumStrategy();
-exec<"fourSum">(fourSum, { nums: [2, 2, 2, 2, 2], target: 8 }); // ➞ [[2, 2, 2, 2]]
+getLeetcodeResult("FOUR_SUM", { nums: [2, 2, 2, 2, 2], target: 8 }); // ➞ [[2, 2, 2, 2]]
 
 // ThreeSumClosest: Return the closest 3Sum values
-const threeSumClosest = new ThreeSumClosestStrategy();
-exec<"threeSumClosest">(threeSumClosest, {
+getLeetcodeResult("THREE_SUM_CLOSEST", {
   nums: [-8, -6, -5, -3, -1],
   target: 2,
 }); // ➞ -9 (closest to 2)
 
 // ContainerWithMostWater: All heights zero
-const containerWithMostWater = new ContainerWithMostWaterStrategy();
-exec<"containerWithMostWater">(containerWithMostWater, {
+getLeetcodeResult("CONTAINER_WITH_MOST_WATER", {
   nums: [0, 0, 0, 0, 0],
 }); // ➞ 0
 
 // GroupAnagrams: Empty array - no anagrams to group
-const groupAnagrams = new GroupAnagramsStrategy();
-exec<"groupAnagrams">(groupAnagrams, { strings: [] }); // ➞ []
+getLeetcodeResult("GROUP_ANAGRAMS", { strings: [] }); // ➞ []
 
 // MaximumSumSubArray: Edge Case 1000000
-const maxSumSubarray = new MaximumSumSubArrayStrategy();
-exec<"maxSumSubarray">(maxSumSubarray, { nums: [1000000, -1000000, 1000000] }); // ➞ 1000000
+getLeetcodeResult("MAX_SUM_SUBARRAY", {
+  nums: [1000000, -1000000, 1000000],
+}); // ➞ 1000000
 
 // CountHillsAndValleys: All elements are the same
-const countHillsAndValleys = new CountHillsAndValleysStrategy();
-exec<"countHillsAndValley">(countHillsAndValleys, { nums: [5, 5, 5, 5, 5] }); // ➞ 0
+getLeetcodeResult("COUNT_HILLS_AND_VALLEYS", { nums: [5, 5, 5, 5, 5] }); // ➞ 0
 
 // MaximumProductSubArray: Expected 0 as output
-const maximumProductSubarray = new MaximumProductSubArrayStrategy();
-exec<"maxProductSubarray">(maximumProductSubarray, { nums: [-2, 0 - 2] }); // ➞ 4
+getLeetcodeResult("MAX_PRODUCT_SUBARRAY", { nums: [-2, 0, -2] }); // ➞ 4
 
 // RotatedArraySearch: Edge Case handling with all Duplicate
-const rotatedArraySearch = new RotatedArraySearchStrategy();
-exec<"rotatedArraySearch">(rotatedArraySearch, {
+getLeetcodeResult("ROTATED_ARRAY_SEARCH", {
   nums: [1, 1, 3, 1, 1],
   target: 3,
 });
 
 // ZeroFilledSubArray: Expected 6 as output
-const zeroFilledSubArray = new ZeroFilledSubArrayStrategy();
-exec<"zeroFilledSubArray">(zeroFilledSubArray, {
+getLeetcodeResult("ZERO_FILLED_SUBARRAY", {
   nums: [1, 3, 0, 0, 2, 0, 0, 4],
 });
 
 // LongestCommonPrefix: Expected "" as output
-const longestCommonPrefix = new LongestCommonPrefixStrategy();
-exec<"longestCommonPrefix">(longestCommonPrefix, {
+getLeetcodeResult("LONGEST_COMMON_PREFIX", {
   array: ["hello", "", "world", "help"],
 });
 
 // SumsUpToZero: Expected [-1, 0, 1] as output
-const sumUpToZero = new SumsUpToZeroStrategy();
-exec<"sumsUpToZero">(sumUpToZero, { length: 3 });
+getLeetcodeResult("SUMS_UP_TO_ZERO", { length: 3 });
 
 // BestTimeToBuyAndSellStock: Expected 0 as output
-const bestTimeToBuyAndSell = new BestTimeToBuyAndSellStockStrategy();
-exec<"bestTimeToSell">(bestTimeToBuyAndSell, { array: [9, 7, 5, 3, 1] });
+getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
+  array: [9, 7, 5, 3, 1],
+});
 
 // CountElementsWithMostFrequency: Expected 4 as output
-const countElemWithMostFre = new CountElementsWithMaximumFrequencyStrategy();
-exec<"countElemWithMostFrequency">(countElemWithMostFre, {
+getLeetcodeResult("COUNT_ELEMENTS_WITH_MAXIMUM_FREQUENCY", {
   array: [1, 2, 2, 3, 1, 4],
 });
 
 // Permutations: Expected [ [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1] ] as output in any order
-const permutations = new PermutationsStrategy();
-exec<"nextPermutation">(permutations, { nums: [1, 2, 3] });
+getLeetcodeResult("PERMUTATIONS", { nums: [1, 2, 3] });
 
 // Consecutive Odds: Expected true
-const consecutiveOdds = new ConsecutiveOddsStrategy();
-exec<"consecutiveOdds">(consecutiveOdds, {
+getLeetcodeResult("CONSECUTIVE_ODDS", {
   array: [0, 0, 0, 0, 0, 1, 23, 5, 0, 0, 0, 7, 5, 3],
 });

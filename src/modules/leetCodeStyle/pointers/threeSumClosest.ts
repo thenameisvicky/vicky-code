@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { threeSumClosestParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class ThreeSumClosestStrategy
-  implements BaseSingleArrayExecutionStrategy<"threeSumClosest">
+  implements LeetcodeStrategy<{ nums: Array<number>; target: number }, number>
 {
-  contextFunction(params: threeSumClosestParams): any {
+  function(params: { nums: Array<number>; target: number }): number {
     const { nums, target } = params;
     nums.sort((a: number, b: number) => a - b);
     let closest = -Infinity;

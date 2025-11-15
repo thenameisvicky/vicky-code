@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MaximumSumSubArrayStrategy = void 0;
 class MaximumSumSubArrayStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums } = params;
         if (nums.length === 0) {
             return 0;

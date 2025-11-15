@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { maxProductSubarrayParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class MaximumProductSubArrayStrategy
-  implements BaseSingleArrayExecutionStrategy<"maxProductSubarray">
+  implements LeetcodeStrategy<{ nums: Array<number> }, number>
 {
-  contextFunction(params: maxProductSubarrayParams): any {
+  function(params: { nums: Array<number> }): number {
     const { nums } = params;
     let maxProduct = nums[0];
     let minProduct = nums[0];

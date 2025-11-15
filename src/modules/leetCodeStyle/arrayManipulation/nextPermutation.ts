@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { nextPermutationParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class NextPermutationStrategy
-  implements BaseSingleArrayExecutionStrategy<"nextPermutation">
+  implements LeetcodeStrategy<{ nums: Array<number> }, Array<number>>
 {
-  contextFunction(params: nextPermutationParams): any {
+  function(params: { nums: Array<number> }): Array<number> {
     const { nums } = params;
     let i = nums.length - 2;
     while (i >= 0 && nums[i] >= nums[i + 1]) {

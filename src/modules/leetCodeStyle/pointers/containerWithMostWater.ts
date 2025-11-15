@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { containerWithMostWaterParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class ContainerWithMostWaterStrategy
-  implements BaseSingleArrayExecutionStrategy<"containerWithMostWater">
+  implements LeetcodeStrategy<{ nums: Array<number> }, number>
 {
-  contextFunction(params: containerWithMostWaterParams): any {
+  function(params: { nums: Array<number> }): number {
     const { nums } = params;
     let left = 0;
     let right = nums.length - 1;

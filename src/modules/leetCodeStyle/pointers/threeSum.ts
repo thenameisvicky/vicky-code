@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { threeSumParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class ThreeSumStrategy
-  implements BaseSingleArrayExecutionStrategy<"threeSum">
+  implements LeetcodeStrategy<{ nums: Array<number> }, Array<Array<number>>>
 {
-  contextFunction(params: threeSumParams): any {
+  function(params: { nums: Array<number> }): Array<Array<number>> {
     const { nums } = params;
     const result = [];
     nums.sort((a: number, b: number) => a - b);

@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CountElementsWithMaximumFrequencyStrategy = void 0;
 class CountElementsWithMaximumFrequencyStrategy {
-    contextFunction(params) {
+    function(params) {
         const { array } = params;
         const map = new Map();
         let maxFreCount = 0;

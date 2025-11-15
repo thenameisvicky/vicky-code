@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { maxSumSubarrayParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class MaximumSumSubArrayStrategy
-  implements BaseSingleArrayExecutionStrategy<"maxSumSubarray">
+  implements LeetcodeStrategy<{ nums: Array<number> }, number>
 {
-  contextFunction(params: maxSumSubarrayParams): any {
+  function(params: { nums: Array<number> }): number {
     const { nums } = params;
 
     if (nums.length === 0) {

@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { moveZerosParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class MoveZeroStrategy
-  implements BaseSingleArrayExecutionStrategy<"moveZeros">
+  implements LeetcodeStrategy<{ nums: Array<number> }, Array<number>>
 {
-  contextFunction(params: moveZerosParams): any {
+  function(params: { nums: Array<number> }): Array<number> {
     const { nums } = params;
     let k = 0;
     for (let i = 0; i < nums.length; i++) {

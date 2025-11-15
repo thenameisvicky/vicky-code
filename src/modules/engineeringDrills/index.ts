@@ -1,5 +1,6 @@
 import { BinaryTree } from "./binaryTree";
-import { TreeNode } from "./helperClasses";
+import { TreeNode } from "./helper/tree.helper";
+import { findKthLargest } from "./kthLargestHc";
 import { kthLargestElement } from "./kthLargestHeap";
 import { TaskManager } from "./taskManager";
 
@@ -24,7 +25,7 @@ const manager = new TaskManager([
 const result = tree.levelOrder(root, []);
 const exeTask = manager.execTop();
 const kthLargestElementResponse = kthLargestElement([3, 2, 1, 5, 6, 4], 2);
-const kthLargestElementHc = kthLargestElement([3, 2, 1, 5, 6, 4], 2);
+const kthLargestElementHc = findKthLargest([3, 2, 1, 5, 6, 4], 2);
 
 console.log(`Binary Traversal Result: ${result}`);
 console.log(`Task Manager result: ${exeTask}`);

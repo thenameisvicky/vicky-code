@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { countElementsWithMaximumFrequencyParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class CountElementsWithMaximumFrequencyStrategy
-  implements BaseSingleArrayExecutionStrategy<"countElemWithMostFrequency">
+  implements LeetcodeStrategy<{ array: Array<number> }, number>
 {
-  contextFunction(params: countElementsWithMaximumFrequencyParams) {
+  function(params: { array: Array<number> }): number {
     const { array } = params;
     const map = new Map();
     let maxFreCount = 0;

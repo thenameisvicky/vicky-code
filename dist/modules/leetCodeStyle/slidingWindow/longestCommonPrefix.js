@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LongestCommonPrefixStrategy = void 0;
 class LongestCommonPrefixStrategy {
-    contextFunction(params) {
+    function(params) {
         const { array } = params;
         if (!array.length)
             return "";

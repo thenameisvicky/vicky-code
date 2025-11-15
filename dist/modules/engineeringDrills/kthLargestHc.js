@@ -1,7 +1,9 @@
 "use strict";
-var findKthLargest = function (nums, k) {
-    let sorted = [];
-    let used = new Set();
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.findKthLargest = void 0;
+const findKthLargest = function (nums, k) {
+    const sorted = [];
+    const used = new Set();
     while (sorted.length < k) {
         let maxIndex = -1;
         let max = -Infinity;
@@ -16,3 +18,4 @@ var findKthLargest = function (nums, k) {
     }
     return sorted[k - 1];
 };
+exports.findKthLargest = findKthLargest;

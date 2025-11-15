@@ -1,4 +1,4 @@
-import { Heap } from "./helperClasses";
+import { Heap } from "./helper/tree.helper";
 
 type task = {
   userId: number;

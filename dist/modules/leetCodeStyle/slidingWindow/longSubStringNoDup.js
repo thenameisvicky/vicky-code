@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LongestSubStrWithNoRepeatCharStrategy = void 0;
 class LongestSubStrWithNoRepeatCharStrategy {
-    contextFunction(params) {
+    function(params) {
         const { s } = params;
         let left = 0;
         const map = new Map();

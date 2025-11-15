@@ -1,4 +1,4 @@
-import { TreeNode } from "./helperClasses";
+import { TreeNode } from "./helper/tree.helper";
 export class BinaryTree {
   private root: TreeNode<number> | null;
 

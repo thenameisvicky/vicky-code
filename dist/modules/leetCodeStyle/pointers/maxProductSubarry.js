@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MaximumProductSubArrayStrategy = void 0;
 class MaximumProductSubArrayStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums } = params;
         let maxProduct = nums[0];
         let minProduct = nums[0];

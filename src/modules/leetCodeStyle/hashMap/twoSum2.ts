@@ -1,23 +1,23 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { twoSumParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class TwoSumStrategy2
-  implements BaseSingleArrayExecutionStrategy<"twoSum">
+  implements
+    LeetcodeStrategy<{ nums: Array<number>; target: number }, Array<number>>
 {
-  contextFunction(params: twoSumParams): Promise<Array<number>> {
+  function(params: { nums: Array<number>; target: number }): Array<number> {
     const { nums, target } = params;
     let left = 0;
     let right = nums.length - 1;
     while (left <= right) {
       const sum = nums[left] + nums[right];
       if (sum === target) {
-        return Promise.resolve([left, right]);
+        return [left, right];
       } else if (sum < target) {
         left++;
       } else {
         right--;
       }
     }
-    return Promise.resolve([-1, -1]);
+    return [-1, -1];
   }
 }

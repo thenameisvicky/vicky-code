@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { consecutiveOddsParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class ConsecutiveOddsStrategy
-  implements BaseSingleArrayExecutionStrategy<"consecutiveOdds">
+  implements LeetcodeStrategy<{ array: Array<number> }, boolean>
 {
-  contextFunction(params: consecutiveOddsParams): any {
+  function(params: { array: Array<number> }): boolean {
     const { array } = params;
     for (let i = 0; i < array.length; i++) {
       if (
@@ -15,5 +14,6 @@ export class ConsecutiveOddsStrategy
         return true;
       }
     }
+    return false;
   }
 }

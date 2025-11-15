@@ -1,5 +1,5 @@
 {
-    "currentLevel": "Intermediate to Advanced (strong in arrays, strings, binary search, sliding window, hash map, subarray problems; consistently improving with 26 problems solved)",
+    "currentLevel": "Intermediate to Advanced (strong in arrays, strings, binary search, sliding window, hash map, subarray problems; consistently improving with 25 problems solved; recently refactored all strategies to unified pattern)",
     "areasOfImprovement": [
       "Expand to more problem types (graphs, trees, dynamic programming, advanced data structures)",
       "Participate in coding contests for speed and breadth",
@@ -7,7 +7,12 @@
       "Revisit and optimize previously solved problems",
       "Increase pace and minimize reliance on AI tools"
     ],
-    "lastSolvedStrategyDate": "2025-09-26",
+    "lastSolvedStrategyDate": "2025-01-27",
+    "recentAchievements": [
+      "Refactored all 25 LeetCode strategies to unified LeetcodeStrategy<T, K> pattern",
+      "Implemented centralized strategy executor with getLeetcodeResult() function",
+      "All strategies now follow consistent interface and execution pattern"
+    ],
     "problems": [
       {
         "name": "Maximum Sum Subarray (Kadane's Algorithm)",
@@ -120,8 +125,7 @@
         "approach": "Sliding Window with Streak Counting",
         "description": "Counts the total number of zero-filled subarrays by maintaining a streak counter. For each consecutive zero, adds the current streak length to the total count. Efficiently handles edge cases and returns the total count of all possible zero-filled subarrays. Time complexity O(n), space complexity O(1).",
         "recentlyAdded": true
-      }
-      ,
+      },
       {
         "name": "Best Time to Buy and Sell Stock (LeetCode 121)",
         "file": "bestTimeStockActivities.ts",
@@ -162,6 +166,13 @@
         "file": "consecutiveOdds.ts",
         "approach": "Single pass scan with modulus checks",
         "description": "Checks if an array contains three consecutive odd numbers by scanning once and verifying triplets with modulo arithmetic. Time complexity O(n), space O(1).",
+        "recentlyAdded": true
+      },
+      {
+        "name": "Permutations (LeetCode 46)",
+        "file": "permutations.ts",
+        "approach": "Iterative Next-Permutation Generation",
+        "description": "Generates all permutations of an array using iterative next-permutation algorithm. Calculates total permutations (n!) and generates each permutation by repeatedly applying next-permutation logic. Returns all unique permutations. Time complexity O(n! * n), space O(n! * n).",
         "recentlyAdded": true
       }
     ]

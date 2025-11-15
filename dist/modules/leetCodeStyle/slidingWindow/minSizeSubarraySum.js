@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MinimumSizeSubarraySumStrategy = void 0;
 class MinimumSizeSubarraySumStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums, target } = params;
         let left = 0;
         let min = Infinity;

@@ -1,17 +1,16 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import type { binarySearchParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class BinarySearchStrategy
-  implements BaseSingleArrayExecutionStrategy<"binarySearch">
+  implements LeetcodeStrategy<{ nums: Array<number>; target: number }, number>
 {
-  contextFunction(params: binarySearchParams): any {
+  function(params: { nums: Array<number>; target: number }): number {
     const { nums, target } = params;
     let left = 0;
     let right = nums.length - 1;
     while (left <= right) {
       const mid = Math.floor((left + right) / 2);
       if (nums[mid] === target) {
-        return Promise.resolve(mid);
+        return mid;
       } else if (nums[mid] < target) {
         left = mid + 1;
       } else {

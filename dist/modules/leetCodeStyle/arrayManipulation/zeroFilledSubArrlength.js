@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ZeroFilledSubArrayStrategy = void 0;
 class ZeroFilledSubArrayStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums } = params;
         let count = 0;
         let streak = 0;

@@ -1,10 +1,8 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { longestCommonPrefixParams } from "../types";
-
+import { LeetcodeStrategy } from "../../helpers";
 export class LongestCommonPrefixStrategy
-  implements BaseSingleArrayExecutionStrategy<"longestCommonPrefix">
+  implements LeetcodeStrategy<{ array: Array<string> }, string>
 {
-  contextFunction(params: longestCommonPrefixParams): any {
+  function(params: { array: Array<string> }): string {
     const { array } = params;
     if (!array.length) return "";
     const sortedLen = array.sort((a, b) => b.length - a.length);

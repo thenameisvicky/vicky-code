@@ -1,10 +1,9 @@
-import { BaseSingleArrayExecutionStrategy } from "../../../Executors/types/arrays";
-import { sumsUpToZeroParams } from "../types";
+import { LeetcodeStrategy } from "../../helpers";
 
 export class SumsUpToZeroStrategy
-  implements BaseSingleArrayExecutionStrategy<"sumsUpToZero">
+  implements LeetcodeStrategy<{ length: number }, Array<number>>
 {
-  contextFunction(params: sumsUpToZeroParams) {
+  function(params: { length: number }): Array<number> {
     const { length } = params;
     if (length === 1) return [0];
     const array = [];

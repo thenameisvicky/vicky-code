@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ConsecutiveOddsStrategy = void 0;
 class ConsecutiveOddsStrategy {
-    contextFunction(params) {
+    function(params) {
         const { array } = params;
         for (let i = 0; i < array.length; i++) {
             if (array[i] % 2 !== 0 &&
@@ -11,6 +11,7 @@ class ConsecutiveOddsStrategy {
                 return true;
             }
         }
+        return false;
     }
 }
 exports.ConsecutiveOddsStrategy = ConsecutiveOddsStrategy;

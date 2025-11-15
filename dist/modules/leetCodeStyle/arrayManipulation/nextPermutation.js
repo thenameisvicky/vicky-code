@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.NextPermutationStrategy = void 0;
 class NextPermutationStrategy {
-    contextFunction(params) {
+    function(params) {
         const { nums } = params;
         let i = nums.length - 2;
         while (i >= 0 && nums[i] >= nums[i + 1]) {

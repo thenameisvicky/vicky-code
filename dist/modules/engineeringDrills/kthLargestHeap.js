@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.kthLargestElement = kthLargestElement;
-const helperClasses_1 = require("./helperClasses");
+const tree_helper_1 = require("./helper/tree.helper");
 function kthLargestElement(nums, k) {
-    const minHeap = new helperClasses_1.Heap((a, b) => a - b);
-    for (let num of nums) {
+    const minHeap = new tree_helper_1.Heap((a, b) => a - b);
+    for (const num of nums) {
         if (minHeap.data.length < k) {
             minHeap.insert(num);
         }

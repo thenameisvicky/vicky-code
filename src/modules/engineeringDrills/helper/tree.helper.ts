@@ -57,7 +57,7 @@ export class Heap<T> {
   size(): number {
     return this.data.length;
   }
-  
+
   private bubbleUp(index: number): void {
     while (index > 0) {
       const parent = Math.floor((index - 1) / 2);
