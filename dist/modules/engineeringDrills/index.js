@@ -1,19 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const binaryTree_1 = require("./binaryTree");
-const tree_helper_1 = require("./helper/tree.helper");
+const helpers_1 = require("../helpers");
 const kthLargestHc_1 = require("./kthLargestHc");
 const kthLargestHeap_1 = require("./kthLargestHeap");
 const taskManager_1 = require("./taskManager");
 // Construct Tree
-const root = new tree_helper_1.TreeNode(1);
-root.left = new tree_helper_1.TreeNode(2);
-root.right = new tree_helper_1.TreeNode(3);
-root.left.left = new tree_helper_1.TreeNode(4);
-root.left.right = new tree_helper_1.TreeNode(5);
-root.right.right = new tree_helper_1.TreeNode(6);
+const root = (0, helpers_1.getRoot)([1, 2, 3, 4, 5, 6]);
+const root2 = (0, helpers_1.getRoot)([1, 2, 3, null, 4]);
 // class instances
-const tree = new binaryTree_1.BinaryTree();
+const tree = new helpers_1.BinaryTree(root);
+const treeNull = new helpers_1.BinaryTree(root2);
 const manager = new taskManager_1.TaskManager([
     [1, 10, 5],
     [2, 11, 10],
@@ -22,10 +18,12 @@ const manager = new taskManager_1.TaskManager([
 ]);
 // Function calls
 const result = tree.levelOrder(root, []);
+const nullResult = treeNull.levelOrder(root2, []);
 const exeTask = manager.execTop();
 const kthLargestElementResponse = (0, kthLargestHeap_1.kthLargestElement)([3, 2, 1, 5, 6, 4], 2);
 const kthLargestElementHc = (0, kthLargestHc_1.findKthLargest)([3, 2, 1, 5, 6, 4], 2);
 console.log(`Binary Traversal Result: ${result}`);
+console.log(`Binary Tree with null root: ${nullResult}`);
 console.log(`Task Manager result: ${exeTask}`);
 console.log(`Kth LargestElementHeap: ${kthLargestElementResponse}`);
 console.log(`Kth LargestElementHc: ${kthLargestElementHc}`);

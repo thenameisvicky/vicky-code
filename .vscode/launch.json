@@ -21,6 +21,18 @@
       "outFiles": [
         "${workspaceFolder}/dist/**/*.js"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Mocha Tests",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "env": {
+        "TS_NODE_FILES": "true",
+        "TS_NODE_TRANSPILE_ONLY": "true",
+        "TS_NODE_PROJECT": "tsconfig.json",
+      },
+      "args": ["--config=src/test/.mocharc.json"],
     }
   ]
 }

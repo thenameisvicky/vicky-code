@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Heap = exports.TreeNode = void 0;
+exports.BinaryTree = exports.Heap = exports.TreeNode = void 0;
 class TreeNode {
     constructor(val) {
         this.value = val;
@@ -90,3 +90,49 @@ class Heap {
     }
 }
 exports.Heap = Heap;
+class BinaryTree {
+    constructor(root) {
+        this.root = root;
+    }
+    preOrder(node = this.root, result) {
+        if (!node)
+            return result;
+        result.push(node.value);
+        this.preOrder(node.left, result);
+        this.preOrder(node.right, result);
+        return result;
+    }
+    postOrder(node = this.root, result) {
+        if (!node)
+            return result;
+        this.postOrder(node.right, result);
+        this.postOrder(node.left, result);
+        result.push(node.value);
+        return result;
+    }
+    inOrder(node = this.root, result) {
+        if (!node)
+            return result;
+        this.inOrder(node.left, result);
+        result.push(node.value);
+        this.inOrder(node.right, result);
+        return result;
+    }
+    levelOrder(node = this.root, result) {
+        if (!node)
+            return result;
+        const queue = [node];
+        while (queue.length > 0) {
+            const currentNode = queue.shift();
+            if (currentNode) {
+                result.push(currentNode.value);
+                if (currentNode.left)
+                    queue.push(currentNode.left);
+                if (currentNode.right)
+                    queue.push(currentNode.right);
+            }
+        }
+        return result;
+    }
+}
+exports.BinaryTree = BinaryTree;

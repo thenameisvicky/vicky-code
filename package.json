@@ -4,8 +4,13 @@
     "typescript": "5.8.3"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.20",
+    "@types/faker": "^5.5.9",
+    "@types/mocha": "^8.2.3",
+    "@types/sinon": "^17.0.4",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
+    "chai": "^4.5.0",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-config-standard": "17.1.0",
@@ -13,10 +18,18 @@
     "eslint-plugin-n": "16.6.2",
     "eslint-plugin-prettier": "^5.5.4",
     "eslint-plugin-promise": "6.1.1",
-    "prettier": "^3.6.2"
+    "mocha": "^8.4.0",
+    "mongodb-memory-server": "^6.9.6",
+    "nock": "^13.5.6",
+    "nyc": "^15.1.0",
+    "prettier": "^3.6.2",
+    "sinon": "^17.0.1",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.2"
   },
   "scripts": {
     "build": "tsc",
+    "mocha": "mocha -r ts-node/register --reporter spec --color --timeout 10000 'src/test/**/*.test.ts'",
     "leetcodeDev": "node dist/leetCodeStyle/index.js",
     "engineeringDrills": "node dist/engineeringDrills/index.js",
     "lint:fix": "eslint src --ext .ts,.js --fix",

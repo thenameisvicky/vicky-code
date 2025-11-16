@@ -1,4 +1,4 @@
-import { Heap } from "./helper/tree.helper";
+import { Heap } from "../helpers";
 
 export function kthLargestElement(nums: Array<number>, k: number): number {
   const minHeap = new Heap<number>((a, b) => a - b);

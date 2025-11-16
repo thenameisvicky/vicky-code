@@ -1,5 +1,26 @@
 import { LeetcodeStrategy } from "../../helpers";
 
+/**
+ * Permutations (LeetCode 46)
+ *
+ * Problem: Given an array nums of distinct integers, return all the possible permutations.
+ * You can return the answer in any order.
+ *
+ * A permutation is an arrangement of all the elements of a set in a specific order.
+ *
+ * Example:
+ * Input: [1, 2, 3]
+ * Output: [[1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]]
+ *
+ * Input: [0, 1]
+ * Output: [[0,1], [1,0]]
+ *
+ * Input: [1]
+ * Output: [[1]]
+ *
+ * @param params - Object containing nums array of distinct integers
+ * @returns Array of all possible permutations
+ */
 export class PermutationsStrategy
   implements LeetcodeStrategy<{ nums: Array<number> }, Array<Array<number>>>
 {

@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TaskManager = void 0;
-const tree_helper_1 = require("./helper/tree.helper");
+const helpers_1 = require("../helpers");
 class TaskManager {
     constructor(tasks) {
         this.task = {};
-        this.heap = new tree_helper_1.Heap((a, b) => {
+        this.heap = new helpers_1.Heap((a, b) => {
             if (a.priority !== b.priority)
                 return b.priority - a.priority;
             return b.taskId - a.taskId;

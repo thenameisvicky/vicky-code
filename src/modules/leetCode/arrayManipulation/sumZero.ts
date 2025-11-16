@@ -1,5 +1,23 @@
 import { LeetcodeStrategy } from "../../helpers";
 
+/**
+ * Find N Unique Integers Sum up to Zero (LeetCode 1304)
+ *
+ * Problem: Given an integer n, return any array containing n unique integers such that they add up to 0.
+ *
+ * Example:
+ * Input: 5
+ * Output: [-7, -1, 1, 3, 4] or [-5, -1, 1, 2, 3] or [-3, -1, 2, -2, 4]
+ *
+ * Input: 3
+ * Output: [-1, 0, 1]
+ *
+ * Input: 1
+ * Output: [0]
+ *
+ * @param params - Object containing length (n) of the desired array
+ * @returns Array of n unique integers that sum to zero
+ */
 export class SumsUpToZeroStrategy
   implements LeetcodeStrategy<{ length: number }, Array<number>>
 {
