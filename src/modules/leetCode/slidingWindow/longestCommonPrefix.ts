@@ -1,4 +1,22 @@
 import { LeetcodeStrategy } from "../../helpers";
+/**
+ * 14. Longest Common Prefix
+ *
+ * Write a function to find the longest common prefix string amongst an array of strings.
+ * If there is no common prefix, return an empty string "".
+ *
+ * Example 1:
+ * Input: strs = ["flower","flow","flight"]
+ * Output: "fl"
+ *
+ * constrains:
+ * 1 <= strs.length <= 200
+ * 0 <= strs[i].length <= 200
+ * strs[i] consists of only lowercase English letters if it is non-empty.
+ *
+ * @param params - Array of strings
+ * @returns One string with longest common prefix
+ */
 export class LongestCommonPrefixStrategy
   implements LeetcodeStrategy<{ array: Array<string> }, string>
 {

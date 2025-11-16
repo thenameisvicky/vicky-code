@@ -79,9 +79,9 @@ export class StrategyExecutor {
     this.strategy = StrategyExecutor.strategyMap[this.strategyName];
   }
 
-  async execute(data: any) {
+  execute(data: any) {
     const result = this.strategy.function(data);
-    console.log(`[EXE] - ${this.strategyName} [RES] - ${result}`);
+    // console.log(`[EXE]- ${this.strategyName} [RES]- ${result}`);
     return result;
   }
 }

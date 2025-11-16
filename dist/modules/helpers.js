@@ -34,9 +34,9 @@ class StrategyExecutor {
         this.strategyName = name;
         this.strategy = StrategyExecutor.strategyMap[this.strategyName];
     }
-    async execute(data) {
+    execute(data) {
         const result = this.strategy.function(data);
-        console.log(`[EXE] - ${this.strategyName} [RES] - ${result}`);
+        // console.log(`[EXE]- ${this.strategyName} [RES]- ${result}`);
         return result;
     }
 }
