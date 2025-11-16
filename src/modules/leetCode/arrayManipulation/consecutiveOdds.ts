@@ -22,7 +22,7 @@ export class ConsecutiveOddsStrategy
 {
   function(params: { array: Array<number> }): boolean {
     const { array } = params;
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length - 2; i++) {
       if (
         array[i] % 2 !== 0 &&
         array[i + 1] % 2 !== 0 &&

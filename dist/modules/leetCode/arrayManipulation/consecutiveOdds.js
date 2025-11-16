@@ -21,7 +21,7 @@ exports.ConsecutiveOddsStrategy = void 0;
 class ConsecutiveOddsStrategy {
     function(params) {
         const { array } = params;
-        for (let i = 0; i < array.length; i++) {
+        for (let i = 0; i < array.length - 2; i++) {
             if (array[i] % 2 !== 0 &&
                 array[i + 1] % 2 !== 0 &&
                 array[i + 2] % 2 !== 0) {

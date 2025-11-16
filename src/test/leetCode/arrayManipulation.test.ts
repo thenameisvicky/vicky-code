@@ -4,67 +4,79 @@ import { getLeetcodeResult } from "../../modules/helpers";
 describe("Array Manipulation", () => {
   describe("121. Best Time to Buy and Sell Stock", () => {
     let maximumProfit;
-    it("should return 0 when prices are strictly decreasing", () => {
+    it("Returns 0 according to the input [9, 7, 5, 3, 1]", () => {
       maximumProfit = getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
         array: [9, 7, 5, 3, 1],
       });
       expect(maximumProfit).equal(0);
     });
 
-    it("should return maximum profit when prices are strictly increasing", () => {
+    it("Returns 4 according to the input [1, 2, 3, 4, 5]", () => {
       maximumProfit = getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
         array: [1, 2, 3, 4, 5],
       });
       expect(maximumProfit).equal(4);
     });
 
-    it("should return correct profit for mixed prices", () => {
+    it("Returns 5 according to the input [7, 1, 5, 3, 6, 4]", () => {
       maximumProfit = getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
         array: [7, 1, 5, 3, 6, 4],
       });
       expect(maximumProfit).equal(5);
     });
 
-    it("should return 0 when there is only one price", () => {
+    it("Returns 0 according to the input [5]", () => {
       maximumProfit = getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
         array: [5],
       });
       expect(maximumProfit).equal(0);
     });
 
-    it("should return 0 when prices are all the same", () => {
+    it("Returns 0 according to the input [5, 5, 5, 5, 5]", () => {
       maximumProfit = getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
         array: [5, 5, 5, 5, 5],
       });
       expect(maximumProfit).equal(0);
     });
+  });
 
-    it("should return correct profit for two prices with profit opportunity", () => {
-      maximumProfit = getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
-        array: [1, 2],
+  describe("1550. Three Consecutive Odds", () => {
+    let threeConsecutiveOdds;
+    it("Returns false according to the input [2,6,4,1]", () => {
+      threeConsecutiveOdds = getLeetcodeResult("CONSECUTIVE_ODDS", {
+        array: [2, 6, 4, 1],
       });
-      expect(maximumProfit).equal(1);
+      expect(threeConsecutiveOdds).equal(false);
     });
 
-    it("should return 0 for two prices without profit opportunity", () => {
-      maximumProfit = getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
-        array: [2, 1],
+    it("Returns true according to the input [7,2,5,10,13,17,22,25,31,47]", () => {
+      threeConsecutiveOdds = getLeetcodeResult("CONSECUTIVE_ODDS", {
+        array: [7, 2, 5, 10, 13, 17, 22, 25, 31, 47],
       });
-      expect(maximumProfit).equal(0);
+      expect(threeConsecutiveOdds).equal(true);
     });
 
-    it("should return maximum profit when best buy is early and sell is late", () => {
-      maximumProfit = getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
-        array: [2, 4, 1, 7, 3, 9],
+    it("Returns true according to the input [0, 0.1, 0.3, 0.5, 5, 7, 9, 0.9, 11, 13, 15]", () => {
+      threeConsecutiveOdds = getLeetcodeResult("CONSECUTIVE_ODDS", {
+        array: [0, 0.1, 0.3, 0.5, 5, 7, 9, 0.9, 11, 13, 15],
       });
-      expect(maximumProfit).equal(8);
+      expect(threeConsecutiveOdds).equal(true);
     });
 
-    it("should handle prices with multiple profit opportunities correctly", () => {
-      maximumProfit = getLeetcodeResult("BEST_TIME_TO_BUY_AND_SELL_STOCK", {
-        array: [3, 3, 5, 0, 0, 3, 1, 4],
+    it("Returns false according to the input [0, 0, 100, 100000, 1000000, 10, 2000000, 7600000, 9400000, 130, 120]", () => {
+      threeConsecutiveOdds = getLeetcodeResult("CONSECUTIVE_ODDS", {
+        array: [
+          0, 0, 100, 100000, 1000000, 10, 2000000, 7600000, 9400000, 130, 120,
+        ],
       });
-      expect(maximumProfit).equal(4);
+      expect(threeConsecutiveOdds).equal(false);
+    });
+
+    it("Returns true according to the input [1.5, 3.7, 5.9]", () => {
+      threeConsecutiveOdds = getLeetcodeResult("CONSECUTIVE_ODDS", {
+        array: [1.5, 3.7, 5.9],
+      });
+      expect(threeConsecutiveOdds).equal(true);
     });
   });
 });
