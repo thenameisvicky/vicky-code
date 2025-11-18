@@ -79,4 +79,48 @@ describe("Array Manipulation", () => {
       expect(threeConsecutiveOdds).equal(true);
     });
   });
+
+  describe("717. 1-bit and 2-bit Characters", () => {
+    let isOneBitCharacter;
+
+    it("Returns true according to the input [0]", () => {
+      isOneBitCharacter = getLeetcodeResult("IS_ONEBIT_CHARACTER", {
+        array: [0],
+      });
+
+      expect(isOneBitCharacter).equal(true);
+    });
+
+    it("Returns true according to the input [1,1,0]", () => {
+      isOneBitCharacter = getLeetcodeResult("IS_ONEBIT_CHARACTER", {
+        array: [1, 1, 0],
+      });
+
+      expect(isOneBitCharacter).equal(true);
+    });
+
+    it("Returns false according to the input [1,1,1,0]", () => {
+      isOneBitCharacter = getLeetcodeResult("IS_ONEBIT_CHARACTER", {
+        array: [1, 1, 1, 0],
+      });
+
+      expect(isOneBitCharacter).equal(false);
+    });
+
+    it("Returns false according to the input [0,0,0,0,1,0]", () => {
+      isOneBitCharacter = getLeetcodeResult("IS_ONEBIT_CHARACTER", {
+        array: [0, 0, 0, 0, 1, 0],
+      });
+
+      expect(isOneBitCharacter).equal(false);
+    });
+
+    it("Returns true according to the input [1,0,1,1,0]", () => {
+      isOneBitCharacter = getLeetcodeResult("IS_ONEBIT_CHARACTER", {
+        array: [1, 0, 1, 1, 0],
+      });
+
+      expect(isOneBitCharacter).equal(true);
+    });
+  });
 });

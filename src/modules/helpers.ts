@@ -23,6 +23,8 @@ import { RotatedArraySearchStrategy } from "./leetCode/search/rotatedArraySearch
 import { LongestCommonPrefixStrategy } from "./leetCode/slidingWindow/longestCommonPrefix";
 import { MinimumSizeSubarraySumStrategy } from "./leetCode/slidingWindow/minSizeSubarraySum";
 import { LongestSubStrWithNoRepeatCharStrategy } from "./leetCode/slidingWindow/longSubStringNoDup";
+import { NumberOfSubstringsWithOnly1s } from "./leetCode/stringManipulation/numberOfSubstringsWith1s";
+import { IsOneBitCharacterStrategy } from "./leetCode/arrayManipulation/isOneBitCharacter";
 
 // Interfaces
 export interface LeetcodeStrategy<T, K> {
@@ -68,6 +70,10 @@ export class StrategyExecutor {
     MINIMUM_SIZE_SUBARRAY_SUM: new MinimumSizeSubarraySumStrategy(),
     LONGEST_SUBSTRING_NO_REPEAT_CHAR:
       new LongestSubStrWithNoRepeatCharStrategy(),
+
+    // String Manipulation
+    NUMBER_OF_SUBSTRINGS_ONES: new NumberOfSubstringsWithOnly1s(),
+    IS_ONEBIT_CHARACTER: new IsOneBitCharacterStrategy(),
   };
 
   private strategy: (typeof StrategyExecutor.strategyMap)[keyof typeof StrategyExecutor.strategyMap];

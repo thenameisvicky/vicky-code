@@ -28,6 +28,7 @@ const rotatedArraySearch_1 = require("./leetCode/search/rotatedArraySearch");
 const longestCommonPrefix_1 = require("./leetCode/slidingWindow/longestCommonPrefix");
 const minSizeSubarraySum_1 = require("./leetCode/slidingWindow/minSizeSubarraySum");
 const longSubStringNoDup_1 = require("./leetCode/slidingWindow/longSubStringNoDup");
+const numberOfSubstringsWith1s_1 = require("./leetCode/stringManipulation/numberOfSubstringsWith1s");
 // classes
 class StrategyExecutor {
     constructor(name) {
@@ -72,6 +73,8 @@ StrategyExecutor.strategyMap = {
     LONGEST_COMMON_PREFIX: new longestCommonPrefix_1.LongestCommonPrefixStrategy(),
     MINIMUM_SIZE_SUBARRAY_SUM: new minSizeSubarraySum_1.MinimumSizeSubarraySumStrategy(),
     LONGEST_SUBSTRING_NO_REPEAT_CHAR: new longSubStringNoDup_1.LongestSubStrWithNoRepeatCharStrategy(),
+    // String Manipulation
+    NUMBER_OF_SUBSTRINGS_ONES: new numberOfSubstringsWith1s_1.NumberOfSubstringsWithOnly1s(),
 };
 class TreeNode {
     constructor(val) {
